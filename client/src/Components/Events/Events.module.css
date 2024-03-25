@@ -1,0 +1,497 @@
+/* TEAM WORK TITLE */
+.titleContainer>h1,
+.titleContainer>h2,
+.registerText {
+    text-align: center;
+    font-size: 19vw;
+    line-height: 17vw;
+    font-family: var(--font-logo);
+    color: var(--color-grey);
+    margin: 0 0 33px 0;
+}
+
+/* ACBC EVENTS TITLE */
+.registerToday {
+    color: black;
+    font-family: var(--font-anton);
+    font-size: 11vw;
+    margin: 10vw 0 -5vw 3vw;
+}
+
+.eventsSubTitle,
+.detailsTitle {
+    font-size: 5vw;
+    text-align: left;
+    text-transform: uppercase;
+    color: var(--color-gold);
+    margin: 15px 0 4px 12px;
+}
+
+.bodyText {
+    font-size: 4.5vw;
+    font-family: var(--font-proxima);
+    margin: 15px 0 0 12px;
+    width: 95%;
+}
+
+.spanText {
+    color: var(--color-gold)
+}
+
+.introContainer {
+    width: 94%;
+    margin: 15px 0 0 0;
+    line-height: 5vw;
+    color: var(--color-light-grey);
+}
+
+.readMoreButton {
+    width: 40%;
+    border: 0;
+    border-radius: .4rem;
+    text-transform: uppercase;
+    margin: 5px 0 5px 13px;
+    background-color: white;
+    color: black;
+    font-size: 4.2vw;
+    letter-spacing: .1vw;
+    padding: 2vw 0;
+}
+
+.readMoreButton:hover {
+    background-color: var(--color-gold-orange);
+    color: black;
+}
+
+.EventsImg {
+    width: 100%;
+    height: auto;
+}
+
+.titleContainer {
+    margin: 1rem 0 0 0;
+    width: 100%;
+}
+
+.contentContainer {
+    width: 100%;
+    padding-bottom: 10vw;
+    background-image: url("../../assets/images/events/event-bkgd-mobile.jpg");
+    background-size: cover;
+
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.mainContainer {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Register Button */
+.registerButtonDiv {
+    width: 83vw;
+    margin: 2vw auto 0 auto;
+    border-radius: .3rem;
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.749);
+    height: 81vw;
+}
+
+.registerText {
+    font-size: 7.77vw;
+    position: absolute;
+    letter-spacing: -.1vw;
+    left: 58vw;
+    top: 47vw;
+    color: var(--color-gold);
+}
+
+.registerBtn {
+    width: 27%;
+    border: 0;
+    position: absolute;
+    border-radius: .3rem;
+    text-transform: uppercase;
+    background-color: white;
+    color: black;
+    font-size: 4.2vw;
+    font-family: var(--font-anton);
+    left: 57.3vw;
+    top: 60.2vw;
+    padding: 1vw 0;
+}
+
+.registerBtn:hover {
+    background-color: var(--color-gold-orange);
+    color: black;
+}
+
+/* "HUSTON" TEXT */
+.hustonText {
+    font-size: 8vw;
+    line-height: 7vw;
+}
+
+/* ROUND UP TEXT */
+.titleContainer>h2 {
+    font-size: 11.5vw;
+    line-height: 10vw;
+    text-align: left;
+    margin: -14vw 0 0 2vw;
+}
+
+.logoStyle {
+    width: 25%;
+    height: auto;
+    margin: -10vw 0 0 2vw;
+}
+
+.TexasImg,
+.MichiganImg {
+    width: 30vw;
+    position: relative;
+    top: 5vw;
+    left: 26vw;
+}
+
+.MichiganImg {
+    left: 28vw;
+}
+
+.detailsTitle,
+.detailsBody {
+    font-size: 3.77vw;
+    line-height: 3.77vw;
+    margin: 0 0 0 2vw;
+    letter-spacing: -.77px;
+    font-weight: 500;
+}
+
+.detailsBody {
+    margin: 2vw 0 0 2vw;
+    color: var(--color-light-grey);
+    letter-spacing: -.5px;
+}
+
+/* span class */
+.address {
+    text-transform: capitalize;
+    font-size: 3.55vw;
+}
+
+
+@media screen and (min-width:414px) {
+
+    .registerText {
+        top: 46vw;
+    }
+
+    .registerBtn {
+        top: 59.2vw;
+    }
+
+    .detailsBody {
+        letter-spacing: -.7px;
+    }
+
+    .detailsTitle {
+        letter-spacing: -.97px;
+    }
+}
+
+@media screen and (min-width:475px) {
+
+    .detailsBody {
+        letter-spacing: -.9px;
+    }
+
+    .detailsTitle {
+        letter-spacing: -1.2px;
+    }
+}
+
+@media screen and (min-width:534px) {
+    .detailsBody {
+        letter-spacing: -1.1px
+    }
+}
+
+
+@media screen and (min-width:600px) {
+
+    .registerText {
+        top: 44vw;
+    }
+
+    .registerBtn {
+        top: 57.2vw;
+    }
+}
+
+@media screen and (min-width:728px) {
+
+    .mainWrapper {
+        background: rgb(2, 0, 36);
+        background: linear-gradient(180deg, rgb(29 29 32) 35%, rgb(119 119 120) 51%, rgb(243 243 245) 100%);
+    }
+
+    .contentContainer {
+        background-image: url("../../assets/images/events/event-bkgd-desktop.png");
+        background-position: center top;
+    }
+
+    .registerButtonDiv {
+        height: 52vw;
+    }
+
+    .registerToday {
+        color: var(--color-light-grey);
+        margin: 10vw 0 -3vw 3vw;
+        font-size: 9vw;
+    }
+
+    .logoStyle {
+        width: 16%;
+    }
+
+    .TexasImg,
+    .MichiganImg {
+        width: 23vw;
+        left: 37vw
+    }
+
+    .bodyText {
+        font-size: 22px;
+        line-height: 23px;
+    }
+
+    .readMoreButton {
+        font-size: 2.2vw;
+        width: 165px;
+        padding: 2vw 0;
+    }
+
+    .titleContainer>h1 {
+        font-size: 10vw;
+        margin: 30px 0 13px 0;
+    }
+
+    .titleContainer>h2 {
+        font-size: 7vw;
+        line-height: 6vw;
+    }
+
+    .eventsSubTitle,
+    .detailsTitle {
+        font-size: 3.5vw
+    }
+
+    .hustonText {
+        font-size: 5vw;
+        line-height: 5vw;
+    }
+
+    .detailsBody,
+    .detailsTitle {
+        font-size: 3vw;
+        line-height: 3.2vw;
+    }
+
+    .address {
+        font-size: 3vw;
+    }
+
+    .registerText {
+        position: absolute;
+        left: 54vw;
+        top: 26vw;
+    }
+
+    .registerBtn {
+        left: 53.3vw;
+        top: 38.2vw;
+    }
+}
+
+
+@media screen and (min-width:800px) {
+
+    .registerButtonDiv {
+        width: 45vw;
+        height: 38vw;
+        margin: 0 0 0 1.5vw;
+    }
+
+    .registerToday {
+        font-size: 7vw;
+        margin: 10vw 0 -2vw 1vw;
+        color: black;
+    }
+
+    .logoStyle {
+        margin: -8vw 0 0 2vw;
+    }
+
+    .registerBtnWrapper {
+        display: flex;
+        margin: 0 0 0 -2.5vw;
+    }
+
+    .TexasImg,
+    .MichiganImg {
+        left: 20vw;
+        width: 15vw;
+    }
+
+    .detailsTitle,
+    .detailsBody {
+        font-size: 1.8vw;
+        line-height: 2.4vw;
+    }
+
+    .titleContainer>h2 {
+        font-size: 5vw;
+        line-height: 4vw;
+        margin: -11vw 0 0 2vw;
+    }
+
+    .hustonText {
+        font-size: 3.5vw;
+        line-height: 4vw;
+    }
+
+    .address {
+        font-size: 1.8vw;
+    }
+
+    .registerText {
+        left: 29.5vw;
+        font-size: 4.77vw;
+        top: 18vw;
+    }
+
+    .registerBtn {
+        top: 29.2vw;
+        left: 29.9vw;
+        font-size: 2.3vw;
+        padding: .5vw 0;
+    }
+
+    .readMoreButton {
+        font-size: 17px;
+        width: 129px;
+        padding: 11px;
+    }
+}
+
+
+
+@media screen and (min-width:1200px) {
+
+    .readMoreButton {
+        width: 140px;
+        letter-spacing: 1.366px;
+    }
+
+    .contentContainer {
+        padding-bottom: 136.6px;
+    }
+
+    .registerBtnWrapper {
+        margin: 0 0 0 -48.15px;
+        justify-content: center;
+    }
+
+    .logoStyle {
+        margin: -109.28px 0 0 27.32px;
+    }
+
+    .registerToday {
+        /* font-size: 95.62px;
+        margin: 136.6px 0 -14.32px 13.66px; */
+        display: none;
+    }
+
+    .introContainer {
+        line-height: 68.3px;
+    }
+
+    .titleContainer {
+        margin: 3rem 0 0 0;
+    }
+
+    .titleContainer>h1 {
+        font-size: 138px;
+        line-height: 132px;
+        margin-top: 5rem;
+    }
+
+    .titleContainer>h2 {
+        font-size: 59.3px;
+        line-height: 45.64px;
+        margin: -150.26px 0 0 27.32px;
+    }
+
+    .eventsSubTitle {
+        font-size: 39px;
+    }
+
+    .registerButtonDiv {
+        width: 543px;
+        height: 535px;
+        margin: 0 0 0 21px;
+    }
+
+    .TexasImg,
+    .MichiganImg {
+        top: 68.3px;
+        left: 220.2px;
+        width: 194.9px;
+    }
+
+    .hustonText {
+        font-size: 39.81px;
+        line-height: 40.64px;
+    }
+
+    .detailsBody,
+    .detailsTitle {
+        font-size: 20.588px;
+        line-height: 22.784px;
+        margin: 27.32px 0 0 27.32px;
+    }
+
+    .address {
+        font-size: 20.588px;
+    }
+
+    .registerText {
+        left: 354.47px;
+        font-size: 58.2022px;
+        line-height: 267.22px;
+        letter-spacing: -1.366px;
+        top: 171.23px;
+    }
+
+    .registerBtn {
+        top: 336.232px;
+        left: 357.634px;
+        font-size: 27.418px;
+        padding: 6.83px 0;
+
+    }
+
+}
+
+@media screen and (min-width:1500px) {
+    .contactWrapperBottom {
+        width: 491.76px;
+
+    }
+
+}

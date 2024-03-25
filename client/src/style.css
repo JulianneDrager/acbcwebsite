@@ -1,0 +1,32 @@
+/* .navbar-toggler-icon {
+    filter: invert(1);
+} */
+
+.btn-check:checked+.btn, .btn.active, .btn.show, .btn:first-child:active, :not(.btn-check)+.btn:active {
+    color: var(--bs-btn-active-color);
+    background-color: transparent;
+    border-color: transparent;
+}
+
+.accordion-item {
+    background-color: transparent;
+    border: none;
+}
+
+.accordion {
+    --bs-accordion-active-bg: transparent
+}
+
+.accordion-button:not(.collapsed) {
+    padding: 0;
+}
+
+/* .input-group>.form-control, .input-group>.form-floating, .input-group>.form-select {
+    margin: 2px;
+} */
+
+@media screen and (min-width:992px) {
+    .navbar {
+        --bs-navbar-nav-link-padding-x: 0.42rem !important;
+    }
+}

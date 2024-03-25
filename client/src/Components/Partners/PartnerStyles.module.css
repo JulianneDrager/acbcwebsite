@@ -1,0 +1,209 @@
+.img {
+    width: 90%;
+    margin: 0 auto;
+}
+
+
+.logoDiv h3 {
+    font-size: 8vw;
+    line-height: 6.8vw;
+    color: var(--font-color-primary);
+    font-family: var(--font-style-primary);
+}
+
+.introContainer {
+    width: 90%;
+    margin: 15px 0 25px 0;
+    padding: 0 0 38px 0;
+
+    background: rgb(255, 255, 255);
+    background: linear-gradient(1250deg, rgba(255, 255, 255, 1) 0%, rgb(255 255 255 / 79%) 25%, rgba(255, 255, 255, 0) 100%, rgba(9, 9, 121, 0) 100%);
+
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+}
+
+.introContainer h4 {
+    color: var(--color-secondary);
+    font-size: 4vw;
+    font-weight: bold;
+    font-style: italic;
+    text-align: center;
+    margin: 1rem 0 -.5rem 0;
+}
+
+.titleContainer {
+    margin: 1rem 0 0 0;
+    width: 100%;
+}
+
+.contentContainer {
+    width: 100%;
+
+    background-image: url("../../assets/mobile/partners/background.jpg");
+    background-size: cover;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.titleContainer>h3 {
+    font-size: 5vw;
+    margin: .5rem 0 0 0;
+    color: var(--font-color-secondary-light);
+    font-family: var(--font-style-primary);
+    font-weight: 500;
+}
+
+.introContainer>p {
+    margin: 2vw 7.5vw;
+
+    text-align: center;
+    font-size: 4vw;
+    font-style: italic;
+    line-height: 5.5vw;
+}
+
+.mainContainer {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.titleContainer>* {
+    margin: 0;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+
+@media screen and (min-width:375px) {
+    .introContainer p {
+        margin: 2vw 6vw;
+        font-size: 4.2vw;
+    }
+}
+
+@media screen and (min-width:600px) {
+
+    .introContainer p {
+        margin: 2vw 7.5vw;
+        font-size: 4.4vw;
+    }
+}
+
+@media screen and (min-width:728px) {
+
+    .imgDesktop {
+        width: 30%;
+        display: flex;
+    }
+
+    .mainContainer {
+        width: 100%;
+        /* aspect-ratio: 25 / 10; */
+        align-items: start;
+        display: block;
+    }
+
+    .contentContainer {
+        width: 100%;
+        padding-bottom: 0%;
+        background: rgb(255, 255, 255);
+        background: linear-gradient(541deg, rgb(212 206 206 / 0%) 0%, rgb(212 206 206) 60%, rgb(255 255 255 / 0%) 100%)
+    }
+
+    .logoDiv h3 {
+        font-size: 4.5vw;
+        line-height: 2.8vw;
+        margin: 0 0 21px 0;
+        text-align: center;
+    }
+
+    .titleContainer {
+        background: none;
+        position: static;
+    }
+
+    .titleContainer h3 {
+        font-size: 4.4vw;
+        line-height: 4vw;
+    }
+
+    .introContainer {
+        display: block;
+        /* width: 96%; */
+        margin: 23px 0 -1px 0;
+        background: none;
+    }
+
+    .introContainer h4 {
+        font-size: 2vw;
+    }
+
+    .introContainer p {
+        font-size: 1.4vw;
+        line-height: 2vw;
+        margin: 18px 17px 8px 0px;
+        text-align: justify;
+    }
+
+}
+
+@media screen and (min-width: 1024px) {
+    .iconDesktopWidth {
+        height: 10vw;
+    }
+
+    .imgDesktop {
+        justify-content: center;
+        width: 100%;
+    }
+
+    .contentContainer {
+        background: rgb(255, 255, 255);
+        background: linear-gradient(541deg, rgb(212 206 206 / 0%) 20%, rgb(212 206 206) 56%, rgb(255 255 255 / 50%) 99%);
+    }
+}
+
+
+@media screen and (min-width: 1485px) {
+
+    .titleContainer h3 {
+        font-size: 61.4px;
+        line-height: 54px;
+    }
+
+    .logoDiv {
+        margin: 1rem 0 0 0;
+    }
+
+    .logoDiv h3 {
+        font-size: 65.5px;
+        line-height: 51px;
+    }
+
+    .introContainer p {
+        font-size: 20.4px;
+        line-height: 28.8px;
+        margin: 31px 61px 6px 77px;
+    }
+
+    .introContainer h4 {
+        font-size: 34px;
+    }
+}
+
+@media screen and (min-width: 1600px) {
+    .iconDesktopWidth {
+        height: 150px;
+    }
+}

@@ -1,0 +1,16 @@
+/* FILE: Slideshow.css */
+
+.slideshow {
+    position: relative;
+}
+
+.slide {
+    position: absolute;
+    width: 100%;
+    opacity: 0;
+    transition: opacity 2s ease-in-out;
+}
+
+.slide.active {
+    opacity: 1;
+}
