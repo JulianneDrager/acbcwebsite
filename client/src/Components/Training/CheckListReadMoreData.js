@@ -67,7 +67,7 @@ const checklistReadMoreData = [
     id: 8,
     divClassName: checklistReadMore,
     imgClassName: checkReadMore,
-    span: "HIPPA compliant",
+    span: "HIPAA compliant",
   },
   {
     id: 9,

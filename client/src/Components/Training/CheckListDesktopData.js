@@ -67,7 +67,7 @@ const CheckListDesktopData = [
     id: 8,
     divClassName: checklistDesktop,
     imgClassName: checkDesktop,
-    span: "HIPPA compliant",
+    span: "HIPAA compliant",
   },
   {
     id: 9,
