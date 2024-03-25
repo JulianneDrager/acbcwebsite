@@ -1,0 +1,489 @@
+/* TEAM WORK TITLE */
+.titleContainer>h3,
+.coFoundersTitle {
+    text-align: center;
+    font-size: 19vw;
+    line-height: 17vw;
+    font-family: var(--font-logo);
+    color: var(--color-grey);
+    margin: 0 0 33px 0;
+}
+
+.coFoundersTitle {
+    text-align: left;
+    margin: 0 0 0 23px;
+}
+
+/* "DREAM" TEXT */
+.spanText {
+    color: var(--color-gold)
+}
+
+/* MEET OUR TEAM TITLE */
+.meetTeamTitle {
+    font-size: 5.5vw;
+    text-align: left;
+    text-transform: uppercase;
+    color: var(--color-gold);
+    margin: 4px 0 4px 12px;
+}
+
+.meetTeamBody {
+    font-size: 4.5vw;
+    font-family: var(--font-proxima);
+    margin: -2px 0 0 12px;
+    width: 95%;
+}
+
+
+.introContainer {
+    width: 94%;
+    margin: 15px 0 0 0;
+    line-height: 5vw;
+    color: var(--color-light-grey);
+}
+
+.parentheses {
+    font-family: sans-serif;
+}
+
+
+.readMoreButton {
+    width: 40%;
+    border: 0;
+    border-radius: .4rem;
+    text-transform: uppercase;
+    margin: -5px 0 5px 13px;
+    background-color: white;
+    color: black;
+    font-size: 4.2vw;
+    letter-spacing: .1vw;
+    padding: 2vw 0;
+}
+
+.readMoreButton:hover {
+    background-color: var(--color-gold-orange);
+    color: rgba(0, 0, 0, 0.767);
+    transition: 0.2s;
+}
+
+.HeadShotReadMoreButton {
+    background-color: #292929;
+    margin: -5px 14px 10px 0px;
+    border: 0;
+    font-size: 5vw;
+}
+
+.HeadShotReadMoreButton:hover {
+    background-color: rgb(17, 17, 17);
+    color: white;
+    transition: 0.2s;
+}
+
+.imageWrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profileImg {
+    width: 98%;
+    height: auto;
+}
+
+.coFoundersTitle,
+.directorsTitle {
+    font-size: 15vw;
+    color: var(--color-gold);
+    text-align: left;
+    margin: 0 0 0 13px;
+    position: relative;
+    top: 8vw;
+    z-index: 1;
+}
+
+.directorsTitle {
+    font-family: var(--font-logo);
+    color: #000000;
+    top: 9vw;
+}
+
+.blackLine,
+.whiteLine {
+    background: linear-gradient(to right, #000000, #5a6f8e00);
+    height: 11vw;
+    width: 100%;
+    margin: 0 0 0 4px;
+    position: relative;
+    top: -12px;
+    z-index: 0;
+}
+
+.blackLine {
+    background: linear-gradient(to right, #ffffff, #5a6f8e00);
+}
+
+.bioTextSection {
+    width: 98%;
+    background-color: var(--color-gold);
+    color: black;
+    margin: 0 auto;
+    font-size: 4.5vw;
+    font-family: var(--font-proxima);
+}
+
+.HeadShotBody {
+    padding: 0 .8rem 0 .8rem;
+    text-align: center;
+    letter-spacing: .1px;
+}
+
+.HeadShotTitle,
+.HeadShotSubTitle {
+    font-family: open sans;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 8vw;
+
+}
+
+.HeadShotSubTitle {
+    font-size: 4.5vw;
+    margin: -8px 0 0 0;
+}
+
+.HeadShotReadMoreCoFoundersBtn {
+    width: 98%;
+    font-size: 5vw;
+    margin: 8px 0 0 0;
+    height: 17vw;
+    border: 0;
+    border-radius: 0;
+    text-transform: uppercase;
+    background-color: #101010
+}
+
+.HeadShotReadMoreCoFoundersBtn:hover {
+    background-color: #292929;
+    transition: 0.2s;
+}
+
+
+.titleContainer {
+    margin: 1rem 0 0 0;
+    width: 100%;
+}
+
+.contentContainer {
+    width: 100%;
+    padding-bottom: 10vw;
+    background-image: url("../../assets/images/about/about-bkgd-mobile.jpg");
+    background-size: 100%;
+    background-position: center top;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.mainContainer {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.mainvisibilty {
+    display: none;
+}
+
+@media screen and (min-width:383px) {
+    .HeadShotBody {
+        letter-spacing: 0.1vw;
+    }
+
+}
+
+@media screen and (min-width:500px) {
+    .coFoundersTitle {
+        top: 11vw
+    }
+
+    .directorsTitle {
+        top: 11vw;
+    }
+
+}
+
+@media screen and (min-width:600px) {
+
+    .HeadShotsContainer {
+        margin: -7vw 0 0 0
+    }
+
+    .readMoreButton {
+        width: 165px;
+        padding: 2vw 0;
+        font-size: 3.2vw;
+    }
+
+    .HeadShotReadMoreButton {
+        font-size: 4vw;
+    }
+}
+
+@media screen and (min-width:699px) {
+    .headShotDiv {
+        width: 34%;
+    }
+
+    .headShotWrapper {
+        display: flex;
+    }
+
+    .bioTextSection {
+        /* width: 30%; */
+        font-size: 2vw;
+        line-height: 2vw;
+    }
+
+    .HeadShotTitle {
+        padding-top: 1vw;
+        font-size: 2vw;
+    }
+
+    .HeadShotSubTitle {
+        font-size: 1.5vw;
+    }
+
+    .HeadShotBody {
+        letter-spacing: 0;
+    }
+
+    .HeadShotReadMoreCoFoundersBtn {
+        font-size: 4.5vw;
+        height: 12vw;
+    }
+
+    .HeadShotReadMoreCoFoundersBtn {
+        font-size: 2.2vw;
+        height: 6vw;
+        width: 30%;
+    }
+
+    .HeadShotReadMoreButton {
+        font-size: 2.2vw;
+        margin: 11px 14px 10px 0px;
+    }
+
+    .readMoreButton {
+        font-size: 2.2vw;
+    }
+}
+
+@media screen and (min-width:728px) {
+
+    .titleContainer>h3 {
+        font-size: 10vw;
+    }
+
+    .titleContainer>h3 {
+        margin: 45px 0 14px 0;
+    }
+
+    .coFoundersTitle {
+        font-size: 7vw;
+        top: 8vw;
+    }
+
+    .meetTeamBody {
+        font-size: 21px;
+
+        line-height: 23px;
+        width: 98%;
+    }
+
+    .meetTeamTitle {
+        font-size: 3.5vw;
+    }
+
+    .contentContainer {
+        background-image: url("../../assets/images/about/about-bkgd-desktop.jpg");
+        background-size: cover;
+        padding-bottom: 4vw;
+    }
+
+    .directorsTitle {
+        font-size: 7vw;
+        top: 4vw;
+    }
+
+    .blackLine,
+    .whiteLine {
+        height: 5vw;
+    }
+
+    .introContainer {
+        line-height: 4vw;
+    }
+
+    .parentheses {
+        font-size: 3.5vw;
+    }
+
+    .imageWrapper {
+        width: 100%;
+    }
+
+    .mainContainer {
+        padding-bottom: 0;
+    }
+
+}
+
+
+@media screen and (min-width:792px) {
+    .HeadShotBody {
+        letter-spacing: .1px;
+    }
+}
+
+@media screen and (min-width:884px) {
+    .HeadShotBody {
+        letter-spacing: .2px;
+    }
+}
+
+@media screen and (min-width:975px) {
+    .HeadShotBody {
+        letter-spacing: .25px;
+    }
+}
+
+@media screen and (min-width:1018px) {
+    .HeadShotBody {
+        letter-spacing: .35px;
+    }
+
+    .headShotWrapper {
+        display: flex;
+    }
+}
+
+@media screen and (min-width:1200px) {
+
+    .contentContainer {
+        /* background-position: center -44px; */
+    }
+
+    .introContainer {
+        line-height: 4px;
+    }
+
+    .HeadShotsContainer {
+        margin: -7px 0 0 0;
+    }
+
+    .bioTextSection {
+        font-size: 24px;
+        line-height: 23px;
+    }
+
+    .mainABout {
+        margin: -56px 0 0 0;
+    }
+
+    .coFoundersTitle,
+    .directorsTitle {
+        font-size: 81px;
+    }
+
+    .directorsTitle {
+        top: 3px;
+    }
+
+    .coFoundersTitle {
+        top: 55px;
+    }
+
+    .meetTeamTitle {
+        font-size: 39px;
+        margin: 6px 0 4px 12px;
+    }
+
+    .blackLine,
+    .whiteLine {
+        height: 59px;
+    }
+
+    /* black line */
+    .whiteLine {
+        top: -68px;
+    }
+
+    /* white line */
+    .blackLine {
+        top: -68px;
+    }
+
+    .headShotWrapper {
+        display: block;
+        margin: -41px 0 0 0;
+    }
+
+    .titleContainer>h3 {
+        font-size: 138px;
+        line-height: 132px;
+    }
+
+    .titleContainer,
+    .coFoundersTitle {
+        line-height: 196px;
+    }
+
+    .titleContainer {
+        margin: 3rem 0 0 0;
+    }
+
+    .headShotDiv {
+        display: flex;
+        width: 100%;
+        margin-bottom: 16px;
+    }
+
+    .profileImg {
+        width: 22%;
+    }
+
+    .imageWrapper {
+        display: contents;
+    }
+
+    .HeadShotTitle,
+    .HeadShotSubTitle {
+        margin-left: 14px;
+    }
+
+    .HeadShotTitle,
+    .HeadShotSubTitle,
+    .HeadShotBody {
+        text-align: left;
+    }
+
+    .HeadShotTitle {
+        font-size: 44px;
+    }
+
+    .HeadShotSubTitle {
+        font-size: 27px;
+    }
+
+    .HeadShotReadMoreButton {
+        font-size: 24px;
+    }
+
+}
