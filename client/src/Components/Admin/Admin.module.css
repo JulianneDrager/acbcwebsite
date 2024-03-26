@@ -10,8 +10,9 @@
     align-items: center;
 }
 
-.mainContainer > * {
-    margin: 2vw 0;
+.mainContainer > section > * {
+    margin-top: 2vw;
+    margin-bottom: 2vw;;
 }
 
 .header {

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Form } from "react-bootstrap";
 import AdminStyle from "./Admin.module.css";
 import { Table, Thead, Tbody, Tr, Th, Td } from 'react-super-responsive-table'; // SUPER-RESPONSIVE-TABLE library src: https://www.npmjs.com/package/react-super-responsive-table
@@ -24,19 +24,34 @@ const Admin = () => {
     const buttonExport = AdminStyle.buttonExport;
     const table = AdminStyle.table;
 
-    let adminIsLoggedIn = false;
+    const [adminIsLoggedIn, setAdminIsLoggedIn] = useState(false);
+    console.log(adminIsLoggedIn);
 
 
     return (
         <main className={mainContainer}>
             {!adminIsLoggedIn ? <section>
-                Login View
+                <Form>
+                    <Form.Group controlId="formUsername">
+                        <Form.Label>Username</Form.Label>
+                        <Form.Control type="text" placeholder="Enter username" />
+                    </Form.Group>
+
+                    <Form.Group controlId="formPassword">
+                        <Form.Label>Password</Form.Label>
+                        <Form.Control type="password" placeholder="Enter password" />
+                    </Form.Group>
+
+                    <Button variant="primary" type="submit" onClick={() => { setAdminIsLoggedIn(true) }}>
+                        Login
+                    </Button>
+                </Form>
             </section> :
                 <section>
                     <div className={header}>
                         <div className={headerEmpty}></div>
                         <h1 className={headerTitle}>Welcome, Brandis</h1>
-                        <Button className={buttonLogout}>Log Out</Button>
+                        <Button className={buttonLogout} type="submit" onClick={() => { setAdminIsLoggedIn(false) }}>Log Out</Button>
                     </div>
 
                     <Form
@@ -48,9 +63,11 @@ const Admin = () => {
                         autoComplete="on"
                     >
                         <Input className={formSearchBar} placeholder="Search" inputProps={{ 'aria-label': 'description' }} />
-                        <Button className={buttonSearch} type="submit">Search</Button>
+                        <Button className={buttonSearch}>Search</Button>
                     </Form>
-                    <Button className={buttonExport}>Export this List</Button>
+                   
+                        <Button className={buttonExport} >Export this List</Button>
+                    
                     <Table className={table}>
                         <Thead>
                             <Tr>
