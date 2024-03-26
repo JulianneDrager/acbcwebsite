@@ -1,29 +1,139 @@
-import React, { Component } from "react";
-import { Table } from "react-bootstrap";
+import axios from "axios";
+import React, { useEffect, useState } from "react";
+import { Row, Col } from "react-bootstrap";
+import Search from "./Search";
+
+// Jacob, I added an Admin folder, and I have a simple component with search and table result, you can either use this and design or create an AdminUI component for Cole design, I am just using this component to test Col backend functionality.
 
 const Admin = () => {
-  const Search = () => {
-    return <input type="search" placeholder="Search..." />;
+  const [listCustomers, setListCustomers] = useState([]);
+  const [filteredCustomers, setFilteredCustomers] = useState([]);
+  const [searchTerm, setSearchTerm] = useState("");
+
+  // function to extract company name from the note field
+
+  const extractCompany = (str) => {
+    if (!str) {
+      return "";
+    }
+    const keyword = "Company:";
+    if (str.includes(keyword)) {
+      return str.split(keyword)[1].split(",")[0].trim();
+    } else if (!str) {
+      return;
+    }
+  };
+
+  // function to extract specialty from the note field
+  const keywordSpecialty = "Specialty:";
+  const extractSpecialty = (str) => {
+    if (str.includes(keywordSpecialty)) {
+      return str.split(keywordSpecialty)[1].split(",")[0].trim();
+    } else if (!str) {
+      return;
+    }
+  };
+
+  const company = extractCompany("Company");
+  const specialty = extractSpecialty("Specialty");
+
+  // function to filter customers by name
+  const filtered = listCustomers.filter((res) => {
+    const companyName = extractCompany(res.note);
+    return (
+      res.givenName.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      (companyName &&
+        companyName.toLowerCase().includes(searchTerm.toLowerCase()))
+    );
+  });
+
+  //http request to get all customers via /api/customer route
+  useEffect(() => {
+    const fetchData = async () => {
+      const response = await axios.get("http://localhost:5000/api/customer");
+      setListCustomers(response.data);
+    };
+    fetchData();
+  }, []);
+
+  // function to format phone number
+  const formatPhoneNumber = (phoneNumberString) => {
+    const cleaned = ("" + phoneNumberString).replace(/\+/g, "");
+    return cleaned;
+  };
+
+  //   styles
+  const title = {
+    backgroundColor: "white",
+    color: "grey",
+    margin: "0",
+    textTransform: "uppercase",
+    padding: "10px 0",
   };
 
   const Results = ({ results }) => {
     return (
-      <Table style={{ backgroundColor: "white" }} striped bordered hover>
-        <thead>
-          <tr>
-            <th>#</th>
-            <th>Result</th>
-          </tr>
-        </thead>
-        <tbody>
-          {results.map((result, index) => (
-            <tr key={index}>
-              <td>{index + 1}</td>
-              <td>{result}</td>
-            </tr>
+      <>
+        {/* <div style={{ backgroundColor: "white" }} striped bordered hover>
+          <Row style={title}>
+            <Col xs={5} sm={6} md={3}>#</Col>
+            <Col xs={5} sm={6} md={3}>Name</Col>
+            <Col xs={5} sm={6} md={3}>Email</Col>
+            <Col xs={5} sm={6} md={3}>Phone#</Col>
+          </Row>
+
+          {listCustomers.map((result, index) => (
+            <Row key={index}>
+              <Col xs={5} sm={6} md={3}>{index + 1}</Col>
+              <Col xs={5} sm={6} md={3}>{result.givenName}</Col>
+              <Col xs={5} sm={6} md={3}>{result.emailAddress}</Col>
+              <Col xs={5} sm={6} md={3}>{result.phoneNumber}</Col>
+            </Row>
           ))}
-        </tbody>
-      </Table>
+        </div> */}
+
+        <div style={{ backgroundColor: "white" }} striped bordered hover>
+          {filtered.map((result, index) => (
+            <Row key={index}>
+              <hr />
+              {/* <div style={{ display: "flex" }}>
+                <Col xs={5}>#</Col>
+                <Col xs={5}>{index.listCustomers + 1}</Col>
+              </div> */}
+              <div style={{ display: "flex" }}>
+                <Col xs={5}>Name</Col>
+                <Col xs={5}>{result.givenName}</Col>
+              </div>
+              <div style={{ display: "flex" }}>
+                <Col xs={5}>Email</Col>
+                <Col xs={5}>{result.emailAddress}</Col>
+              </div>
+              <div style={{ display: "flex" }}>
+                <Col xs={5}>Phone#</Col>
+                <Col xs={5}>{formatPhoneNumber(result.phoneNumber)}</Col>{" "}
+              </div>
+              <div style={{ display: "flex" }}>
+                <Col xs={5}>Specialty</Col>
+                <Col xs={5}>{result.note && extractSpecialty(result.note)}</Col>
+              </div>
+              <div style={{ display: "flex" }}>
+                <Col xs={5}>PRCT. Name</Col>
+                <Col xs={5}>{result.note && extractCompany(result.note)}</Col>
+              </div>
+              <div style={{ display: "flex" }}>
+                <Col xs={5}>Address</Col>
+                <Col xs={5}>{result.address.addressLine1}</Col>
+              </div>
+              <div style={{ display: "flex" }}>
+                <Col xs={5}>Address_2</Col>
+                <Col xs={5}>{result.address.addressLine2}</Col>
+              </div>
+
+              {/* <Col xs={5} sm={6} md={3}>{console.log("result", result)}</Col> */}
+            </Row>
+          ))}
+        </div>
+      </>
     );
   };
 
@@ -32,9 +142,22 @@ const Admin = () => {
       <div>
         <h1 style={{ color: "white" }}>Welcome Brandis</h1>
         <hr />
-        <Search />
+        <Search
+          listCustomers={listCustomers}
+          filteredCustomers={filteredCustomers}
+          setFilteredCustomers={setFilteredCustomers}
+          searchTerm={searchTerm}
+          setSearchTerm={setSearchTerm}
+          extractCompany={extractCompany}
+        />
         <hr />
-        <Results results={["Result 1", "Result 2", "Result 3"]} />
+        <h4 style={title}>Registrant Information</h4>
+        {/* <Results results={["Result 1", "Result 2", "Result 3"]} /> */}
+        <Results results={filteredCustomers} />
+        {/* <div>
+          {company && <div>{company}</div>}
+          {specialty && <div>{specialty}</div>}
+        </div> */}
       </div>
     </>
   );
