@@ -8,9 +8,9 @@
 - [ ] As an ADMIN, I want to see registrants' Event Name, Ticket #, Amount Paid, First Name, Last Name, Professional Title/Position, Email, Phone Number, Practice Name, Practice Address (street #, city, state, country, postal code), etc.
 	- [ ] As a DEV, I want...
 		- [ ] this page to display a table, but is hidden if the admin is not logged in
-			- [ ] this table to display a row for every ticket purchased
+			- [x] this table to display a row for every ticket purchased
 
 
 BACKLOG FEATURES
-- [ ] As an ADMIN, I want a search field that filters registrants by ???
+- [x] As an ADMIN, I want a search field that filters registrants by ???
 - [ ] As an Admin, I want a dropdown field to filter by events
