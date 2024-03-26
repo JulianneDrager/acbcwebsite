@@ -15,7 +15,7 @@ const Search = ({
     setSearchTerm(event.target.value);
   };
 
-  const handleButtonClickCompany = () => {
+  const handleButtonClick = () => {
     // Perform the search when the button is clicked
     const newFilteredCustomers = listCustomers.filter((customer) => {
       if (company) {
@@ -46,7 +46,7 @@ const Search = ({
               value={searchTerm}
               onChange={handleSearch}
             />
-            <button onClick={handleButtonClickCompany}>SEARCH</button>
+            <button onClick={handleButtonClick}>SEARCH</button>
           </div>
         )}
         {company && (
@@ -58,7 +58,7 @@ const Search = ({
               onChange={handleSearch}
               style={{ backgroundColor: "lightgrey" }}
             />
-            <button onClick={handleButtonClickCompany}>SEARCH</button>
+            <button onClick={handleButtonClick}>SEARCH</button>
           </div>
         )}
 
@@ -81,9 +81,7 @@ const Search = ({
         >
           SEARCH BY COMPANY
         </Link>
-
         <br />
-        {/* <button onClick={handleButtonClick}>SEARCH BY COMPANY</button> */}
       </div>
     </>
   );
