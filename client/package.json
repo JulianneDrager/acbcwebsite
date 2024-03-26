@@ -30,6 +30,7 @@
     "react-router-dom": "^6.19.0",
     "react-scripts": "5.0.1",
     "react-square-web-payments-sdk": "^3.2.1",
+    "react-super-responsive-table": "^5.2.2",
     "readline-sync": "^1.4.10",
     "smoothscroll-polyfill": "^0.4.4",
     "web-vitals": "^2.1.4"
