@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import { Row, Col } from "react-bootstrap";
 import Search from "./Search";
 
-// Jacob, I added an Admin folder, and I have a simple component with search and table result, you can either use this and design or create an AdminUI component for Cole design, I am just using this component to test Col backend functionality.
+// Jacob, I added an Admin folder, and I have a simple component with search and grid result, you can either use this and design or create an AdminUI component for Cole design, I am just using this component to test Col backend functionality.
 
 const Admin = () => {
   const [listCustomers, setListCustomers] = useState([]);
@@ -11,7 +11,6 @@ const Admin = () => {
   const [searchTerm, setSearchTerm] = useState("");
 
   // function to extract company name from the note field
-
   const extractCompany = (str) => {
     if (!str) {
       return "";
@@ -74,6 +73,7 @@ const Admin = () => {
   const Results = ({ results }) => {
     return (
       <>
+        {/* DESKTOP UI version */}
         {/* <div style={{ backgroundColor: "white" }} striped bordered hover>
           <Row style={title}>
             <Col xs={5} sm={6} md={3}>#</Col>
@@ -92,14 +92,11 @@ const Admin = () => {
           ))}
         </div> */}
 
+        {/* Mobile UI version */}
         <div style={{ backgroundColor: "white" }} striped bordered hover>
           {filtered.map((result, index) => (
             <Row key={index}>
               <hr />
-              {/* <div style={{ display: "flex" }}>
-                <Col xs={5}>#</Col>
-                <Col xs={5}>{index.listCustomers + 1}</Col>
-              </div> */}
               <div style={{ display: "flex" }}>
                 <Col xs={5}>Name</Col>
                 <Col xs={5}>{result.givenName}</Col>
@@ -128,8 +125,6 @@ const Admin = () => {
                 <Col xs={5}>Address_2</Col>
                 <Col xs={5}>{result.address.addressLine2}</Col>
               </div>
-
-              {/* <Col xs={5} sm={6} md={3}>{console.log("result", result)}</Col> */}
             </Row>
           ))}
         </div>
@@ -154,10 +149,6 @@ const Admin = () => {
         <h4 style={title}>Registrant Information</h4>
         {/* <Results results={["Result 1", "Result 2", "Result 3"]} /> */}
         <Results results={filteredCustomers} />
-        {/* <div>
-          {company && <div>{company}</div>}
-          {specialty && <div>{specialty}</div>}
-        </div> */}
       </div>
     </>
   );
