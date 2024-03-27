@@ -8,6 +8,33 @@ import { Button } from 'react-bootstrap';
 
 import useMediaQuery from "services/useMediaQuery";
 
+import registrantsData from './dbRegistrants';
+
+const RegistrantRow = (props) => {
+    // const mainContainer = ContentStyles.mainContainer;
+  
+    return (
+        <Tr>
+            <Td>{props.eventName}</Td>
+            <Td>{props.ticketNumber}</Td>
+            <Td>{props.paidAmount}</Td>
+            <Td>{props.firstName}</Td>
+            <Td>{props.lastName}</Td>
+            <Td>{props.title}</Td>
+            <Td>{props.practice}</Td>
+            <Td>{props.email}</Td>
+            <Td>{props.phone}</Td>
+        </Tr>
+    );
+  };
+
+const RegistrantsList = () => {
+    const registrantsRows = registrantsData.map((data) => {
+      return <RegistrantRow key={data.id} {...data} />;
+    });
+    return registrantsRows;
+  };
+
 const Admin = () => {
 
     const matchedDesktop = useMediaQuery("(min-width: 728px)");
@@ -26,6 +53,7 @@ const Admin = () => {
 
     const [adminIsLoggedIn, setAdminIsLoggedIn] = useState(false);
     console.log(adminIsLoggedIn);
+
 
 
     return (
@@ -84,7 +112,7 @@ const Admin = () => {
                         </Thead>
                         <Tbody>
                             <Tr>
-                                <Td>Lorem Ipsum</Td>
+                                <Td>Ipsum</Td>
                                 <Td>123456789</Td>
                                 <Td>$1234.56</Td>
                                 <Td>John</Td>
@@ -94,28 +122,7 @@ const Admin = () => {
                                 <Td>johndoe@example.com</Td>
                                 <Td>123-456-7890</Td>
                             </Tr>
-                            <Tr>
-                                <Td>Lorem Ipsum</Td>
-                                <Td>123456789</Td>
-                                <Td>$1234.56</Td>
-                                <Td>John</Td>
-                                <Td>Doe</Td>
-                                <Td>Doctor</Td>
-                                <Td>John's Clinic</Td>
-                                <Td>johndoe@example.com</Td>
-                                <Td>123-456-7890</Td>
-                            </Tr>
-                            <Tr>
-                                <Td>Lorem Ipsum</Td>
-                                <Td>123456789</Td>
-                                <Td>$1234.56</Td>
-                                <Td>John</Td>
-                                <Td>Doe</Td>
-                                <Td>Doctor</Td>
-                                <Td>John's Clinic</Td>
-                                <Td>johndoe@example.com</Td>
-                                <Td>123-456-7890</Td>
-                            </Tr>
+                            <RegistrantsList/>
                         </Tbody>
                     </Table>
                 </section>}
