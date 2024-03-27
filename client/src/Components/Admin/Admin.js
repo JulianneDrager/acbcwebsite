@@ -8,32 +8,8 @@ import { Button } from 'react-bootstrap';
 
 import useMediaQuery from "services/useMediaQuery";
 
-import registrantsData from './dbRegistrants';
+import RegistrantsList from './Registrants';
 
-const RegistrantRow = (props) => {
-    // const mainContainer = ContentStyles.mainContainer;
-  
-    return (
-        <Tr>
-            <Td>{props.eventName}</Td>
-            <Td>{props.ticketNumber}</Td>
-            <Td>{props.paidAmount}</Td>
-            <Td>{props.firstName}</Td>
-            <Td>{props.lastName}</Td>
-            <Td>{props.title}</Td>
-            <Td>{props.practice}</Td>
-            <Td>{props.email}</Td>
-            <Td>{props.phone}</Td>
-        </Tr>
-    );
-  };
-
-const RegistrantsList = () => {
-    const registrantsRows = registrantsData.map((data) => {
-      return <RegistrantRow key={data.id} {...data} />;
-    });
-    return registrantsRows;
-  };
 
 const Admin = () => {
 
