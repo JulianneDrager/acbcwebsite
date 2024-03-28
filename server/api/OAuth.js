@@ -44,13 +44,17 @@ router.get("/callback", async (req, res) => {
 
     const { access_token } = response.data;
 
-    // Store the access token and use it to authenticate your API calls
-    // This is a simple example and does not cover token storage or refresh
-    // You'll need to implement token storage and refresh according to your application's needs
-
     console.log("Access token: ", access_token);
+
+    // Send a response back to the client
+    res.json({ access_token });
   } catch (error) {
     console.error("Error when making request to Square: ", error);
+
+    // Send an error response back to the client
+    res
+      .status(500)
+      .json({ error: "An error occurred when making a request to Square" });
   }
 });
 
