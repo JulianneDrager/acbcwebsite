@@ -7,13 +7,14 @@ const router = express.Router();
 
 const clientIDENV = process.env.SQUARE_CLIENT_ID;
 const clientSecretENV = process.env.SQUARE_CLIENT_SECRET;
-console.log(clientSecretENV); // Should print your Square client ID
+// const accessTokenENV = process.env.SQUARE_ACCESS_TOKEN;
+// console.log(clientSecretENV); // Should print your Square client ID
 
 // Redirect user to Square's OAuth page
 router.get("/authorize", (req, res) => {
   const clientId = clientIDENV;
 
-  const redirectUri = "https://acbcwebsiteapp.onrender.com/oauth/callback"; // Replace with your redirect URI
+  const redirectUri = "https://acbcwebsite.onrender.com/oauth/callback"; // Replace with your redirect URI.
   const scopes = ["CUSTOMERS_READ", "CUSTOMERS_WRITE"]; // Replace with the scopes your application needs
 
   const authUrl = `https://connect.squareup.com/oauth2/authorize?client_id=${clientId}&response_type=code&scope=${scopes.join(
@@ -21,6 +22,15 @@ router.get("/authorize", (req, res) => {
   )}&redirect_uri=${redirectUri}`;
 
   res.redirect(authUrl);
+});
+
+// Callback route for Square to redirect to
+router.get("oauth/callback", async (req, res) => {
+  const { code } = req.query;
+
+  // Log the entire query parameters and the authorization code
+  console.log("Query parameters: ", req.query);
+  console.log("Authorization code: ", code);
 });
 
 // Callback route for Square to redirect to
@@ -43,7 +53,7 @@ router.get("/callback", async (req, res) => {
   // This is a simple example and does not cover token storage or refresh
   // You'll need to implement token storage and refresh according to your application's needs
 
-  res.send("Access token received");
+  console.log("Access token: ", access_token);
 });
 
 module.exports = router;
