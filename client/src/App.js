@@ -7,7 +7,9 @@ import ContactSponsor from "Components/Contact/ContactSponsor";
 import ContactSubscribe from "Components/Contact/ContactSubscribe";
 import { ContactContextProvider } from "Components/Context/ContactContext";
 import PaymentForm from "Components/Sqare/PaymentForm";
-import Admin from "Components/Admin/Admin";
+import Admin from "Components/Admin/AdminMain";
+import Services from "Components/Terms/Services";
+import Privacy from "Components/Terms/Privacy";
 
 function App() {
   return (
@@ -20,6 +22,8 @@ function App() {
           <Route exact path="/subscribe" element={<ContactSubscribe />} />
           <Route exact path="tmp/payment" element={<PaymentForm />} />
           <Route exact path="tmp/bootcamp/admin" element={<Admin />} />
+          <Route exact path="tmp/bootcamp/services" element={<Services />} />
+          <Route exact path="tmp/bootcamp/privacy" element={<Privacy />} />
 
           <Route
             exact

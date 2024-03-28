@@ -151,27 +151,17 @@ const Header = () => {
 
             {matchedDesktop && (
               <>
-                <h1 className={acbcSubTitle}>ACBC Mission Statement:</h1>
+                <h1 className={acbcSubTitle}>Who IS ACBC:</h1>
                 <p className={headerIntroParagraph}>
                   Access Coordinator Boot Camp {leftParentheses}ACBC
-                  {rightParenthesesNoSpace},
-                  <br />a dedicated 501{leftParenthesesNoSpace}c
-                  {rightParenthesesNoSpace}
+                  {rightParenthesesNoSpace}, a dedicated 501
+                  {leftParenthesesNoSpace}c{rightParenthesesNoSpace}
                   {leftParenthesesNoSpace}3{rightParentheses}
                   non{dash}profit organization catering to professionals across
                   all medical specialties responsible for prescribing biologic
                   and systemic medications to patients with auto{dash}
-                  immune diseases. Access Coordinator Boot Camp{" "}
-                </p>
-                <hr style={{ border: "none", margin: ".4rem" }} />
-                <p className={headerIntroParagraph}>
-                  {leftParentheses}ACBC
-                  {rightParenthesesNoSpace}, a dedicated 501{leftParentheses}c
-                  {rightParentheses}
-                  {leftParentheses} 3{rightParentheses}
-                  non{dash}profit organization catering to professionals across
-                  all Our organization comprises a diverse team of medical
-                  experts well{dash}versed in biologics, possessing the
+                  immune diseases. Our organization comprises a diverse team of
+                  medical experts well{dash}versed in biologics, possessing the
                   expertise to effectively disseminate crucial information and
                   streamline processes, all aimed at enhancing patient care.
                 </p>

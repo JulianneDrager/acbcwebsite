@@ -7,7 +7,9 @@ const { Client, Environment } = require("square");
 const squareClient = new Client({
   environment: Environment.Sandbox,
   accessToken:
-    "EAAAlzLmagOIlzdzcT1uw7MDkkuL02e2bxHbLHDnu-V7B2w5etx5RxdwSjZ2zF5f",
+    // "EAAAlzLmagOIlzdzcT1uw7MDkkuL02e2bxHbLHDnu-V7B2w5etx5RxdwSjZ2zF5f",
+    // "EAAAlwA6A91QoTghE43RKpckU5YuNsw6bjsUyP2hbbvDFOcSwxE26cV4XWMd74D1",
+    "EAAAlhhWyNDnz-vovQ_bTmqjBbG9QIG8evKHf66_xskBj0b22TGiOPSP6S4KorHo",
 });
 
 async function createCustomer(
@@ -20,7 +22,7 @@ async function createCustomer(
   specialty,
   position,
   company,
-  message
+  tShirtSize
 ) {
   const requestBody = {
     idempotencyKey: uuidv4(), // Generate a unique idempotency key
@@ -35,7 +37,7 @@ async function createCustomer(
     note: `Specialty:${specialty},
      Position:${position},
      Company:${company},
-     Message:${message}`,
+     tShirtSize:${tShirtSize}`,
     // Add other customer fields as needed
   };
 
@@ -52,16 +54,16 @@ async function createCustomer(
 
 async function run() {
   // Define the variables
-  let firstName = "Chris";
-  let lastName = "Drager";
-  let email = "Cdrager.doe@example.com";
-  let phone = "+15485516481"; // Change this to a valid phone number in E.164 format
-  let address = "123 Main St";
-  let address2 = "Apt 4B";
+  let firstName = "Joy";
+  let lastName = "Hoppkins";
+  let email = "Joyr.doe@example.com";
+  let phone = "+14155552671"; // Change this to a valid phone number in E.164 format
+  let address = "9 Polly Lane";
+  let address2 = "";
   let specialty = "Dr";
-  let position = "Pharmacist";
-  let company = "ABC Pharmacy";
-  let message = "This is a test message.";
+  let position = "Lead Dr";
+  let company = "Healthcare LLC";
+  let tShirtSize = "M";
   try {
     const customer = await createCustomer(
       firstName,
@@ -73,7 +75,7 @@ async function run() {
       specialty,
       position,
       company,
-      message
+      tShirtSize
     );
     console.log("Created customer:", customer);
   } catch (error) {
@@ -81,3 +83,4 @@ async function run() {
   }
 }
 run();
+// createCustomer();

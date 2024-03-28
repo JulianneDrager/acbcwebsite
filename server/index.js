@@ -4,18 +4,17 @@ const bodyParser = require("body-parser");
 const jsonParser = require("body-parser").json();
 const cors = require("cors");
 const morgan = require("morgan");
-// const multer = require("multer"); middle where for FILES only
+const oauthRouter = require("./OAuth");
 
 const pay = require("./api/pay");
-const readCustomer = require("./api/readCustomer");
+const readCustomer = require("./api/readCustomer.js");
 const React = require("react");
 const { render } = require("@react-email/render");
 const { Email } = require("./dist/email.js");
 const { SubscribeEmail } = require("./dist/subscribemail.js");
 const { SponsorEmail } = require("./dist/sponsoremail.js");
 
-// upload
-// const upload = multer();
+app.use("/oauth", oauthRouter);
 
 // morgan
 app.use(morgan("tiny"));
@@ -34,7 +33,15 @@ app.get("/", (req, res) => {
 
 app.post("/api/pay", pay.handlePayment);
 // app.post("api/customer", customer.handleCustomer);
-app.get("/api/customer", readCustomer.listCustomers);
+app.get("/api/customer", async (req, res) => {
+  try {
+    const customers = await readCustomer.listCustomers();
+    res.json(customers);
+  } catch (error) {
+    console.error(error);
+    res.status(500).send("Error retrieving customers");
+  }
+});
 
 app.post("/send-email", async (req, res) => {
   const {
