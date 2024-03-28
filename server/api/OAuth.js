@@ -14,7 +14,7 @@ const clientSecretENV = process.env.SQUARE_CLIENT_SECRET;
 router.get("/authorize", (req, res) => {
   const clientId = clientIDENV;
 
-  const redirectUri = "https://acbcwebsite.onrender.com/oauth/callback"; // Replace with your redirect URI
+  const redirectUri = "https://acbcwebsite.onrender.com/oauth/callback"; // Replace with your redirect URI.
   const scopes = ["CUSTOMERS_READ", "CUSTOMERS_WRITE"]; // Replace with the scopes your application needs
 
   const authUrl = `https://connect.squareup.com/oauth2/authorize?client_id=${clientId}&response_type=code&scope=${scopes.join(
