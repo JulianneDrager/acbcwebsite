@@ -12,15 +12,18 @@ const MyPaymentForm = () => {
       applicationId="sandbox-sq0idb-TJ977YZPIwv8gvpBuvbnzA"
       locationId="L80KFT030HD0V"
       cardTokenizeResponseReceived={async (token, buyer) => {
-        const response = await fetch("http://localhost:5000/api/pay", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({
-            sourceId: token.token,
-          }),
-        });
+        const response = await fetch(
+          "https://acbcwebsiteapp.onrender.com/api/pay",
+          {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+              sourceId: token.token,
+            }),
+          }
+        );
 
         if (response.ok) {
           const data = await response.json();
