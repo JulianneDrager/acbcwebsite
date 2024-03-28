@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import { Tr, Td } from 'react-super-responsive-table';
-// import registrantsData from './dbRegistrants'; // change this source for live DB
 import fetchRegistrants from 'services/fetchRegistrants';
 
 const RegistrantRow = (props) => {

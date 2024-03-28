@@ -31,7 +31,6 @@ const Admin = () => {
     console.log(adminIsLoggedIn);
 
 
-
     return (
         <main className={mainContainer}>
             {!adminIsLoggedIn ? <section>
@@ -88,17 +87,6 @@ const Admin = () => {
                             </Tr>
                         </Thead>
                         <Tbody>
-                            <Tr>
-                                <Td>Ipsum</Td>
-                                <Td>123456789</Td>
-                                <Td>$1234.56</Td>
-                                <Td>John</Td>
-                                <Td>Doe</Td>
-                                <Td>Doctor</Td>
-                                <Td>John's Clinic</Td>
-                                <Td>johndoe@example.com</Td>
-                                <Td>123-456-7890</Td>
-                            </Tr>
                             <RegistrantsList />
                         </Tbody>
                     </Table>

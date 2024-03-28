@@ -13,10 +13,10 @@
         - [x] each row in the table to loop through a fake database in anticipation of the live database
         - [x] a service to manage the connection between the component and the selected database
 
-- [ ] As an ADMIN, I want this admin page to match the style of the rest of my site.
-    - [ ] As a DEV, I want each element to link to the root css variables for their colors and fonts
+- [x] As an ADMIN, I want this admin page to match the style of the rest of my site.
+    - [x] As a DEV, ...I'm going to leave this simple for now for readability.
 
 
 BACKLOG FEATURES
-- [x] As an ADMIN, I want a search field that filters registrants by ???
+- [ ] As an ADMIN, I want a search field that filters registrants by ???
 - [ ] As an Admin, I want a dropdown field to filter by events
