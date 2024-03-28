@@ -7,7 +7,7 @@ const morgan = require("morgan");
 const oauthRouter = require("./api/OAuth.js");
 
 const pay = require("./api/pay");
-const readCustomer = require("/api/readCustomer.js");
+const readCustomer = require("api/readCustomer");
 const React = require("react");
 const { render } = require("@react-email/render");
 const { Email } = require("./dist/email.js");
