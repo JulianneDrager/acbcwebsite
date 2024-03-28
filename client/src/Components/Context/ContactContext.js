@@ -47,7 +47,7 @@ export const ContactContextProvider = ({ children }) => {
 
     try {
       const response = await fetch(
-        "https://acbcwebsiteapp.onrender.com/send-email",
+        "https://acbcwebsite.onrender.com/send-email",
         {
           method: "POST",
           headers: {

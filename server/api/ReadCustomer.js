@@ -33,7 +33,7 @@ async function listCustomers() {
     console.log(customers);
     return customers; // Return the customers array
   } catch (error) {
-    console.error("Error listing customers:", error);
+    // console.error("Error listing customers:", error);
   }
 }
 // Call the function immediately
