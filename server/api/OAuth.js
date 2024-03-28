@@ -1,13 +1,18 @@
 const express = require("express");
 const axios = require("axios");
 const qs = require("querystring");
-require("dotenv").config();
+require("dotenv").config({ path: __dirname + "/.env" });
 
 const router = express.Router();
 
+const clientIDENV = process.env.SQUARE_CLIENT_ID;
+const clientSecretENV = process.env.SQUARE_CLIENT_SECRET;
+console.log(clientSecretENV); // Should print your Square client ID
+
 // Redirect user to Square's OAuth page
 router.get("/authorize", (req, res) => {
-  const clientId = process.env.SQUARE_CLIENT_ID;
+  const clientId = clientIDENV;
+
   const redirectUri = "https://acbcwebsiteapp.onrender.com/oauth/callback"; // Replace with your redirect URI
   const scopes = ["CUSTOMERS_READ", "CUSTOMERS_WRITE"]; // Replace with the scopes your application needs
 
@@ -25,8 +30,8 @@ router.get("/callback", async (req, res) => {
   const response = await axios.post(
     "https://connect.squareup.com/oauth2/token",
     qs.stringify({
-      client_id: process.env.SQUARE_CLIENT_ID,
-      client_secret: process.env.SQUARE_CLIENT_SECRET,
+      client_id: clientIDENV,
+      client_secret: clientSecretENV,
       code,
       grant_type: "authorization_code",
     })
