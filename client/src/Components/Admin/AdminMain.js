@@ -64,7 +64,7 @@ const Admin = () => {
   useEffect(() => {
     const fetchData = async () => {
       const response = await axios.get(
-        "https://acbcwebsiteapp.onrender.com/api/customer"
+        "https://acbcwebsite.onrender.com/api/customer"
       );
       setListCustomers(response.data);
     };
