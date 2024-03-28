@@ -1,0 +1,6 @@
+services:
+  - name: acbcwebsite
+    env: node
+    buildCommand: npm install && npm run build
+    workDir: /api
+    startCommand: npm start
