@@ -63,7 +63,9 @@ const Admin = () => {
   //http request to get all customers via /api/customer route
   useEffect(() => {
     const fetchData = async () => {
-      const response = await axios.get("http://localhost:5000/api/customer");
+      const response = await axios.get(
+        "https://acbcwebsiteapp.onrender.com/api/customer"
+      );
       setListCustomers(response.data);
     };
     fetchData();
