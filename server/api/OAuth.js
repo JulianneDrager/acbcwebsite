@@ -16,8 +16,8 @@ router.get("/authorize", (req, res) => {
 
   const redirectUri = "https://acbcwebsite.onrender.com/oauth/callback";
 
-  const authUrl = `https://connect.squareup.com/oauth2/authorize?client_id=${clientIDENV}=CUSTOMERS_READ CUSTOMERS_WRITE&session=false&state=NY&redirect_uri=${redirectUri}`;
-
+  const authUrl = `https://connect.squareup.com/oauth2/authorize?client_id=${clientIDENV}&CUSTOMERS_WRITE+CUSTOMERS_READ&session=false&state=NY&redirect_uri=${redirectUri}`;
+  console.log(authUrl);
   res.redirect(authUrl);
 });
 
