@@ -15,7 +15,7 @@ const Search = ({
     setSearchTerm(event.target.value);
   };
 
-  const handleButtonClick = () => {
+  const handleButtonClick = (customer) => {
     // Perform the search when the button is clicked
     const newFilteredCustomers = listCustomers.filter((customer) => {
       if (company) {
