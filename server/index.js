@@ -4,7 +4,7 @@ const bodyParser = require("body-parser");
 const jsonParser = require("body-parser").json();
 const cors = require("cors");
 const morgan = require("morgan");
-const oauthRouter = require("./OAuth");
+const oauthRouter = require("./api/OAuth.js");
 
 const pay = require("./api/pay");
 const readCustomer = require("./api/readCustomer.js");
