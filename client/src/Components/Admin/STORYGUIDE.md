@@ -10,8 +10,8 @@
 	- [ ] As a DEV, I want...
 		- [x] this page to display a table
         - [x] this table to display a row for every ticket purchased
-        - [ ] each row in the table to loop through a fake database in anticipation of the live database
-            - [ ] a service to manage the connection between the component and the selected database
+        - [x] each row in the table to loop through a fake database in anticipation of the live database
+        - [ ] a service to manage the connection between the component and the selected database
 
 - [ ] As an ADMIN, I want this admin page to match the style of the rest of my site.
     - [ ] As a DEV, I want each element to link to the root css variables for their colors and fonts

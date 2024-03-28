@@ -1,5 +1,7 @@
-import { Tr, Td } from 'react-super-responsive-table'; // SUPER-RESPONSIVE-TABLE library src: https://www.npmjs.com/package/react-super-responsive-table
-import registrantsData from './dbRegistrants';
+import React, { useEffect, useState } from 'react';
+import { Tr, Td } from 'react-super-responsive-table';
+// import registrantsData from './dbRegistrants'; // change this source for live DB
+import fetchRegistrants from 'services/fetchRegistrants';
 
 const RegistrantRow = (props) => {
     return (
@@ -18,9 +20,25 @@ const RegistrantRow = (props) => {
 };
 
 const RegistrantsList = () => {
+    const [registrantsData, setRegistrantsData] = useState([]);
+
+    useEffect(() => {
+        const fetchData = async () => {
+            try {
+                const data = await fetchRegistrants();
+                setRegistrantsData(data);
+            } catch (error) {
+                console.error('Error fetching data: ', error);
+            }
+        };
+
+        fetchData();
+    }, []);
+
     const registrantsRows = registrantsData.map((data) => {
         return <RegistrantRow key={data.id} {...data} />;
     });
+
     return registrantsRows;
 };
 
