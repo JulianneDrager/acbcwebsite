@@ -8,7 +8,7 @@ import { Button } from 'react-bootstrap';
 
 import useMediaQuery from "services/useMediaQuery";
 
-import RegistrantsList from './Registrants';
+import RegistrantsList from './RegistrantsList';
 
 
 const Admin = () => {
@@ -52,12 +52,13 @@ const Admin = () => {
                 </Form>
             </section> :
                 <section>
+                    
                     <div className={header}>
                         <div className={headerEmpty}></div>
                         <h1 className={headerTitle}>Welcome, Brandis</h1>
                         <Button className={buttonLogout} type="submit" onClick={() => { setAdminIsLoggedIn(false) }}>Log Out</Button>
                     </div>
-
+                
                     <Form
                         id="formSearch"
                         // ref={refForm}
@@ -69,9 +70,9 @@ const Admin = () => {
                         <Input className={formSearchBar} placeholder="Search" inputProps={{ 'aria-label': 'description' }} />
                         <Button className={buttonSearch}>Search</Button>
                     </Form>
-                   
-                        <Button className={buttonExport} >Export this List</Button>
-                    
+
+                    <Button className={buttonExport} >Export this List</Button>
+
                     <Table className={table}>
                         <Thead>
                             <Tr>
@@ -98,7 +99,7 @@ const Admin = () => {
                                 <Td>johndoe@example.com</Td>
                                 <Td>123-456-7890</Td>
                             </Tr>
-                            <RegistrantsList/>
+                            <RegistrantsList />
                         </Tbody>
                     </Table>
                 </section>}

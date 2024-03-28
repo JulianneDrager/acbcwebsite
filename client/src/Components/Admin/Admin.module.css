@@ -1,13 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Didact+Gothic&family=EB+Garamond:ital;wght@0;400;0;500;0;600;0;700;1;400&family=Merriweather:wght@400;700&family=Montserrat:ital;wght@0;100;0;300;0;500;1;100&family=Roboto:wght@100;300;400;500;700&display=swap');
 
 .mainContainer {
-    color: white;
     width: 100vw;
     height: 100vh;
-    padding: 5vw;
+    padding: 2vw;
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.mainContainer * {
+    /* font-family: var(--font-proxima); */
+    color: var(--color-light-grey);
+}
+
+.mainContainer > section {
+    width: 100%;
 }
 
 .mainContainer > section > * {
@@ -33,6 +41,8 @@
 
 .buttonLogout {
     width: 30%;
+    color: white;
+font-weight: bold;
 }
 
 .formSearch {
@@ -44,15 +54,20 @@
 .formSearchBar {
     width: 60%;
     background-color: white;
+font-weight: bold;
 }
 
 .buttonSearch {
     width: 20%;
+    color: white;
+font-weight: bold;
 }
 
 .buttonExport {
     width: 30%;
     margin-left: 70%;
+    color: white;
+    font-weight: bold;
 }
 
 .table tbody tr {
@@ -63,14 +78,26 @@
     .mainContainer {
         height: 100%;
     }
+
+    .mainContainer > section > * {
+        margin-top: 4vw;
+        margin-bottom: 4vw;;
+    }
     
     .headerEmpty {
         display: none;
     }
 
     .formSearch {
+        width: 100%;
         flex-direction: column;
+        gap: 2vw;
     }
+
+    .formSearchBar {
+        width: 80%;
+        height: 38px;
+    }    
 
     .buttonSearch {
         width: 30%;
