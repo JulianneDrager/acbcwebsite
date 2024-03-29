@@ -14,7 +14,7 @@ const { paymentsApi } = new Client({
   accessToken:
     "EAAAlzLmagOIlzdzcT1uw7MDkkuL02e2bxHbLHDnu-V7B2w5etx5RxdwSjZ2zF5f",
 
-  environment: Environment.Sandbox,
+  environment: Environment.Production,
 });
 
 const handlePayment = async (req, res) => {
