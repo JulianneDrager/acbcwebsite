@@ -29,14 +29,15 @@ async function listCustomers() {
   try {
     console.log("Calling listCustomers API...");
     const response = await squareClient.customersApi.listCustomers();
-    console.log("Result from listCustomers API:", response.result);
+    console.log("Response from listCustomers API:", response); // Log the entire response
     const customers = response.result.customers;
-    // console.log("customers", customers);
+    console.log("customers", customers);
     return customers;
   } catch (error) {
     console.error("Error listing customers:", error);
   }
 }
+
 // Call the function immediately
 (async () => {
   const customers = await listCustomers();
