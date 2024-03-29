@@ -32,8 +32,11 @@ app.get("/", (req, res) => {
 });
 
 app.post("/api/pay", pay.handlePayment);
-// app.post("api/customer", customer.handleCustomer);
+
+// Get all customers
 app.get("/api/customer", async (req, res) => {
+  const accessToken = req.session.accessToken;
+
   try {
     const customers = await readCustomer.listCustomers();
     res.json(customers);
@@ -42,6 +45,21 @@ app.get("/api/customer", async (req, res) => {
     res.status(500).send("Error retrieving customers");
   }
 });
+
+// Get a access token to show all customers
+async function listCustomers(accessToken) {
+  const response = await axios.get(
+    "https://connect.squareup.com/v2/customers",
+    {
+      headers: {
+        Authorization: `Bearer ${accessToken}`,
+        Accept: "application/json",
+      },
+    }
+  );
+
+  return response.data;
+}
 
 app.post("/send-email", async (req, res) => {
   const {

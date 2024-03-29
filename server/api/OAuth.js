@@ -45,7 +45,10 @@ router.get("/callback", async (req, res) => {
 
     const { access_token } = response.data;
 
-    console.log("Access token: ", access_token);
+    // console.log("Access token: ", access_token);
+
+    // After obtaining the access token...
+    req.session.accessToken = access_token;
 
     // Send a response back to the client
     res.json({ access_token });
