@@ -166,6 +166,6 @@ app.post("/send-email", async (req, res) => {
   }
 });
 
-app.listen(1000, () => {
-  console.log("Server started on port 1000");
+app.listen(10000, () => {
+  console.log("Server started on port 10000");
 });
