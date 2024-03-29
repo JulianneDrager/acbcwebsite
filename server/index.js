@@ -35,6 +35,17 @@ app.get("/", (req, res) => {
   res.json({ message: "Hello world" });
 });
 
+const session = require("express-session");
+
+app.use(
+  session({
+    secret: "your secret",
+    resave: false,
+    saveUninitialized: true,
+    cookie: { secure: false }, // set to true if you're using https
+  })
+);
+
 app.post("/api/pay", pay.handlePayment);
 
 // Get all customers
@@ -166,6 +177,6 @@ app.post("/send-email", async (req, res) => {
   }
 });
 
-app.listen(10000, () => {
-  console.log("Server started on port 10000");
+app.listen(process.env.PORT || 10000, () => {
+  console.log(`Server started on port ${process.env.PORT || 10000}`);
 });
