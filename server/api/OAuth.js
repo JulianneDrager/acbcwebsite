@@ -39,6 +39,7 @@ router.get("/callback", async (req, res) => {
         client_secret: clientSecretENV,
         code,
         grant_type: "authorization_code",
+        redirect_uri: redirectUri, // Replace with your actual redirect URI
       })
     );
 
