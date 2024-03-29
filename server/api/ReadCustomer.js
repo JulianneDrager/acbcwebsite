@@ -27,17 +27,16 @@ const squareClient = new Client({
 
 async function listCustomers() {
   try {
-    const {
-      result: { customers },
-    } = await squareClient.customersApi.listCustomers();
+    console.log("Calling listCustomers API...");
+    const response = await squareClient.customersApi.listCustomers();
+    console.log("Response from listCustomers API:", response);
+    const customers = response.result.customers;
     console.log(customers);
-    return customers; // Return the customers array
+    return customers;
   } catch (error) {
     console.error("Error listing customers:", error);
-    console.log(customers);
   }
 }
-// Call the function immediately
 // Call the function immediately
 (async () => {
   const customers = await listCustomers();
