@@ -24,7 +24,11 @@ let smtpTransport = require("nodemailer-smtp-transport");
 app.use(jsonParser); // use it globally
 app.use(bodyParser.json()); // to support JSON-encoded bodies
 app.use(bodyParser.urlencoded({ extended: true })); // to support URL-encoded bodies
-app.use(cors());
+app.use(
+  cors({
+    origin: "http://localhost:3000",
+  })
+);
 
 //server route
 app.get("/", (req, res) => {
@@ -162,6 +166,6 @@ app.post("/send-email", async (req, res) => {
   }
 });
 
-app.listen(5000, () => {
-  console.log("Server started on port 5000");
+app.listen(1000, () => {
+  console.log("Server started on port 1000");
 });
