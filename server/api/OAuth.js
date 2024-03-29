@@ -50,10 +50,7 @@ router.get("/callback", async (req, res) => {
     // Send a response back to the client
     res.json({ access_token });
   } catch (error) {
-    console.error(
-      "Error when making request to Square: ",
-      error.response.data.errors
-    );
+    console.error("Error when making request to Square: ", error.response);
 
     // Send an error response back to the client
     res
