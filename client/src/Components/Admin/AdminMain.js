@@ -65,6 +65,7 @@ const Admin = () => {
     const fetchData = async () => {
       const response = await axios.get(
         "https://acbcwebsite.onrender.com/api/customer"
+        // "http://localhost:10000/api/customer"
       );
       setListCustomers(response.data);
     };

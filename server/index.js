@@ -180,3 +180,7 @@ app.post("/send-email", async (req, res) => {
 app.listen(process.env.PORT || 10000, () => {
   console.log(`Server started on port ${process.env.PORT || 10000}`);
 });
+
+// app.listen(10000, () => {
+//   console.log("Server started on port 10000");
+// });
