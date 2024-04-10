@@ -4,17 +4,46 @@ const bodyParser = require("body-parser");
 const jsonParser = require("body-parser").json();
 const cors = require("cors");
 const morgan = require("morgan");
-const oauthRouter = require("./api/OAuth.js");
+// const oauthRouter = require("./api/OAuth.js");
 
-const pay = require("./api/pay");
-const readCustomer = require("./api/ReadCustomer.js");
+// const pay = require("./api/pay");
+// const readCustomer = require("./api/ReadCustomer.js");
 const React = require("react");
 const { render } = require("@react-email/render");
 const { Email } = require("./dist/email.js");
 const { SubscribeEmail } = require("./dist/subscribemail.js");
 const { SponsorEmail } = require("./dist/sponsoremail.js");
 
-app.use("/oauth", oauthRouter);
+const { MongoClient, ServerApiVersion } = require("mongodb");
+const uri =
+  "mongodb+srv://Julianne:I7s0wyjdcog6pwma@acbc-database.xgrchue.mongodb.net/?retryWrites=true&w=majority&appName=acbc-database";
+
+// Create a MongoClient with a MongoClientOptions object to set the Stable API version
+const client = new MongoClient(uri, {
+  serverApi: {
+    version: ServerApiVersion.v1,
+    strict: true,
+    deprecationErrors: true,
+  },
+});
+
+async function run() {
+  try {
+    // Connect the client to the server	(optional starting in v4.7)
+    await client.connect();
+    // Send a ping to confirm a successful connection
+    await client.db("admin").command({ ping: 1 });
+    console.log(
+      "Pinged your deployment. You successfully connected to MongoDB!"
+    );
+  } finally {
+    // Ensures that the client will close when you finish/error
+    await client.close();
+  }
+}
+run().catch(console.dir);
+
+// app.use("/oauth", oauthRouter);
 
 // morgan
 app.use(morgan("tiny"));
@@ -46,58 +75,58 @@ app.use(
   })
 );
 
-app.post("/api/pay", pay.handlePayment);
+// app.post("/api/pay", pay.handlePayment);
 
 // Get all payments
-app.get("/api/payments", async (req, res) => {
-  const accessToken = req.session.accessToken;
+// app.get("/api/payments", async (req, res) => {
+//   const accessToken = req.session.accessToken;
 
-  try {
-    const response = await axios.get(
-      `https://connect.squareup.com/v2/payments?customer_id=${customerId}`,
-      {
-        headers: {
-          Authorization: `Bearer ${accessToken}`,
-          Accept: "application/json",
-        },
-      }
-    );
+//   try {
+//     const response = await axios.get(
+//       `https://connect.squareup.com/v2/payments?customer_id=${customerId}`,
+//       {
+//         headers: {
+//           Authorization: `Bearer ${accessToken}`,
+//           Accept: "application/json",
+//         },
+//       }
+//     );
 
-    const payments = response.data.payments;
-    res.json(payments);
-  } catch (error) {
-    console.error(error);
-    res.status(500).send("Error retrieving payments");
-  }
-});
+//     const payments = response.data.payments;
+//     res.json(payments);
+//   } catch (error) {
+//     console.error(error);
+//     res.status(500).send("Error retrieving payments");
+//   }
+// });
 
 // Get all customers
-app.get("/api/customer", async (req, res) => {
-  const accessToken = req.session.accessToken;
+// app.get("/api/customer", async (req, res) => {
+//   const accessToken = req.session.accessToken;
 
-  try {
-    const customers = await readCustomer.listCustomers();
-    res.json(customers);
-  } catch (error) {
-    console.error(error);
-    res.status(500).send("Error retrieving customers");
-  }
-});
+//   try {
+//     const customers = await readCustomer.listCustomers();
+//     res.json(customers);
+//   } catch (error) {
+//     console.error(error);
+//     res.status(500).send("Error retrieving customers");
+//   }
+// });
 
 // Get a access token to show all customers
-async function listCustomers(accessToken) {
-  const response = await axios.get(
-    "https://connect.squareup.com/v2/customers",
-    {
-      headers: {
-        Authorization: `Bearer ${accessToken}`,
-        Accept: "application/json",
-      },
-    }
-  );
+// async function listCustomers(accessToken) {
+//   const response = await axios.get(
+//     "https://connect.squareup.com/v2/customers",
+//     {
+//       headers: {
+//         Authorization: `Bearer ${accessToken}`,
+//         Accept: "application/json",
+//       },
+//     }
+//   );
 
-  return response.data;
-}
+//   return response.data;
+// }
 
 app.post("/send-email", async (req, res) => {
   const {
