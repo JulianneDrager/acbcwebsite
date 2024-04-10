@@ -59,6 +59,10 @@ app.use(
   })
 );
 
+//routes
+const registerRouter = require("./routes/EventRouter.js");
+app.use("/api", registerRouter);
+
 //server route
 app.get("/", (req, res) => {
   res.json({ message: "Hello world" });
