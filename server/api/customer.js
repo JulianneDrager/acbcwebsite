@@ -5,7 +5,7 @@ const { Client, Environment } = require("square");
 
 // access token
 const squareClient = new Client({
-  environment: Environment.Sandbox,
+  environment: Environment.Production,
   accessToken:
     // "EAAAlzLmagOIlzdzcT1uw7MDkkuL02e2bxHbLHDnu-V7B2w5etx5RxdwSjZ2zF5f",
     // "EAAAlwA6A91QoTghE43RKpckU5YuNsw6bjsUyP2hbbvDFOcSwxE26cV4XWMd74D1",
