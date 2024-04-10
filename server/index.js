@@ -48,6 +48,29 @@ app.use(
 
 app.post("/api/pay", pay.handlePayment);
 
+// Get all payments
+app.get("/api/payments", async (req, res) => {
+  const accessToken = req.session.accessToken;
+
+  try {
+    const response = await axios.get(
+      `https://connect.squareup.com/v2/payments?customer_id=${customerId}`,
+      {
+        headers: {
+          Authorization: `Bearer ${accessToken}`,
+          Accept: "application/json",
+        },
+      }
+    );
+
+    const payments = response.data.payments;
+    res.json(payments);
+  } catch (error) {
+    console.error(error);
+    res.status(500).send("Error retrieving payments");
+  }
+});
+
 // Get all customers
 app.get("/api/customer", async (req, res) => {
   const accessToken = req.session.accessToken;
