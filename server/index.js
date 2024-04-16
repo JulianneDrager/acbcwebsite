@@ -30,7 +30,9 @@ app.use(
 
 //routes
 const registerRouter = require("./routes/EventRouter.js");
+const extractEmailsRouter = require("./routes/ExtractEmailsRouter.js");
 app.use("/api", registerRouter);
+app.use("/api", extractEmailsRouter);
 
 //server route
 app.get("/", (req, res) => {

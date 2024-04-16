@@ -7,6 +7,7 @@ const connectDB = async () => {
   try {
     const connect = await mongoose.connect(mongoURI);
     console.log(`MnogoDB connected: ${connect.connection.host}...`);
+    return connect; // Return the Mongoose connection  to make object available to other modules
   } catch (err) {
     console.error(`Error: ${err.message}`);
     console.error(err.stack);
