@@ -23,6 +23,7 @@ exports.createRegister = async (req, res) => {
     practiceAddress: req.body.practiceAddress,
     company: req.body.company,
     shirtSize: req.body.shirtSize,
+    type: req.body.type,
   });
 
   try {

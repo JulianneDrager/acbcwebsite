@@ -14,6 +14,7 @@ const { render } = require("@react-email/render");
 const { Email } = require("./dist/email.js");
 const { SubscribeEmail } = require("./dist/subscribemail.js");
 const { SponsorEmail } = require("./dist/sponsoremail.js");
+const { RegisterEmail } = require("./dist/registeremail.js");
 
 app.use(morgan("tiny"));
 const nodemailer = require("nodemailer");
@@ -46,11 +47,14 @@ app.post("/send-email", async (req, res) => {
     lastName,
     email,
     phone,
+    eventDropDown,
     address,
     address2,
     specialty,
+    practice,
     position,
     company,
+    shirtSize,
     message,
   } = req.body;
   console.log("FN", req.body.firstName);
@@ -102,6 +106,21 @@ app.post("/send-email", async (req, res) => {
       })
     );
 
+    const registerEmailHtml = render(
+      React.createElement(RegisterEmail, {
+        firstName: firstName,
+        lastName: lastName,
+        email: email,
+        phone: phone,
+        eventDropDown: eventDropDown,
+        specialty: specialty,
+        practice: practice,
+        address: address,
+        company: company,
+        shirtSize: shirtSize,
+      })
+    );
+
     const options = {
       from: "acbcemails@gmail.com",
       to: "acbcemails@gmail.com",
@@ -123,12 +142,21 @@ app.post("/send-email", async (req, res) => {
       html: sponsorEmailHtml,
     };
 
+    const registerOptions = {
+      from: "acbcemails@gmail.com",
+      to: "acbcemails@gmail.com",
+      subject: "Registrant Form from ACBC Website",
+      html: registerEmailHtml,
+    };
+
     if (type === "contact") {
       await smtpTransport.sendMail(options);
     } else if (type === "subscribe") {
       await smtpTransport.sendMail(subscribeOptions);
     } else if (type === "sponsor") {
       await smtpTransport.sendMail(sponsorOptions);
+    } else if (type === "register") {
+      await smtpTransport.sendMail(registerOptions);
     }
 
     res.json({ message: "Email sent!" });

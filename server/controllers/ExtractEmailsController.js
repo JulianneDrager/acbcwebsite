@@ -18,7 +18,7 @@ exports.extractEmails = async (req, res) => {
     fs.writeFileSync("emails.xlsx", xls, "binary");
 
     // Send a success response
-    res.json({ message: "Emails extracted successfully" });
+    res.json(users);
   } catch (err) {
     console.error(err);
     res.status(500).json({ message: "Server error" });

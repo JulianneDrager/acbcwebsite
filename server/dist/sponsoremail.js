@@ -1,15 +1,54 @@
 "use strict";
 
-function _typeof(o) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o; }, _typeof(o); }
+function _typeof(o) {
+  "@babel/helpers - typeof";
+  return (
+    (_typeof =
+      "function" == typeof Symbol && "symbol" == typeof Symbol.iterator
+        ? function (o) {
+            return typeof o;
+          }
+        : function (o) {
+            return o &&
+              "function" == typeof Symbol &&
+              o.constructor === Symbol &&
+              o !== Symbol.prototype
+              ? "symbol"
+              : typeof o;
+          }),
+    _typeof(o)
+  );
+}
 Object.defineProperty(exports, "__esModule", {
-  value: true
+  value: true,
 });
 exports["default"] = exports.SponsorEmail = void 0;
 var _components = require("@react-email/components");
 var React = _interopRequireWildcard(require("react"));
-function _getRequireWildcardCache(e) { if ("function" != typeof WeakMap) return null; var r = new WeakMap(), t = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(e) { return e ? t : r; })(e); }
-function _interopRequireWildcard(e, r) { if (!r && e && e.__esModule) return e; if (null === e || "object" != _typeof(e) && "function" != typeof e) return { "default": e }; var t = _getRequireWildcardCache(r); if (t && t.has(e)) return t.get(e); var n = { __proto__: null }, a = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var u in e) if ("default" !== u && {}.hasOwnProperty.call(e, u)) { var i = a ? Object.getOwnPropertyDescriptor(e, u) : null; i && (i.get || i.set) ? Object.defineProperty(n, u, i) : n[u] = e[u]; } return n["default"] = e, t && t.set(e, n), n; }
-var SponsorEmail = exports.SponsorEmail = function SponsorEmail(_ref) {
+function _getRequireWildcardCache(e) {
+  if ("function" != typeof WeakMap) return null;
+  var r = new WeakMap(),
+    t = new WeakMap();
+  return (_getRequireWildcardCache = function _getRequireWildcardCache(e) {
+    return e ? t : r;
+  })(e);
+}
+function _interopRequireWildcard(e, r) {
+  if (!r && e && e.__esModule) return e;
+  if (null === e || ("object" != _typeof(e) && "function" != typeof e))
+    return { default: e };
+  var t = _getRequireWildcardCache(r);
+  if (t && t.has(e)) return t.get(e);
+  var n = { __proto__: null },
+    a = Object.defineProperty && Object.getOwnPropertyDescriptor;
+  for (var u in e)
+    if ("default" !== u && {}.hasOwnProperty.call(e, u)) {
+      var i = a ? Object.getOwnPropertyDescriptor(e, u) : null;
+      i && (i.get || i.set) ? Object.defineProperty(n, u, i) : (n[u] = e[u]);
+    }
+  return (n["default"] = e), t && t.set(e, n), n;
+}
+var SponsorEmail = (exports.SponsorEmail = function SponsorEmail(_ref) {
   var firstName = _ref.firstName,
     lastName = _ref.lastName,
     email = _ref.email,
@@ -20,63 +59,156 @@ var SponsorEmail = exports.SponsorEmail = function SponsorEmail(_ref) {
     position = _ref.position,
     company = _ref.company,
     message = _ref.message;
-  return /*#__PURE__*/React.createElement(_components.Html, null, /*#__PURE__*/React.createElement(_components.Heading, {
-    style: acbcHeading
-  }, "ACBC Sponsor Request"), /*#__PURE__*/React.createElement(_components.Preview, null, "You have a new sponsor request"), /*#__PURE__*/React.createElement(_components.Body, {
-    style: main
-  }, /*#__PURE__*/React.createElement(_components.Container, {
-    style: container
-  }, /*#__PURE__*/React.createElement(_components.Section, {
-    style: box
-  }, /*#__PURE__*/React.createElement(_components.Hr, {
-    style: hr
-  }), /*#__PURE__*/React.createElement(_components.Text, {
-    style: paragraph
-  }, firstName, " ", lastName, " would like to subscribe to your email list."), /*#__PURE__*/React.createElement(_components.Text, {
-    style: paragraph
-  }, "Their email is: ", email), /*#__PURE__*/React.createElement(_components.Hr, {
-    style: hr
-  }), /*#__PURE__*/React.createElement(_components.Text, {
-    style: paragraph2
-  }, "Thier details are"), /*#__PURE__*/React.createElement(_components.Container, {
-    style: messageContainer
-  }, /*#__PURE__*/React.createElement(_components.Text, {
-    style: paragraph2
-  }, "Phone: ", phone ? phone : "No phone number was provided"), /*#__PURE__*/React.createElement(_components.Text, {
-    style: paragraph2
-  }, "Address: ", address ? address : "No address was provided"), /*#__PURE__*/React.createElement(_components.Text, {
-    style: paragraph2
-  }, " ", "Address2: ", address2 ? address : null), /*#__PURE__*/React.createElement(_components.Text, {
-    style: paragraph2
-  }, "Company Name: ", company ? company : "No company name was provided"), /*#__PURE__*/React.createElement(_components.Hr, {
-    style: hr
-  }), /*#__PURE__*/React.createElement(_components.Text, {
-    style: paragraph2
-  }, message ? message : "No message was provided")), /*#__PURE__*/React.createElement(_components.Text, {
-    style: paragraph
-  }, "\u2014 Access Bootcamp Website"), /*#__PURE__*/React.createElement(_components.Hr, {
-    style: hr
-  }), /*#__PURE__*/React.createElement(_components.Text, {
-    style: footer
-  }, "Data was taken from your Access Bootcamp Website, Sponsor contact form.")))));
-};
-var _default = exports["default"] = SponsorEmail;
+  return /*#__PURE__*/ React.createElement(
+    _components.Html,
+    null,
+    /*#__PURE__*/ React.createElement(
+      _components.Heading,
+      {
+        style: acbcHeading,
+      },
+      "ACBC Sponsor Request"
+    ),
+    /*#__PURE__*/ React.createElement(
+      _components.Preview,
+      null,
+      "You have a new sponsor request"
+    ),
+    /*#__PURE__*/ React.createElement(
+      _components.Body,
+      {
+        style: main,
+      },
+      /*#__PURE__*/ React.createElement(
+        _components.Container,
+        {
+          style: container,
+        },
+        /*#__PURE__*/ React.createElement(
+          _components.Section,
+          {
+            style: box,
+          },
+          /*#__PURE__*/ React.createElement(_components.Hr, {
+            style: hr,
+          }),
+          /*#__PURE__*/ React.createElement(
+            _components.Text,
+            {
+              style: paragraph,
+            },
+            firstName,
+            " ",
+            lastName,
+            " would like to subscribe to your email list."
+          ),
+          /*#__PURE__*/ React.createElement(
+            _components.Text,
+            {
+              style: paragraph,
+            },
+            "Their email is: ",
+            email
+          ),
+          /*#__PURE__*/ React.createElement(_components.Hr, {
+            style: hr,
+          }),
+          /*#__PURE__*/ React.createElement(
+            _components.Text,
+            {
+              style: paragraph2,
+            },
+            "Their details are"
+          ),
+          /*#__PURE__*/ React.createElement(
+            _components.Container,
+            {
+              style: messageContainer,
+            },
+            /*#__PURE__*/ React.createElement(
+              _components.Text,
+              {
+                style: paragraph2,
+              },
+              "Phone: ",
+              phone ? phone : "No phone number was provided"
+            ),
+            /*#__PURE__*/ React.createElement(
+              _components.Text,
+              {
+                style: paragraph2,
+              },
+              "Address: ",
+              address ? address : "No address was provided"
+            ),
+            /*#__PURE__*/ React.createElement(
+              _components.Text,
+              {
+                style: paragraph2,
+              },
+              " ",
+              "Address2: ",
+              address2 ? address : null
+            ),
+            /*#__PURE__*/ React.createElement(
+              _components.Text,
+              {
+                style: paragraph2,
+              },
+              "Company Name: ",
+              company ? company : "No company name was provided"
+            ),
+            /*#__PURE__*/ React.createElement(_components.Hr, {
+              style: hr,
+            }),
+            /*#__PURE__*/ React.createElement(
+              _components.Text,
+              {
+                style: paragraph2,
+              },
+              message ? message : "No message was provided"
+            )
+          ),
+          /*#__PURE__*/ React.createElement(
+            _components.Text,
+            {
+              style: paragraph,
+            },
+            "\u2014 Access Bootcamp Website"
+          ),
+          /*#__PURE__*/ React.createElement(_components.Hr, {
+            style: hr,
+          }),
+          /*#__PURE__*/ React.createElement(
+            _components.Text,
+            {
+              style: footer,
+            },
+            "Data was taken from your Access Bootcamp Website, Sponsor contact form."
+          )
+        )
+      )
+    )
+  );
+});
+var _default = (exports["default"] = SponsorEmail);
 var main = {
   backgroundColor: "#f6f9fc",
-  fontFamily: '-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Ubuntu,sans-serif'
+  fontFamily:
+    '-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Ubuntu,sans-serif',
 };
 var container = {
   backgroundColor: "#ffffff",
   margin: "0 auto",
   padding: "20px 0 48px",
-  marginBottom: "64px"
+  marginBottom: "64px",
 };
 var acbcHeading = {
   color: "black",
   fontSize: "24px",
   fontWeight: "bold",
   textAlign: "center",
-  margin: "0"
+  margin: "0",
 };
 var messageContainer = {
   backgroundColor: "#e4e2e2",
@@ -85,30 +217,30 @@ var messageContainer = {
   margin: "0 auto",
   padding: "4px",
   height: "20px",
-  fontStyle: "italic"
+  fontStyle: "italic",
 };
 var box = {
-  padding: "0 48px"
+  padding: "0 48px",
 };
 var hr = {
   borderColor: "#e6ebf1",
-  margin: "20px 0"
+  margin: "20px 0",
 };
 var paragraph = {
   color: "#525f7f",
   fontSize: "16px",
   lineHeight: "24px",
-  textAlign: "left"
+  textAlign: "left",
 };
 var paragraph2 = {
   color: "#525f7f",
   margin: "0",
   fontSize: "16px",
   lineHeight: "24px",
-  textAlign: "left"
+  textAlign: "left",
 };
 var anchor = {
-  color: "#556cd6"
+  color: "#556cd6",
 };
 var button = {
   backgroundColor: "#656ee8",
@@ -120,10 +252,10 @@ var button = {
   textAlign: "center",
   display: "block",
   width: "100%",
-  padding: "10px"
+  padding: "10px",
 };
 var footer = {
   color: "#8898aa",
   fontSize: "12px",
-  lineHeight: "16px"
+  lineHeight: "16px",
 };

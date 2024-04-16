@@ -13,6 +13,7 @@ const RegisterFormSchema = new mongoose.Schema({
   practiceAddress: { type: String, trim: true },
   company: { type: String, trim: true },
   shirtSize: { type: String, trim: true },
+  type: { type: String, trim: true },
 });
 
 module.exports = mongoose.model("registerForm", RegisterFormSchema);
