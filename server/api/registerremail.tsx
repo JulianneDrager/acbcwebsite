@@ -14,7 +14,7 @@ import {
 } from "@react-email/components";
 import * as React from "react";
 
-export const SubscribeEmail = ({
+export const RegisterEmail = ({
   firstName,
   lastName,
   email,
@@ -22,7 +22,7 @@ export const SubscribeEmail = ({
   eventDropDown,
   specialty,
   practice,
-  address,
+  practiceAddress,
   company,
   shirtSize,
 }) => (
@@ -33,7 +33,7 @@ export const SubscribeEmail = ({
       <Container style={container}>
         <Section style={box}>
           <Hr style={hr} />
-          <Text style={paragraph2}>Thier Register Information:</Text>
+          <Text style={paragraph2}>Their Register Information:</Text>
           <Container style={messageContainer}>
             <Text style={paragraph2}>Event: {eventDropDown}</Text>
             <Text style={paragraph}>
@@ -45,7 +45,8 @@ export const SubscribeEmail = ({
               Phone: {phone ? phone : "No phone number was provided"}
             </Text>
             <Text style={paragraph2}>
-              Address: {address ? address : "No address was provided"}
+              Address:{" "}
+              {practiceAddress ? practiceAddress : "No address was provided"}
             </Text>
             <Text style={paragraph2}>
               Specialty:
@@ -59,7 +60,7 @@ export const SubscribeEmail = ({
             </Text>
             <Hr style={hr} />
             <Text style={paragraph2}>
-              {shirtSize ? shirtSize : "No shirt size was provided"}
+              Shirt Size: {shirtSize ? shirtSize : "No shirt size was provided"}
             </Text>
           </Container>
           <Text style={paragraph}>— Access Bootcamp Website</Text>
@@ -74,7 +75,7 @@ export const SubscribeEmail = ({
   </Html>
 );
 
-export default SubscribeEmail;
+export default RegisterEmail;
 
 const main = {
   backgroundColor: "#f6f9fc",

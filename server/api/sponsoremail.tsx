@@ -34,7 +34,7 @@ export const SponsorEmail = ({
         <Section style={box}>
           <Hr style={hr} />
           <Text style={paragraph}>
-            {firstName} {lastName} would like to subscribe to your email list.
+            {firstName} {lastName} would like to become a sponsor.
           </Text>
           <Text style={paragraph}>Their email is: {email}</Text>
           <Hr style={hr} />

@@ -4,12 +4,12 @@ function _typeof(o) { "@babel/helpers - typeof"; return _typeof = "function" == 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports["default"] = exports.SubscribeEmail = void 0;
+exports["default"] = exports.RegisterEmail = void 0;
 var _components = require("@react-email/components");
 var React = _interopRequireWildcard(require("react"));
 function _getRequireWildcardCache(e) { if ("function" != typeof WeakMap) return null; var r = new WeakMap(), t = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(e) { return e ? t : r; })(e); }
 function _interopRequireWildcard(e, r) { if (!r && e && e.__esModule) return e; if (null === e || "object" != _typeof(e) && "function" != typeof e) return { "default": e }; var t = _getRequireWildcardCache(r); if (t && t.has(e)) return t.get(e); var n = { __proto__: null }, a = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var u in e) if ("default" !== u && {}.hasOwnProperty.call(e, u)) { var i = a ? Object.getOwnPropertyDescriptor(e, u) : null; i && (i.get || i.set) ? Object.defineProperty(n, u, i) : n[u] = e[u]; } return n["default"] = e, t && t.set(e, n), n; }
-var SubscribeEmail = exports.SubscribeEmail = function SubscribeEmail(_ref) {
+var RegisterEmail = exports.RegisterEmail = function RegisterEmail(_ref) {
   var firstName = _ref.firstName,
     lastName = _ref.lastName,
     email = _ref.email,
@@ -17,7 +17,7 @@ var SubscribeEmail = exports.SubscribeEmail = function SubscribeEmail(_ref) {
     eventDropDown = _ref.eventDropDown,
     specialty = _ref.specialty,
     practice = _ref.practice,
-    address = _ref.address,
+    practiceAddress = _ref.practiceAddress,
     company = _ref.company,
     shirtSize = _ref.shirtSize;
   return /*#__PURE__*/React.createElement(_components.Html, null, /*#__PURE__*/React.createElement(_components.Heading, {
@@ -32,7 +32,7 @@ var SubscribeEmail = exports.SubscribeEmail = function SubscribeEmail(_ref) {
     style: hr
   }), /*#__PURE__*/React.createElement(_components.Text, {
     style: paragraph2
-  }, "Thier Register Information:"), /*#__PURE__*/React.createElement(_components.Container, {
+  }, "Their Register Information:"), /*#__PURE__*/React.createElement(_components.Container, {
     style: messageContainer
   }, /*#__PURE__*/React.createElement(_components.Text, {
     style: paragraph2
@@ -44,7 +44,7 @@ var SubscribeEmail = exports.SubscribeEmail = function SubscribeEmail(_ref) {
     style: paragraph2
   }, "Phone: ", phone ? phone : "No phone number was provided"), /*#__PURE__*/React.createElement(_components.Text, {
     style: paragraph2
-  }, "Address: ", address ? address : "No address was provided"), /*#__PURE__*/React.createElement(_components.Text, {
+  }, "Address:", " ", practiceAddress ? practiceAddress : "No address was provided"), /*#__PURE__*/React.createElement(_components.Text, {
     style: paragraph2
   }, "Specialty:", specialty ? specialty : "No specialty field was number provided"), /*#__PURE__*/React.createElement(_components.Text, {
     style: paragraph2
@@ -54,7 +54,7 @@ var SubscribeEmail = exports.SubscribeEmail = function SubscribeEmail(_ref) {
     style: hr
   }), /*#__PURE__*/React.createElement(_components.Text, {
     style: paragraph2
-  }, shirtSize ? shirtSize : "No shirt size was provided")), /*#__PURE__*/React.createElement(_components.Text, {
+  }, "Shirt Size: ", shirtSize ? shirtSize : "No shirt size was provided")), /*#__PURE__*/React.createElement(_components.Text, {
     style: paragraph
   }, "\u2014 Access Bootcamp Website"), /*#__PURE__*/React.createElement(_components.Hr, {
     style: hr
@@ -62,7 +62,7 @@ var SubscribeEmail = exports.SubscribeEmail = function SubscribeEmail(_ref) {
     style: footer
   }, "Data was taken from your Access Bootcamp Website, Subscribe contact form.")))));
 };
-var _default = exports["default"] = SubscribeEmail;
+var _default = exports["default"] = RegisterEmail;
 var main = {
   backgroundColor: "#f6f9fc",
   fontFamily: '-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Ubuntu,sans-serif'

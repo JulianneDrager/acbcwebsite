@@ -49,6 +49,7 @@ app.post("/send-email", async (req, res) => {
     phone,
     eventDropDown,
     address,
+    practiceAddress,
     address2,
     specialty,
     practice,
@@ -57,7 +58,7 @@ app.post("/send-email", async (req, res) => {
     shirtSize,
     message,
   } = req.body;
-  console.log("FN", req.body.firstName);
+  console.log("FN", req.body.type);
 
   try {
     let smtpTransport = nodemailer.createTransport({
@@ -115,7 +116,7 @@ app.post("/send-email", async (req, res) => {
         eventDropDown: eventDropDown,
         specialty: specialty,
         practice: practice,
-        address: address,
+        practiceAddress: practiceAddress,
         company: company,
         shirtSize: shirtSize,
       })
