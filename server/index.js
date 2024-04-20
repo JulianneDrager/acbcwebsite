@@ -32,8 +32,10 @@ app.use(
 //routes
 const registerRouter = require("./routes/EventRouter.js");
 const extractEmailsRouter = require("./routes/ExtractEmailsRouter.js");
+const userRouter = require("./routes/UserRouter.js");
 app.use("/api", registerRouter);
 app.use("/api", extractEmailsRouter);
+app.use("/api", userRouter);
 
 //server route
 app.get("/", (req, res) => {
