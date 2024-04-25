@@ -22,33 +22,6 @@ const createUser = async (req, res) => {
   }
 };
 
-// Controller for authenticating a user
-const authenticateUser = async (req, res) => {
-  try {
-    const { username, password } = req.body;
-
-    // Find the user by username
-    const user = await User.findOne({ username });
-    if (!user) {
-      return res.status(404).json({ message: "User not found" });
-    }
-
-    // Check if the password is correct
-    const isPasswordValid = await user.comparePassword(password);
-    if (!isPasswordValid) {
-      return res.status(401).json({ message: "Invalid password" });
-    }
-
-    // Generate a token or perform any other authentication logic here
-
-    res.status(200).json({ message: "Authentication successful" });
-  } catch (error) {
-    console.error(error);
-    res.status(500).json({ message: "Server error" });
-  }
-};
-
 module.exports = {
   createUser,
-  authenticateUser,
 };
