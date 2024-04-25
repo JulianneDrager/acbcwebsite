@@ -16,8 +16,7 @@
 
 # Ignore .env file in api folder.
 /api/.env
-# Ignore db.js file in config folder.
-/config/db.js
+
 
 .env.local
 .env.development.local
