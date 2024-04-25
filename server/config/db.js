@@ -1,11 +1,9 @@
 const mongoose = require("mongoose");
 require("dotenv").config({ path: __dirname + "/../api/.env" });
 
-const MongoURIPath = process.env.DBSECERT;
-
 const connectDB = async () => {
-  const mongoURI = `mongodb+srv://${MongoURIPath}`;
-  console.log("test", MongoURIPath);
+  const mongoURI =
+    "mongodb+srv://Julianne:I7s0wyjdcog6pwma@acbc-database.xgrchue.mongodb.net/?retryWrites=true&w=majority&appName=acbc-database";
 
   try {
     const connect = await mongoose.connect(mongoURI);
