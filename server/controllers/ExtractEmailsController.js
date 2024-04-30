@@ -8,14 +8,17 @@ exports.extractEmails = async (req, res) => {
     const RegisterForm = mongoose.model("registerForm");
 
     // Query the database to retrieve the emails
-    const users = await RegisterForm.find({}, { email: 1, _id: 0 });
+    const users = await RegisterForm.find(
+      {},
+      { email: 1, _id: 0, firstName: 1, _id: 0, lastName: 1, _id: 0 }
+    );
 
     // Convert the results to Excel format
     const xls = json2xls(users.map((user) => user.toObject()));
     console.log("xls", users);
 
     // Write the data to a file
-    fs.writeFileSync("emails.xlsx", xls, "binary");
+    fs.writeFileSync("Registrant Emails.xlsx", xls, "binary");
 
     // Send a success response
     res.json(users);
