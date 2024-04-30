@@ -23,10 +23,17 @@ let smtpTransport = require("nodemailer-smtp-transport");
 app.use(jsonParser); // use it globally
 app.use(bodyParser.json()); // to support JSON-encoded bodies
 app.use(bodyParser.urlencoded({ extended: true })); // to support URL-encoded bodies
+
+var corsOptions = {
+  origin: "https://designinglory.com",
+  optionsSuccessStatus: 200, // some legacy browsers (IE11, various SmartTVs) choke on 204
+};
+
 app.use(
-  cors({
-    origin: "http://localhost:3000",
-  })
+  cors(corsOptions)
+  // cors({
+  //   origin: "http://localhost:3000",
+  // })
 );
 
 //routes
