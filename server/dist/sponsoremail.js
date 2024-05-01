@@ -46,7 +46,7 @@ var SponsorEmail = exports.SponsorEmail = function SponsorEmail(_ref) {
     style: paragraph2
   }, "Address: ", address ? address : "No address was provided"), /*#__PURE__*/React.createElement(_components.Text, {
     style: paragraph2
-  }, " ", "Address2: ", address2 ? address : null), /*#__PURE__*/React.createElement(_components.Text, {
+  }, " ", "Address2: ", address2 ? address2 : null), /*#__PURE__*/React.createElement(_components.Text, {
     style: paragraph2
   }, "Company Name: ", company ? company : "No company name was provided"), /*#__PURE__*/React.createElement(_components.Hr, {
     style: hr

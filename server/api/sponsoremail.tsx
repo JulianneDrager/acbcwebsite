@@ -48,7 +48,7 @@ export const SponsorEmail = ({
             </Text>
             <Text style={paragraph2}>
               {" "}
-              Address2: {address2 ? address : null}
+              Address2: {address2 ? address2 : null}
             </Text>
             <Text style={paragraph2}>
               Company Name: {company ? company : "No company name was provided"}
