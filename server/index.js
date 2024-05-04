@@ -25,7 +25,7 @@ app.use(bodyParser.json()); // to support JSON-encoded bodies
 app.use(bodyParser.urlencoded({ extended: true })); // to support URL-encoded bodies
 
 var corsOptions = {
-  origin: "https://designinglory.com",
+  origin: "https://accesscoordinatorbootcamp.net",
   optionsSuccessStatus: 200, // some legacy browsers (IE11, various SmartTVs) choke on 204
 };
 
