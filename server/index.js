@@ -10,7 +10,8 @@ require("dotenv").config();
 connectDB();
 
 require("dotenv").config({ path: "./api/.env" });
-const EMAILPW = process.env.EMAILPW;
+const PW = process.env.EMAILPW;
+console.log("PW:", PW);
 
 const React = require("react");
 const { render } = require("@react-email/render");
@@ -79,7 +80,7 @@ app.post("/send-email", async (req, res) => {
       secure: true, // use SSL
       auth: {
         user: "acbcemails@gmail.com",
-        pass: EMAILPW,
+        pass: PW,
       },
     });
 
