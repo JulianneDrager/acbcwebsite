@@ -15,7 +15,7 @@
 .DS_Store
 
 # Ignore .env file in api folder.
-#/api/.env
+/api/.env
 
 
 .env.local
