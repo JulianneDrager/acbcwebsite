@@ -5,19 +5,24 @@ import { Carousel } from "react-responsive-carousel";
 
 import PartnerStyles from "./PartnerStyles.module.css";
 
-import partnerGroup1 from "../../assets/mobile/partners/1.png";
-import partnerGroup2 from "../../assets/mobile/partners/2.png";
+// import partnerGroup1 from "../../assets/mobile/partners/1.png";
+// import partnerGroup2 from "../../assets/mobile/partners/2.png";
 
-import partner1 from "../../assets/desktop/partners/amgen.png";
-import partner2 from "../../assets/desktop/partners/bristol.png";
-import partner3 from "../../assets/desktop/partners/cvs.png";
-import partner4 from "../../assets/desktop/partners/gsk.png";
-import partner5 from "../../assets/desktop/partners/kroger.png";
-import partner6 from "../../assets/desktop/partners/lilly.png";
-import partner7 from "../../assets/desktop/partners/regeneron.png";
-import partner8 from "../../assets/desktop/partners/sands.png";
-import partner9 from "../../assets/desktop/partners/sun.png";
-
+import sponsor1 from "../../assets/images/sponsors/Abbvie-sm.png";
+import sponsor2 from "../../assets/images/sponsors/astrazeneca-sm.png";
+import sponsor3 from "../../assets/images/sponsors/BMS-sm.png";
+import sponsor4 from "../../assets/images/sponsors/Boehringer-sm.png";
+import sponsor5 from "../../assets/images/sponsors/Dermavant-sm.png";
+import sponsor6 from "../../assets/images/sponsors/Incyte-sm.png";
+import sponsor7 from "../../assets/images/sponsors/leo-sm.png";
+import sponsor8 from "../../assets/images/sponsors/Lilly-sm.png";
+import sponsor9 from "../../assets/images/sponsors/novartis-logo-sm.png";
+import sponsor10 from "../../assets/images/sponsors/Paragon-sm.png";
+import sponsor11 from "../../assets/images/sponsors/Pfizer-sm.png";
+import sponsor12 from "../../assets/images/sponsors/regeneron-sm.png";
+import sponsor13 from "../../assets/images/sponsors/RxNexus-sm.png";
+import sponsor14 from "../../assets/images/sponsors/sands-sm.png";
+import sponsor15 from "../../assets/images/sponsors/vivo-sm.png";
 import { Image } from "react-bootstrap";
 
 import useMediaQuery from "services/useMediaQuery";
@@ -35,6 +40,41 @@ const Partners = () => {
   const imgDesktop = PartnerStyles.imgDesktop;
   const img = PartnerStyles.img;
 
+  // links
+  const abbvie = "https://www.abbvie.com/";
+  const bms = "https://www.bms.com/";
+  const astrazeneca = "https://www.astrazeneca.com/";
+  const boehringer = "https://www.boehringer-ingelheim.com/";
+  const dermavant = "https://dermavant.com/";
+  const incyte = "https://www.incyte.com/";
+  const lilly = "https://www.lilly.com/";
+  const novartis = "https://www.novartis.com/";
+  const pfizer = "https://www.pfizer.com/";
+  const regeneron = "https://www.regeneron.com/";
+  const rxnexus = "https://www.rxnexus.com/";
+  const sandsrx = "https://www.sandsrx.com/";
+  const vivo = "https://vivoinfusion.com/";
+  const leo = "https://www.leo-pharma.com/";
+  const paragon = "https://www.paragonhealthcare.com/";
+
+  // links section
+  const linkSection = (
+    <>
+      {" "}
+      <i style={{ fontSize: ".7rem" }}>
+        <a href={abbvie}>Abbvie</a> | <a href={astrazeneca}>AstraZeneca</a> |{" "}
+        {""}
+        <a href={bms}>BMS</a> | <a href={boehringer}>boehringer</a> |{" "}
+        <a href={dermavant}>Dermavant</a> | <a href={incyte}>Incyte</a> |{" "}
+        <a href={lilly}> Lilly </a>| <a href={novartis}>Novartis</a> |{" "}
+        <a href={pfizer}>Pfizer</a> |<a href={regeneron}>Regeneron</a> |{" "}
+        <a href={rxnexus}>RxNexus | </a>
+        <a href={sandsrx}>SandsRX | </a>
+        <a href={vivo}>Vivo Infusion</a> | <a href={leo}>Leo pharma</a> |{" "}
+        <a href={paragon}>Paragon Healthcare</a>
+      </i>
+    </>
+  );
   return (
     <>
       <main className={mainContainer}>
@@ -47,7 +87,8 @@ const Partners = () => {
                     THANK YOU <br />
                   </h3>
                   <div className={logoDiv}>
-                    <h3>TO OUR PARTNERS</h3>
+                    <h3>TO OUR SPONSORS</h3>
+                    {linkSection}
                   </div>
                 </div>
                 <Carousel
@@ -62,10 +103,52 @@ const Partners = () => {
                   interval={1000}
                 >
                   <div className={img}>
-                    <Image src={partnerGroup1} />
+                    <Image src={sponsor1} />
                   </div>
                   <div className={img}>
-                    <Image src={partnerGroup2} />
+                    <Image src={sponsor2} />
+                  </div>
+                  <div className={img}>
+                    <Image src={sponsor2} />
+                  </div>
+                  <div className={img}>
+                    <Image src={sponsor3} />
+                  </div>
+                  <div className={img}>
+                    <Image src={sponsor4} />
+                  </div>
+                  <div className={img}>
+                    <Image src={sponsor5} />
+                  </div>
+                  <div className={img}>
+                    <Image src={sponsor6} />
+                  </div>
+                  <div className={img}>
+                    <Image src={sponsor7} />
+                  </div>
+                  <div className={img}>
+                    <Image src={sponsor8} />
+                  </div>
+                  <div className={img}>
+                    <Image src={sponsor9} />
+                  </div>
+                  <div className={img}>
+                    <Image src={sponsor10} />
+                  </div>
+                  <div className={img}>
+                    <Image src={sponsor11} />
+                  </div>
+                  <div className={img}>
+                    <Image src={sponsor12} />
+                  </div>
+                  <div className={img}>
+                    <Image src={sponsor13} />
+                  </div>
+                  <div className={img}>
+                    <Image src={sponsor14} />
+                  </div>
+                  <div className={img}>
+                    <Image src={sponsor15} />
                   </div>
                 </Carousel>
               </>
@@ -80,7 +163,8 @@ const Partners = () => {
                     <span
                       style={{ color: "var(--font-color-secondary-light)" }}
                     >
-                      TO OUR PARTNERS
+                      TO OUR PARTNERS <br />
+                      {linkSection}
                     </span>
                   </h3>
                 </div>
@@ -98,19 +182,29 @@ const Partners = () => {
                   centerMode={true}
                 >
                   <div className={imgDesktop}>
-                    <Image src={partner1} />
-                    <Image src={partner2} />
-                    <Image src={partner3} />
+                    <Image src={sponsor1} />
+                    <Image src={sponsor2} />
+                    <Image src={sponsor6} />
                   </div>
                   <div className={imgDesktop}>
-                    <Image src={partner4} />
-                    <Image src={partner5} />
-                    <Image src={partner6} />
+                    <Image src={sponsor8} />
+                    <Image src={sponsor4} />
+                    <Image src={sponsor12} />
                   </div>
                   <div className={imgDesktop}>
-                    <Image src={partner7} />
-                    <Image src={partner8} />
-                    <Image src={partner9} />
+                    <Image src={sponsor7} />
+                    <Image src={sponsor3} />
+                    <Image src={sponsor9} />
+                  </div>
+                  <div className={imgDesktop}>
+                    <Image src={sponsor10} />
+                    <Image src={sponsor14} />
+                    <Image src={sponsor15} />
+                  </div>
+                  <div className={imgDesktop}>
+                    <Image src={sponsor11} />
+                    <Image src={sponsor13} />
+                    <Image src={sponsor5} />
                   </div>
                 </Carousel>
               </>
@@ -125,20 +219,31 @@ const Partners = () => {
                     <span
                       style={{ color: "var(--font-color-secondary-light)" }}
                     >
-                      TO OUR PARTNERS
+                      TO OUR PARTNERS <br />
+                      {linkSection}
                     </span>
                   </h3>
                 </div>
                 <div className={imgDesktop}>
-                  <Image className={iconDesktopWidth} src={partner1} />
-                  <Image className={iconDesktopWidth} src={partner2} />
-                  <Image className={iconDesktopWidth} src={partner3} />
-                  <Image className={iconDesktopWidth} src={partner4} />
-                  <Image className={iconDesktopWidth} src={partner5} />
-                  <Image className={iconDesktopWidth} src={partner6} />
-                  <Image className={iconDesktopWidth} src={partner7} />
-                  <Image className={iconDesktopWidth} src={partner8} />
-                  <Image className={iconDesktopWidth} src={partner9} />
+                  <Image className={iconDesktopWidth} src={sponsor1} />
+                  <Image className={iconDesktopWidth} src={sponsor2} />
+                  <Image className={iconDesktopWidth} src={sponsor15} />
+                  <Image className={iconDesktopWidth} src={sponsor7} />
+                  <Image className={iconDesktopWidth} src={sponsor5} />
+                </div>
+                <div className={imgDesktop}>
+                  <Image className={iconDesktopWidth} src={sponsor6} />
+                  <Image className={iconDesktopWidth} src={sponsor4} />
+                  <Image className={iconDesktopWidth} src={sponsor8} />
+                  <Image className={iconDesktopWidth} src={sponsor9} />
+                  <Image className={iconDesktopWidth} src={sponsor10} />
+                </div>
+                <div className={imgDesktop}>
+                  <Image className={iconDesktopWidth} src={sponsor11} />
+                  <Image className={iconDesktopWidth} src={sponsor12} />
+                  <Image className={iconDesktopWidth} src={sponsor13} />
+                  <Image className={iconDesktopWidth} src={sponsor14} />
+                  <Image className={iconDesktopWidth} src={sponsor3} />
                 </div>
               </>
             )}

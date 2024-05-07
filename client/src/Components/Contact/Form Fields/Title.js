@@ -58,7 +58,7 @@ const Title = () => {
             <Link className={linkStyle} to="tel:4693733563">
               469-373-3563
             </Link>{" "}
-            | FAX:{" "}
+            OR:{" "}
             <Link className={linkStyle} to="4693733741">
               469-373-3741
             </Link>

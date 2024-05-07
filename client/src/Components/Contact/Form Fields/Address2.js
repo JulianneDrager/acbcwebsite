@@ -20,7 +20,6 @@ const Address2 = () => {
             onChange={(e) => setAddress2(e.target.value)}
             type="text"
             placeholder="ADDRESS LINE 2"
-            required
             minLength={3}
             maxLength={20}
           />

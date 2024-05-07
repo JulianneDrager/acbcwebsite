@@ -26,9 +26,9 @@ const About = (props) => {
   return (
     <>
       {!matchedDesktop && (
-        <main id="team" className={mainContainer}>
+        <main className={mainContainer}>
           <section className={contentContainer}>
-            <div className={introContainer}>
+            <div id="team" className={introContainer}>
               {/* Teamwork Teamwork Main Title ----------------------------------*/}
               <div className={titleContainer}>
                 <h3>

@@ -14,7 +14,7 @@
 .introContainer {
     width: 90%;
     margin: 15px 0 25px 0;
-    padding: 0 0 38px 0;
+    padding: 0 .5rem 38px .5rem;
 
     background: rgb(255, 255, 255);
     background: linear-gradient(1250deg, rgba(255, 255, 255, 1) 0%, rgb(255 255 255 / 79%) 25%, rgba(255, 255, 255, 0) 100%, rgba(9, 9, 121, 0) 100%);

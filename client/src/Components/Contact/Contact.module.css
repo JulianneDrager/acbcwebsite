@@ -15,7 +15,7 @@
     margin-top: 2vw;
     padding: 2.5vw 0 2.5vw 2vw;
     font-size: 4vw;
-    color: black;
+    color: black !important;
     border-radius: .2rem;
 }
 
@@ -31,14 +31,14 @@
 .resume::placeholder,
 .reason::placeholder,
 .desktopResume::placeholder {
-    color: black;
+    color: black !important;
 }
 
 .emailContact::placeholder,
 .nameContact::placeholder,
 .phoneContact::placeholder,
 .messageContact::placeholder {
-    color: black;
+    color: black !important;
 }
 
 .nameDiv {
@@ -115,22 +115,50 @@
     font-size: 8vw;
 }
 
-.linkStyle {
+.linkStyle,
+.linkStyleFooter {
     color: #6e737d;
     text-decoration: none;
     font-size: 3.5vw;
+}
+
+.linkStyleFooter {
+    color: rgb(50, 50, 50);
+    font-weight: bold;
 }
 
 .linkStyle:hover {
     color: var(--color-primary);
 }
 
-.icon {
+.linkStyleFooter:hover {
+    color: white;
+}
+
+.icon,
+.iconFooter {
     width: 7vw
 }
 
+.icon:hover {
+    filter: invert(.55);
+    cursor: pointer;
+}
+
+.iconFooter {
+    padding-top: .2rem;
+    width: 10vw;
+    filter: invert(1);
+    cursor: pointer;
+}
+
+.iconFooter:hover {
+    filter: invert(0);
+}
+
 .contactWrapper,
-.contactWrapperBottom {
+.contactWrapperBottom,
+.contactWrapperBottomFooter {
     display: flex;
     text-align: left;
     font-size: 2.99vw;
@@ -138,7 +166,8 @@
     letter-spacing: -.08vw;
 }
 
-.contactWrapperBottom {
+.contactWrapperBottom,
+.contactWrapperBottomFooter {
     display: block;
 }
 
@@ -148,10 +177,26 @@
 
 .addressText,
 .hoursText,
-.socialSection {
+.socialSection,
+.socialSectionFooter,
+.addressTextFooter,
+.hoursTextFooter {
     width: 28vw;
     border-right: solid 2px var(--color-gold-orange);
     margin: 0 1.5vw 0 0;
+}
+
+.socialSectionFooter {
+    width: 100%;
+    border-right: none;
+    text-align: center;
+
+}
+
+.addressTextFooter,
+.hoursTextFooter {
+    width: 100%;
+    border-right: solid 2px black
 }
 
 .hoursText {
@@ -389,23 +434,34 @@
         margin: .5rem 0;
     }
 
-    .contactWrapperDesktop {
+    .contactWrapperDesktop,
+    .contactWrapperDesktopFooter {
         display: flex;
         flex-direction: row-reverse;
         margin: 0 0 2vw 2vw;
     }
 
-    .contactWrapper, .contactWrapperBottom {
+    .contactWrapperDesktopFooter {
+        margin: 0 0 0 0;
+        width: 86vw;
+    }
+
+    .contactWrapper, .contactWrapperBottom, .contactWrapperBottomFooter {
         font-size: 13.8px;
         margin-bottom: .5rem;
         color: #e7f4ff;
         letter-spacing: -.2px;
     }
 
-    .contactWrapperBottom {
+    .contactWrapperBottom, .contactWrapperBottomFooter {
         border-right: solid 2px var(--color-gold-orange);
         margin: 0 1.5vw 0 0;
         width: 36vw;
+    }
+
+    .contactWrapperBottomFooter {
+        text-align: left;
+        border-right: 2px solid black;
     }
 
     .brTag {
@@ -420,6 +476,10 @@
         width: 13.8vw;
     }
 
+    .hoursTextFooter {
+        width: 216%;
+    }
+
     .socialSection {
         width: 12vw;
         text-align: left;
@@ -431,9 +491,18 @@
         width: 5vw;
     }
 
+    .iconFooter {
+        width: 5vw;
+    }
+
     .linkStyle {
         color: white;
-        font-size: 1.8vw;
+        font-size: 13px;
+    }
+
+    .linkStyleFooter {
+        font-size: 13px;
+        color: #1d1d20;
     }
 
     .linkStyle:hover {
@@ -460,6 +529,10 @@
         font-size: 9vw;
     }
 
+    .addressTextFooter {
+        width: 216%;
+    }
+
     .formStyle {
         padding: 0 2vw 2.5vw 2vw;
         background: rgb(2 2 2 / 49%);
@@ -481,13 +554,14 @@
         padding: 1.5vw 0 1.5vw 1.5vw;
         font-size: 1.4vw;
         margin: .5rem 0;
+        color: black !important;
     }
 
     .emailContact::placeholder,
     .nameContact::placeholder,
     .phoneContact::placeholder,
     .messageContact::placeholder {
-        color: black;
+        color: black !important;
     }
 
     .nameContact,
@@ -503,7 +577,7 @@
 
     .checkForm {
         font-size: 1.8vw;
-        color: white;
+        color: black;
     }
 
     .btn,
@@ -516,7 +590,7 @@
     }
 
     .btnContact {
-        background-color: var(--color-secondary) !important;
+        background-color: white !important;
     }
 
     .btnContainer {
@@ -620,6 +694,22 @@
 
     .contactTitle {
         margin: 97px 0 64px 0;
+    }
+
+    .addressTextFooter,
+    .hoursTextFooter,
+    .socialSectionFooter {
+        font-size: 13px;
+        line-height: 15px;
+        width: 151px;
+    }
+
+    .contactWrapperDesktopFooter {
+        /* width: 953px; */
+    }
+
+    .socialSectionFooter {
+        text-align: left;
     }
 }
 

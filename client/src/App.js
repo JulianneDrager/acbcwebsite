@@ -10,6 +10,11 @@ import PaymentForm from "Components/Sqare/PaymentForm";
 import Admin from "Components/Admin/AdminMain";
 import Services from "Components/Terms/Services";
 import Privacy from "Components/Terms/Privacy";
+import RegisterForm from "Components/Contact/RegisterForm";
+import Login from "Components/Admin/Login";
+import ThankyouTexas from "Components/Thank You/ThankyouTexas";
+import CreateUser from "Components/Admin/CreateUser";
+import Agendas from "Components/Events/Agendas";
 
 function App() {
   return (
@@ -17,18 +22,30 @@ function App() {
       <ContactContextProvider>
         {/* <Suspense fallback={<div>Loading...</div>}></Suspense> */}
         <Routes>
-          <Route exact path="tmp/bootcamp" element={<Screen />} />
+          <Route exact path="/create-user" element={<CreateUser />} />
+          <Route exact path="" element={<Screen />} />
           <Route exact path="/sponsor" element={<ContactSponsor />} />
           <Route exact path="/subscribe" element={<ContactSubscribe />} />
-          <Route exact path="tmp/payment" element={<PaymentForm />} />
-          <Route exact path="tmp/bootcamp/admin" element={<Admin />} />
-          <Route exact path="tmp/bootcamp/services" element={<Services />} />
-          <Route exact path="tmp/bootcamp/privacy" element={<Privacy />} />
-
           <Route
             exact
-            path="tmp/thankyou/:name"
+            path="/event-details/grand-rapids-michigan-round-up-2024"
+            element={<RegisterForm />}
+          />
+          <Route exact path="/payment" element={<PaymentForm />} />
+          <Route exact path="/login" element={<Login />} />
+          <Route exact path="/admin" element={<Admin />} />
+          <Route exact path="/services" element={<Services />} />
+          <Route exact path="/privacy" element={<Privacy />} />
+          <Route exact path="/agendas" element={<Agendas />} />
+          <Route
+            exact
+            path="/thankyou/:firstName"
             element={<ThankyouGeneral />}
+          />
+          <Route
+            exact
+            path="/thankyou-texas/:firstName"
+            element={<ThankyouTexas />}
           />
         </Routes>
       </ContactContextProvider>

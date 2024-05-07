@@ -3,8 +3,8 @@
 .cardWrapper {
   padding: 1.3rem 1.3rem 3rem 1.3rem;
   border-radius: 0;
-  background-color: #cbcbcb;
-  background-image: url("../../assets/desktop/contact/background.jpg");
+  background-color: #000209;
+  /* background-image: url("../../assets/desktop/contact/background.jpg"); */
   background-size: cover;
   display: flex;
   justify-content: center;

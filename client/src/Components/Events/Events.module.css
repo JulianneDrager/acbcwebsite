@@ -109,9 +109,11 @@
     left: 58vw;
     top: 47vw;
     color: var(--color-gold);
+    display: none;
 }
 
-.registerBtn {
+.registerBtn,
+.registerBtn2 {
     width: 27%;
     border: 0;
     position: absolute;
@@ -122,11 +124,43 @@
     font-size: 4.2vw;
     font-family: var(--font-anton);
     left: 57.3vw;
-    top: 60.2vw;
+    top: 59.2vw;
     padding: 1vw 0;
 }
 
+.registerBtn2 {
+    top: 48.2vw;
+    padding: .8vw 0;
+    /* left: 57.3vw;
+    top: 42.2vw;
+    background: none;
+    font-family: 'Fontspring-DEMO-proximanovacond-regular';
+    color: white;
+    text-decoration: underline; */
+}
+
+.pastAgendasLink {
+    color: white;
+    text-decoration: underline;
+    font-size: 3.5vw;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: right;
+    padding: .5rem
+}
+
+.pastAgendasLink:hover {
+    color: var(--color-gold-orange);
+}
+
 .registerBtn:hover {
+    background-color: var(--color-gold-orange);
+    color: black;
+}
+
+.registerBtn2:hover {
     background-color: var(--color-gold-orange);
     color: black;
 }
@@ -246,7 +280,7 @@
     }
 
     .registerButtonDiv {
-        height: 52vw;
+        height: 58vw;
     }
 
     .registerToday {
@@ -309,12 +343,24 @@
     .registerText {
         position: absolute;
         left: 54vw;
-        top: 26vw;
+        top: 28vw;
     }
 
     .registerBtn {
         left: 53.3vw;
-        top: 38.2vw;
+        top: 40.2vw;
+    }
+
+    .registerBtn2 {
+        left: 53.3vw;
+        top: 30.2vw;
+        z-index: 7;
+    }
+
+    .pastAgendasLink {
+        font-size: 2vw;
+        padding: 0 1rem;
+        text-align: left;
     }
 }
 
@@ -380,6 +426,12 @@
         left: 29.9vw;
         font-size: 2.3vw;
         padding: .5vw 0;
+    }
+
+    .registerBtn2 {
+        left: 30vw;
+        top: 22.2vw;
+        font-size: 2.3vw;
     }
 
     .readMoreButton {
@@ -475,15 +527,26 @@
         font-size: 58.2022px;
         line-height: 267.22px;
         letter-spacing: -1.366px;
-        top: 171.23px;
+        top: 198.23px;
     }
 
     .registerBtn {
-        top: 336.232px;
+        top: 357.232px;
         left: 357.634px;
         font-size: 27.418px;
         padding: 6.83px 0;
+    }
 
+    .registerBtn2 {
+        left: 358.634px;
+        top: 282.232px;
+        font-size: 27.418px;
+        padding: 6.83px 0;
+    }
+
+    .pastAgendasLink {
+        font-size: 20.588px;
+        padding: 29.66px;
     }
 
 }

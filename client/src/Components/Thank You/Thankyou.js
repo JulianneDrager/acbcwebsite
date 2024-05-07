@@ -3,47 +3,53 @@ import { Button } from "react-bootstrap";
 import ThankyouStyle from "./Thankyou.module.css";
 import Wrapper from "./Wrapper";
 
-const ThankyouGeneral = () => {
-  const { name, firstnameprop } = useParams();
-  //   console.log(name);
-  const cardWrapper = ThankyouStyle.cardWrapper;
-  const innerCardWrapper = ThankyouStyle.innerCardWrapper;
-  const cardBody = ThankyouStyle.cardBody;
+import { Card } from "react-bootstrap";
+import ContactStyle from "../Contact/Contact.module.css";
+
+const ThankyouGeneral = ({ sendEmailHandler }) => {
+  const { firstName } = useParams();
+
+  const formStyle = ContactStyle.formStyle;
+  const contact = ContactStyle.contact;
+  const contactTitle = ContactStyle.contactTitle;
+  const spanText = ContactStyle.spanText;
 
   return (
     <>
-      <Wrapper className="contactBody"></Wrapper>
+      <div className={contact}>
+        <Card
+          className={formStyle}
+          style={{ color: "white", textAlign: "center" }}
+        >
+          <p className={contactTitle}>
+            Thank <span className={spanText}>You </span>
+          </p>
+          <h1>
+            Hello
+            <b> {firstName},</b>
+          </h1>
+          <p>
+            Thank you for your submission. We will contact you shortly! <br />
+            --Access Coordinator Bootcamp Team
+            <br />
+          </p>
 
-      <Wrapper className={cardWrapper}>
-        <Wrapper className={innerCardWrapper}>
-          <Wrapper className={cardBody}>
-            <h1>
-              Hello{" "}
-              <b>
-                {name}
-                {firstnameprop}
-              </b>
-            </h1>
-            <h2>
-              Thank you for contacting BioMazze. We will get back to you
-              shortly!
-              <br />
-            </h2>
-
+          <div style={{ textAlign: "center" }}>
             <Button
               style={{
                 marginTop: "1rem",
-                background: "none",
+                background: "#d4ba66",
                 border: "none",
                 color: "black",
+                width: "50%",
               }}
               href="/"
             >
-              Back to Website
+              BACK TO WEBSITE
             </Button>
-          </Wrapper>
-        </Wrapper>
-      </Wrapper>
+          </div>
+        </Card>
+      </div>
     </>
   );
 };

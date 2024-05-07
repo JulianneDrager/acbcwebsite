@@ -140,7 +140,7 @@ const Contact = ({ sendEmailHandler }) => {
                   <div
                     style={{
                       padding: "1rem",
-                      backgroundColor: "#5a6f8ea1",
+                      backgroundColor: "#5a6f8ed9",
                       margin: "1rem 0",
                       borderRadius: ".3rem",
                     }}

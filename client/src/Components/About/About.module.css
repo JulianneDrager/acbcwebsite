@@ -243,6 +243,7 @@
 
     .headShotWrapper {
         display: flex;
+        justify-content: center;
     }
 
     .bioTextSection {

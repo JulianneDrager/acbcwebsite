@@ -1,71 +1,145 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import AdminStyle from "./Admin.module.css";
+import { InputGroup, Form, Col, Button } from "react-bootstrap";
 
-const Search = ({
-  listCustomers,
-  searchTerm,
-  setSearchTerm,
-  setFilteredCustomers,
-  extractCompany,
-}) => {
-  const [company, setCompany] = useState(false);
+const Search = ({ data, setFilteredCustomers, setData }) => {
+  const formSearchBar = AdminStyle.formSearchBar;
+  const buttonSearch = AdminStyle.buttonSearch;
+  const buttonReset = AdminStyle.buttonReset;
+  const formSearch = AdminStyle.formSearch;
+  const linkStyle = AdminStyle.linkStyle;
+  const linkStyle2 = AdminStyle.linkStyle2;
+
+  const [isPractice, setIsPractice] = useState(false);
+  const [isEvent, setIsEvent] = useState(false);
+  const [searchTerm, setSearchTerm] = useState("");
   const [name, setName] = useState(false);
 
   const handleSearch = (event) => {
     setSearchTerm(event.target.value);
   };
 
+  //filtering the data by practice
   const handleButtonClick = (customer) => {
     // Perform the search when the button is clicked
-    const newFilteredCustomers = listCustomers.filter((customer) => {
-      if (company) {
+    const newFilteredCustomers = data.filter((customer) => {
+      if (isPractice) {
         // Filter by company name
-        const companyName = extractCompany(customer.note);
-        return (
-          companyName &&
-          companyName.toLowerCase().includes(searchTerm.toLowerCase())
-        );
-      } else {
+        console.log("companyName", customer.practice);
+        return customer.practice
+          .toLowerCase()
+          .includes(searchTerm.toLowerCase());
+      } else if (isEvent) {
+        // Filter by event
+        console.log("eventName", customer.eventDropDown);
+        return customer.eventDropDown
+          .toLowerCase()
+          .includes(searchTerm.toLowerCase());
+      } else if (name) {
         // Filter by given name
-        return customer.givenName
+        console.log("firstName", customer.firstName);
+        return customer.firstName
           .toLowerCase()
           .includes(searchTerm.toLowerCase());
       }
     });
-    setFilteredCustomers(newFilteredCustomers);
+    setData(newFilteredCustomers);
+  };
+
+  // const testHndle = () => {
+  //   const newFilteredCustomers = data.filter((customer) => {
+  //     // console.log("companyName", customer.practice);
+  //     return customer.practice.toLowerCase().includes(searchTerm.toLowerCase());
+  //   });
+  //   console.log("newFilteredCustomers", newFilteredCustomers);
+  //   setData(newFilteredCustomers);
+  // };
+
+  const resetSearch = () => {
+    window.location.reload();
   };
 
   return (
     <>
-      <div style={{ padding: "2rem" }}>
+      <div style={{ padding: ".5rem", color: "white" }}>
+        <h6 style={{ fontSize: "smaller", fontWeight: "normal" }}>
+          Please choose your search criteria below
+        </h6>
         {name && (
-          <div>
-            <input
-              type="search"
-              placeholder="Search By Name"
-              value={searchTerm}
-              onChange={handleSearch}
-            />
-            <button onClick={handleButtonClick}>SEARCH</button>
+          <div className={formSearch}>
+            <Form.Group as={Col}>
+              <InputGroup>
+                <Form.Control
+                  className={formSearchBar}
+                  type="search"
+                  placeholder="Search By Name"
+                  value={searchTerm}
+                  onChange={handleSearch}
+                />
+              </InputGroup>{" "}
+            </Form.Group>
+
+            <Button className={buttonSearch} onClick={handleButtonClick}>
+              <span class="material-symbols-outlined">search</span>
+            </Button>
+            <Button className={buttonReset} onClick={resetSearch}>
+              Reset
+            </Button>
           </div>
         )}
-        {company && (
-          <div>
-            <input
-              type="search"
-              placeholder="Search By Company"
-              value={searchTerm}
-              onChange={handleSearch}
-              style={{ backgroundColor: "lightgrey" }}
-            />
-            <button onClick={handleButtonClick}>SEARCH</button>
+        {isPractice && (
+          <div div className={formSearch}>
+            <Form.Group as={Col}>
+              <InputGroup>
+                <Form.Control
+                  className={formSearchBar}
+                  type="search"
+                  placeholder="Search By Practice"
+                  value={searchTerm}
+                  onChange={handleSearch}
+                  style={{ backgroundColor: "lightgrey" }}
+                />
+              </InputGroup>
+            </Form.Group>
+
+            <Button className={buttonSearch} onClick={handleButtonClick}>
+              <span class="material-symbols-outlined">search</span>
+            </Button>
+            <Button className={buttonReset} onClick={resetSearch}>
+              Reset
+            </Button>
+          </div>
+        )}
+        {isEvent && (
+          <div div className={formSearch}>
+            <Form.Group as={Col}>
+              <InputGroup>
+                <Form.Control
+                  className={formSearchBar}
+                  type="search"
+                  placeholder="Search By Event"
+                  value={searchTerm}
+                  onChange={handleSearch}
+                  style={{ backgroundColor: "lightgrey" }}
+                />
+              </InputGroup>
+            </Form.Group>
+
+            <Button className={buttonSearch} onClick={handleButtonClick}>
+              <span class="material-symbols-outlined">search</span>
+            </Button>
+            <Button className={buttonReset} onClick={resetSearch}>
+              Reset
+            </Button>
           </div>
         )}
 
         <Link
-          style={{ fontSize: "smaller", textDecoration: "none" }}
+          className={linkStyle}
           onClick={() => {
-            setCompany(false);
+            setIsPractice(false);
+            setIsEvent(false);
             setName(true);
           }}
         >
@@ -73,15 +147,26 @@ const Search = ({
         </Link>
         <br />
         <Link
-          style={{ fontSize: "smaller", textDecoration: "none" }}
+          className={linkStyle2}
           onClick={() => {
             setName(false);
-            setCompany(true);
+            setIsEvent(false);
+            setIsPractice(true);
           }}
         >
-          SEARCH BY COMPANY
+          SEARCH BY PRACTICE
         </Link>
         <br />
+        <Link
+          className={linkStyle2}
+          onClick={() => {
+            setName(false);
+            setIsPractice(false);
+            setIsEvent(true);
+          }}
+        >
+          SEARCH BY EVENT
+        </Link>
       </div>
     </>
   );

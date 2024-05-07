@@ -81,7 +81,7 @@ const HeadShots = (props) => {
           {/* --------------------------------------------------------------*/}
 
           {/* Angela head shot  ----------------------------------------------------*/}
-          {HeadShotMap[5]}
+          {/* {HeadShotMap[5]} */}
           {/* --------------------------------------------------------------*/}
         </>
       </Accordion.Collapse>
@@ -135,9 +135,9 @@ const HeadShots = (props) => {
 
           {/* Brandis head shot  -----------------------------------------------------*/}
           <div className={headShotWrapper}>
+            <div className={headShotDiv}>{HeadShotMap[5]}</div>
             <div className={headShotDiv}>{HeadShotMap[6]}</div>
             <div className={headShotDiv}>{HeadShotMap[7]}</div>
-            <div className={headShotDiv}>{HeadShotMap[8]}</div>
           </div>
           {/* DIRECTORS Title  ------------------------------------------------------------ */}
 
@@ -147,6 +147,7 @@ const HeadShots = (props) => {
 
           {/* Tyler head shot  -----------------------------------------------------*/}
           <div className={headShotWrapper}>
+            <div className={headShotDiv}>{HeadShotMap[8]}</div>
             <div className={headShotDiv}>{HeadShotMap[9]}</div>
             <div className={headShotDiv}>{HeadShotMap[10]}</div>
             <div className={headShotDiv}>{HeadShotMap[11]}</div>
@@ -178,7 +179,7 @@ const HeadShots = (props) => {
           <div className={headShotWrapper}>
             <div className={headShotDiv}>{HeadShotMap[3]}</div>
             <div className={headShotDiv}>{HeadShotMap[4]}</div>
-            <div className={headShotDiv}>{HeadShotMap[5]}</div>
+            {/* <div className={headShotDiv}>{HeadShotMap[5]}</div> */}
           </div>
           {/* ------------------------------------------------------------- */}
         </main>

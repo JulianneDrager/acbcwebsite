@@ -1,6 +1,7 @@
 import React from "react";
 import EventsStyles from "../Events.module.css";
 import { Button, Image } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 const EventsCard = (props) => {
   const mainContainer = EventsStyles.mainContainer;
@@ -14,6 +15,8 @@ const EventsCard = (props) => {
   const detailsBody = EventsStyles.detailsBody;
   const registerText = EventsStyles.registerText;
   const registerBtn = EventsStyles.registerBtn;
+  const registerBtn2 = EventsStyles.registerBtn2;
+  const pastAgendasLink = EventsStyles.pastAgendasLink;
 
   const lightGrey = { color: "var(--color-light-grey)" };
   const gold = { color: "var(--color-gold)" };
@@ -50,10 +53,23 @@ const EventsCard = (props) => {
               <span className={address}>
                 {props.address1} <br />
                 {props.address2}
+                <Button
+                  onClick={() => props.onClick()}
+                  className={registerBtn2}
+                >
+                  {props.btnTittle2}
+                </Button>
               </span>
             </div>
             <h1 className={registerText}>REGISTER</h1>
-            <Button className={registerBtn}>{props.btnTittle}</Button>
+
+            <Button href={props.href} className={registerBtn}>
+              {props.btnTittle}
+            </Button>
+
+            <Link className={pastAgendasLink} onClick={props.onClickLink}>
+              VIEW PAST AGENDAS
+            </Link>
           </div>
 
           {/* REGISTER BUTTON (MI) */}

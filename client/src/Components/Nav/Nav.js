@@ -16,13 +16,13 @@ const Navigation = () => {
               <Nav.Link href="/" style={{ color: "white" }}>
                 Home
               </Nav.Link>
-              <Nav.Link href="/#team" style={{ color: "white" }}>
+              <Nav.Link href="#team" style={{ color: "white" }}>
                 Meet The Team
               </Nav.Link>
-              <Nav.Link href="/#events" style={{ color: "white" }}>
+              <Nav.Link href="#events" style={{ color: "white" }}>
                 ACBC Conferences Events
               </Nav.Link>
-              <Nav.Link href="/#contact" style={{ color: "white" }}>
+              <Nav.Link href="#contact" style={{ color: "white" }}>
                 Contact
               </Nav.Link>
             </Nav>

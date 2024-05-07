@@ -1,8 +1,8 @@
 {
-  "name": "https://designinglory.com/tmp/bootcamp",
+  "name": "www.accesscoordinatorbootcamp.com",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://designinglory.com/tmp/bootcamp",
+  "homepage": "https://accesscoordinatorbootcamp.com",
   "dependencies": {
     "@azure/identity": "^4.0.0",
     "@emailjs/browser": "^3.11.0",
@@ -20,6 +20,7 @@
     "bootstrap": "^5.3.2",
     "emailjs": "^4.0.3",
     "express": "^4.18.2",
+    "file-saver": "^2.0.5",
     "isomorphic-fetch": "^3.0.0",
     "mui": "^0.0.1",
     "react": "^18.2.0",
@@ -30,9 +31,11 @@
     "react-router-dom": "^6.19.0",
     "react-scripts": "5.0.1",
     "react-square-web-payments-sdk": "^3.2.1",
+    "react-super-responsive-table": "^5.2.3",
     "readline-sync": "^1.4.10",
     "smoothscroll-polyfill": "^0.4.4",
-    "web-vitals": "^2.1.4"
+    "web-vitals": "^2.1.4",
+    "xlsx": "^0.18.5"
   },
   "scripts": {
     "start": "react-scripts start",

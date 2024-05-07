@@ -12,14 +12,14 @@ const dash = <span style={{ fontFamily: "Arial" }}>-</span>;
 const HeadshotData = [
   {
     id: 0,
-    title: "PRESIDENT",
+    title: "CEO & PRESIDENT",
     subTitle: "ACBC Founder: Brandis Boyd-Cooper, CMA/CDT",
     img: Brandis,
     alt: "ACBC Founder Brandis Boyd-Cooper, CMA/CDT",
     body: (
       <>
         Brandis is a Biologic Access Coordinator with over twenty years of
-        experience. Her specialty focuses have included immune dermatology with
+        experience. Her specialty focuses have included Immunodermatology with
         crossover training in rheumatology. Her diverse experience, knowledge,
         and profound passion have enabled her to teach others a proficient
         workflow for processing multiple variations of specialty medications
@@ -41,7 +41,7 @@ const HeadshotData = [
   },
   {
     id: 1,
-    title: "VICE PRESIDENT",
+    title: "CFO & VICE PRESIDENT",
     subTitle: "ACBC CO-FOunder: Keri Janicek-McCurry, LVN",
     img: Keri,
     alt: "Keri Janicek-McCurry, LVN",
@@ -142,44 +142,44 @@ const HeadshotData = [
       </>
     ),
   },
-  {
-    id: 5,
-    title: "ACBC Director",
-    subTitle: "Angela Lee, CMA/CDT",
-    img: Angela,
-    alt: "Angela Lee, CMA/CDT",
-    body: (
-      <>
-        Angela, is a biologic coordinator of a dermatology practice in Southeast
-        Michigan, and an Access Speaker for various pharmaceutical companies..
-        She has over 15 years of advanced experience in dermatology, and
-        specializes in the Buy and Bill process.She derives immense satisfaction
-        from educating and championing her patients and peers.
-      </>
-    ),
-    bodyExt: (
-      <>
-        Her diverse She holds the position of Chief Operating Officer at BC
-        Educators, and serves on the Board of Directors for ACBC. background and
-        impressive achievements highlight her dedication to the fields of
-        education and healthcare. As an esteemed access speaker for multiple
-        pharmaceutical companies, she brings valuable insights and expertise to
-        the industry.
-      </>
-    ),
-  },
+  // {
+  //   id: 5,
+  //   title: "ACBC Director",
+  //   subTitle: "Angela Lee, CMA/CDT",
+  //   img: Angela,
+  //   alt: "Angela Lee, CMA/CDT",
+  //   body: (
+  //     <>
+  //       Angela, is a biologic coordinator of a dermatology practice in Southeast
+  //       Michigan, and an Access Speaker for various pharmaceutical companies..
+  //       She has over 15 years of advanced experience in dermatology, and
+  //       specializes in the Buy and Bill process.She derives immense satisfaction
+  //       from educating and championing her patients and peers.
+  //     </>
+  //   ),
+  //   bodyExt: (
+  //     <>
+  //       Her diverse She holds the position of Chief Operating Officer at BC
+  //       Educators, and serves on the Board of Directors for ACBC. background and
+  //       impressive achievements highlight her dedication to the fields of
+  //       education and healthcare. As an esteemed access speaker for multiple
+  //       pharmaceutical companies, she brings valuable insights and expertise to
+  //       the industry.
+  //     </>
+  //   ),
+  // },
 
   // FOR DESKTOP
   {
     id: 6,
-    title: "PRESIDENT",
+    title: "CEO & PRESIDENT",
     subTitle: "ACBC Founder: Brandis Boyd-Cooper, CMA/CDT",
     img: Brandis,
     alt: "Brandis Boyd-Cooper, CMA/CDT",
     body: (
       <>
         Brandis is a Biologic Access Coordinator with over twenty years of
-        experience. Her specialty focuses have included immune dermatology with
+        experience. Her specialty focuses have included Immunodermatology with
         crossover training in rheumatology. Her diverse experience, knowledge,
         and profound passion have enabled her to teach others a proficient
         workflow. With Brandis you learn how to process multiple variations of
@@ -201,7 +201,7 @@ const HeadshotData = [
   },
   {
     id: 7,
-    title: "VICE PRESIDENT",
+    title: "CFO & VICE PRESIDENT",
     subTitle: "ACBC CO-Founder: Keri Janicek-McCurry, LVN",
     img: Keri,
     alt: "Keri Janicek-McCurry, LVN",
@@ -276,32 +276,32 @@ const HeadshotData = [
       </>
     ),
   },
-  {
-    id: 10,
-    title: "ACBC Director",
-    subTitle: "Angela Lee, CMA/CDT",
-    img: Angela,
-    alt: "Angela Lee, CMA/CDT",
-    body: (
-      <>
-        Angela, is a biologic coordinator of a dermatology practice in Southeast
-        Michigan, and an Access Speaker for various pharmaceutical companies..
-        She has over 15 years of advanced experience in dermatology, and
-        specializes in the Buy and Bill process.She derives immense satisfaction
-        from educating and championing her patients and peers.Her diverse She
-        holds the position of Chief Operating Officer at BC Educators, and
-        serves on the Board of Directors for ACBC.
-      </>
-    ),
-    bodyExt: (
-      <>
-        background and impressive achievements highlight her dedication to the
-        fields of education and healthcare. As an esteemed access speaker for
-        multiple pharmaceutical companies, she brings valuable insights and
-        expertise to the industry.
-      </>
-    ),
-  },
+  // {
+  //   id: 10,
+  //   title: "ACBC Director",
+  //   subTitle: "Angela Lee, CMA/CDT",
+  //   img: Angela,
+  //   alt: "Angela Lee, CMA/CDT",
+  //   body: (
+  //     <>
+  //       Angela, is a biologic coordinator of a dermatology practice in Southeast
+  //       Michigan, and an Access Speaker for various pharmaceutical companies..
+  //       She has over 15 years of advanced experience in dermatology, and
+  //       specializes in the Buy and Bill process.She derives immense satisfaction
+  //       from educating and championing her patients and peers.Her diverse She
+  //       holds the position of Chief Operating Officer at BC Educators, and
+  //       serves on the Board of Directors for ACBC.
+  //     </>
+  //   ),
+  //   bodyExt: (
+  //     <>
+  //       background and impressive achievements highlight her dedication to the
+  //       fields of education and healthcare. As an esteemed access speaker for
+  //       multiple pharmaceutical companies, she brings valuable insights and
+  //       expertise to the industry.
+  //     </>
+  //   ),
+  // },
   {
     id: 11,
     title: "ACBC Director",
