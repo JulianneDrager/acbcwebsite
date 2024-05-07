@@ -5,10 +5,12 @@ const jsonParser = require("body-parser").json();
 const cors = require("cors");
 const morgan = require("morgan");
 const connectDB = require("./config/db");
-const EMAILPW = require("./api/.env");
 
 require("dotenv").config();
 connectDB();
+
+require("dotenv").config({ path: "./api/.env" });
+const EMAILPW = process.env.EMAILPW;
 
 const React = require("react");
 const { render } = require("@react-email/render");
