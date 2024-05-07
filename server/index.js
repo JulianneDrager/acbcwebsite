@@ -5,6 +5,7 @@ const jsonParser = require("body-parser").json();
 const cors = require("cors");
 const morgan = require("morgan");
 const connectDB = require("./config/db");
+const EMAILPW = require("api/.env");
 
 require("dotenv").config();
 connectDB();
@@ -76,7 +77,8 @@ app.post("/send-email", async (req, res) => {
       secure: true, // use SSL
       auth: {
         user: "acbcemails@gmail.com",
-        pass: "zzxytfohpoyvakyt",
+        // pass: "zzxytfohpoyvakyt",
+        pass: EMAILPW,
       },
     });
 
