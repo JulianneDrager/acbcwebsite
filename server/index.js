@@ -28,11 +28,13 @@ app.use(jsonParser); // use it globally
 app.use(bodyParser.json()); // to support JSON-encoded bodies
 app.use(bodyParser.urlencoded({ extended: true })); // to support URL-encoded bodies
 
-app.use(
-  cors({
-    origin: "*",
-  })
-);
+var corsOptions = {
+  origin:
+    "https://www.accesscoordinatorbootcamp.com, https://accesscoordinatorbootcamp.com, https://www.accesscoordinatorbootcamp.net, https://accesscoordinatorbootcamp.com,",
+  optionsSuccessStatus: 200, // some legacy browsers (IE11, various SmartTVs) choke on 204
+};
+
+app.use(cors(corsOptions));
 
 //routes
 const registerRouter = require("./routes/EventRouter.js");
