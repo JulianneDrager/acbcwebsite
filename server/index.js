@@ -29,8 +29,12 @@ app.use(bodyParser.json()); // to support JSON-encoded bodies
 app.use(bodyParser.urlencoded({ extended: true })); // to support URL-encoded bodies
 
 var corsOptions = {
-  origin:
-    "https://www.accesscoordinatorbootcamp.com, https://accesscoordinatorbootcamp.com, https://www.accesscoordinatorbootcamp.net, https://accesscoordinatorbootcamp.com,",
+  origin: [
+    "https://www.accesscoordinatorbootcamp.com", 
+    "https://accesscoordinatorbootcamp.com", 
+    "https://www.accesscoordinatorbootcamp.net", 
+    "https://accesscoordinatorbootcamp.com"
+  ],
   optionsSuccessStatus: 200, // some legacy browsers (IE11, various SmartTVs) choke on 204
 };
 
