@@ -34,14 +34,14 @@ export const RegisterEmailResponse = ({
     <Body style={main}>
       <Container style={container}>
         <Section style={box}>
-          <Hr style={hr} />
           <Text style={paragraph2}>
-            Thank you for registering for the 2024 Grand Rapids ACBC Round Up:
-            <br />
-            July 26, 2024 at 7:00 PM – July 28, 2024 at 12:00 PM Grand Rapids,
-            Amway Grand Plaza Hotel, 187 Monroe Ave NW, Grand Rapids, MI 49503,
-            USA Below please find your confirmation:
+            REGISTRATION CONFIRMATION: ACBC Grand Rapids Round Up 24':
+            <Hr style={hr} />
+            Details: July 26, 2024 7:00 PM – July 28, 2024 at 12:00 PM Location:
+            Grand Rapids, Amway Grand Plaza Hotel, <br />
+            187 Monroe Ave NW, Grand Rapids, MI 49503, USA
           </Text>
+          <br/>
           <Container style={messageContainer}>
             <Text style={paragraph2}>Event: {eventDropDown}</Text>
             <Text style={paragraph}>
@@ -66,10 +66,10 @@ export const RegisterEmailResponse = ({
             <Text style={paragraph2}>
               Company Name: {company ? company : "No company name was provided"}
             </Text>
-            <Hr style={hr} />
             <Text style={paragraph2}>
               Shirt Size: {shirtSize ? shirtSize : "No shirt size was provided"}
-            </Text>
+            </Text>{" "}
+            <Hr style={hr} />
           </Container>
 
           <Text style={paragraph2}>
