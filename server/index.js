@@ -35,6 +35,7 @@ var corsOptions = {
     "https://accesscoordinatorbootcamp.com", 
     "https://www.accesscoordinatorbootcamp.net", 
     "https://accesscoordinatorbootcamp.com"
+    "http://localhost:3000",
   ],
   optionsSuccessStatus: 200, // some legacy browsers (IE11, various SmartTVs) choke on 204
 };
@@ -148,7 +149,6 @@ app.post("/send-email", async (req, res) => {
         practiceAddress: practiceAddress,
         company: company,
         shirtSize: shirtSize,
-        type: type,
       })
     );
 
@@ -196,7 +196,6 @@ app.post("/send-email", async (req, res) => {
     } else if (type === "register") {
       await smtpTransport.sendMail(registerOptions);
     }
-
     await smtpTransport.sendMail(responseOptions);
 
     res.json({ message: "Email sent!" });
