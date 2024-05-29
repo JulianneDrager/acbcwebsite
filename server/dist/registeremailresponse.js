@@ -54,7 +54,9 @@ var RegisterEmail = exports.RegisterEmail = function RegisterEmail(_ref) {
     style: hr
   }), /*#__PURE__*/React.createElement(_components.Text, {
     style: paragraph2
-  }, "Shirt Size: ", shirtSize ? shirtSize : "No shirt size was provided")), /*#__PURE__*/React.createElement(_components.Text, {
+  }, "Shirt Size: ", shirtSize ? shirtSize : "No shirt size was provided"), /*#__PURE__*/React.createElement(_components.Text, {
+    style: paragraph2
+  }, "CLICK THE LINK TO REGISTER FOR YOUR HOTEL ROOM: https://book.passkey.com/event/50726023/owner/2529966/home")), /*#__PURE__*/React.createElement(_components.Text, {
     style: paragraph
   }, "\u2014 Access Bootcamp Website"), /*#__PURE__*/React.createElement(_components.Hr, {
     style: hr
