@@ -28,24 +28,23 @@ export const RegisterEmailResponse = ({
 }) => (
   <Html>
     <Heading style={acbcHeading}>
-      {eventDropDown} ACBC Registrant Responce
+      {eventDropDown} ACBC Registrant Response
     </Heading>
-    <Preview>You have a new {eventDropDown} ACBC Registrant Responce</Preview>
+    <Preview>You have a new {eventDropDown} ACBC Registrant Response</Preview>
     <Body style={main}>
       <Container style={container}>
         <Section style={box}>
           <Text style={paragraph2}>
-            REGISTRATION CONFIRMATION: ACBC Grand Rapids Round Up 24':
+            REGISTRATION CONFIRMATION: ACBC Grand Rapids Round Up'
             <Hr style={hr} />
             Details: July 26, 2024 7:00 PM – July 28, 2024 at 12:00 PM Location:
             Grand Rapids, Amway Grand Plaza Hotel, <br />
             187 Monroe Ave NW, Grand Rapids, MI 49503, USA
           </Text>
-          <br/>
+          <br />
           <Container style={messageContainer}>
-            <Text style={paragraph2}>Event: {eventDropDown}</Text>
             <Text style={paragraph}>
-              Registrant Inforamtion: First Name: {firstName} <br />
+              First Name: {firstName} <br />
               Last Name: {lastName}
             </Text>
             <Text style={paragraph2}>Email: {email}</Text>
@@ -69,11 +68,10 @@ export const RegisterEmailResponse = ({
             <Text style={paragraph2}>
               Shirt Size: {shirtSize ? shirtSize : "No shirt size was provided"}
             </Text>{" "}
-            <Hr style={hr} />
           </Container>
-
+          <br />
           <Text style={paragraph2}>
-            BOOK YOUR HOTEL ROOM BY CLICKING THE LINK BELOW:
+            BOOK YOUR HOTEL ROOM:
             <br />
             <a href="https://book.passkey.com/event/50726023/owner/2529966/home">
               GRAND RAPIDS HOTEL BOOKING{" "}
