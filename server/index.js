@@ -122,7 +122,7 @@ app.post("/send-email", async (req, res) => {
     );
 
     const registerEmailHtml = render(
-      React.createElement(RegisterEmailResponse, {
+      React.createElement(RegisterEmail, {
         firstName: firstName,
         lastName: lastName,
         email: email,
@@ -137,7 +137,7 @@ app.post("/send-email", async (req, res) => {
     );
 
         const registerEmailResponseHtml = render(
-      React.createElement(RegisterEmail, {
+      React.createElement(RegisterEmailResponse, {
         firstName: firstName,
         lastName: lastName,
         email: email,
