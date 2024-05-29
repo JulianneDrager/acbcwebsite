@@ -28,11 +28,11 @@ var RegisterEmailResponse = exports.RegisterEmailResponse = function RegisterEma
     style: container
   }, /*#__PURE__*/React.createElement(_components.Section, {
     style: box
-  }, /*#__PURE__*/React.createElement(_components.Hr, {
-    style: hr
-  }), /*#__PURE__*/React.createElement(_components.Text, {
+  }, /*#__PURE__*/React.createElement(_components.Text, {
     style: paragraph2
-  }, "Thank you for registering for the 2024 Grand Rapids ACBC Round Up:", /*#__PURE__*/React.createElement("br", null), "July 26, 2024 at 7:00 PM \u2013 July 28, 2024 at 12:00 PM Grand Rapids, Amway Grand Plaza Hotel, 187 Monroe Ave NW, Grand Rapids, MI 49503, USA Below please find your confirmation:"), /*#__PURE__*/React.createElement(_components.Container, {
+  }, "REGISTRATION CONFIRMATION: ACBC Grand Rapids Round Up 24':", /*#__PURE__*/React.createElement(_components.Hr, {
+    style: hr
+  }), "Details: July 26, 2024 7:00 PM \u2013 July 28, 2024 at 12:00 PM Location: Grand Rapids, Amway Grand Plaza Hotel, ", /*#__PURE__*/React.createElement("br", null), "187 Monroe Ave NW, Grand Rapids, MI 49503, USA"), /*#__PURE__*/React.createElement(_components.Container, {
     style: messageContainer
   }, /*#__PURE__*/React.createElement(_components.Text, {
     style: paragraph2
@@ -50,15 +50,15 @@ var RegisterEmailResponse = exports.RegisterEmailResponse = function RegisterEma
     style: paragraph2
   }, "Position: ", practice ? practice : "No practice field was provided"), /*#__PURE__*/React.createElement(_components.Text, {
     style: paragraph2
-  }, "Company Name: ", company ? company : "No company name was provided"), /*#__PURE__*/React.createElement(_components.Hr, {
-    style: hr
-  }), /*#__PURE__*/React.createElement(_components.Text, {
+  }, "Company Name: ", company ? company : "No company name was provided"), /*#__PURE__*/React.createElement(_components.Text, {
     style: paragraph2
-  }, "Shirt Size: ", shirtSize ? shirtSize : "No shirt size was provided"), /*#__PURE__*/React.createElement(_components.Text, {
+  }, "Shirt Size: ", shirtSize ? shirtSize : "No shirt size was provided"), " ", /*#__PURE__*/React.createElement(_components.Hr, {
+    style: hr
+  })), /*#__PURE__*/React.createElement(_components.Text, {
     style: paragraph2
   }, "BOOK YOUR HOTEL ROOM BY CLICKING THE LINK BELOW:", /*#__PURE__*/React.createElement("br", null), /*#__PURE__*/React.createElement("a", {
     href: "https://book.passkey.com/event/50726023/owner/2529966/home"
-  }, "GRAND RAPIDS HOTEL BOOKING", " "))), /*#__PURE__*/React.createElement(_components.Text, {
+  }, "GRAND RAPIDS HOTEL BOOKING", " ")), /*#__PURE__*/React.createElement(_components.Text, {
     style: paragraph
   }, "\u2014 Access Bootcamp Website"), /*#__PURE__*/React.createElement(_components.Hr, {
     style: hr
