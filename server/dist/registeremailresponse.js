@@ -4,12 +4,12 @@ function _typeof(o) { "@babel/helpers - typeof"; return _typeof = "function" == 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports["default"] = exports.RegisterEmail = void 0;
+exports["default"] = exports.RegisterEmailResponse = void 0;
 var _components = require("@react-email/components");
 var React = _interopRequireWildcard(require("react"));
 function _getRequireWildcardCache(e) { if ("function" != typeof WeakMap) return null; var r = new WeakMap(), t = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(e) { return e ? t : r; })(e); }
 function _interopRequireWildcard(e, r) { if (!r && e && e.__esModule) return e; if (null === e || "object" != _typeof(e) && "function" != typeof e) return { "default": e }; var t = _getRequireWildcardCache(r); if (t && t.has(e)) return t.get(e); var n = { __proto__: null }, a = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var u in e) if ("default" !== u && {}.hasOwnProperty.call(e, u)) { var i = a ? Object.getOwnPropertyDescriptor(e, u) : null; i && (i.get || i.set) ? Object.defineProperty(n, u, i) : n[u] = e[u]; } return n["default"] = e, t && t.set(e, n), n; }
-var RegisterEmail = exports.RegisterEmail = function RegisterEmail(_ref) {
+var RegisterEmailResponse = exports.RegisterEmailResponse = function RegisterEmailResponse(_ref) {
   var firstName = _ref.firstName,
     lastName = _ref.lastName,
     email = _ref.email,
@@ -56,7 +56,9 @@ var RegisterEmail = exports.RegisterEmail = function RegisterEmail(_ref) {
     style: paragraph2
   }, "Shirt Size: ", shirtSize ? shirtSize : "No shirt size was provided"), /*#__PURE__*/React.createElement(_components.Text, {
     style: paragraph2
-  }, "CLICK THE LINK TO REGISTER FOR YOUR HOTEL ROOM: https://book.passkey.com/event/50726023/owner/2529966/home")), /*#__PURE__*/React.createElement(_components.Text, {
+  }, "BOOK YOUR HOTEL ROOM BY CLICKING THE LINK BELOW:", /*#__PURE__*/React.createElement("br", null), /*#__PURE__*/React.createElement("a", {
+    href: "https://book.passkey.com/event/50726023/owner/2529966/home"
+  }, "GRAND RAPIDS HOTEL BOOKING", " "))), /*#__PURE__*/React.createElement(_components.Text, {
     style: paragraph
   }, "\u2014 Access Bootcamp Website"), /*#__PURE__*/React.createElement(_components.Hr, {
     style: hr
@@ -64,7 +66,7 @@ var RegisterEmail = exports.RegisterEmail = function RegisterEmail(_ref) {
     style: footer
   }, "Data was taken from your Access Bootcamp Website, Subscribe contact form.")))));
 };
-var _default = exports["default"] = RegisterEmail;
+var _default = exports["default"] = RegisterEmailResponse;
 var main = {
   backgroundColor: "#f6f9fc",
   fontFamily: '-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Ubuntu,sans-serif'
