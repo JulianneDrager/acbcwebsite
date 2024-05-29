@@ -186,8 +186,6 @@ app.post("/send-email", async (req, res) => {
       html: registerEmailResponseHtml,
     };
 
-        await smtpTransport.sendMail(responseOptions);
-
     if (type === "contact") {
       await smtpTransport.sendMail(options);
     } else if (type === "subscribe") {
@@ -196,9 +194,9 @@ app.post("/send-email", async (req, res) => {
       await smtpTransport.sendMail(sponsorOptions);
     } else if (type === "register") {
       await smtpTransport.sendMail(registerOptions);
-    } else if (type === "type") {
-      await smtpTransport.sendMail(responseOptions);
     }
+
+    await smtpTransport.sendMail(responseOptions);
 
     res.json({ message: "Email sent!" });
   } catch (error) {
