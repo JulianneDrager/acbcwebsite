@@ -148,6 +148,7 @@ app.post("/send-email", async (req, res) => {
         practiceAddress: practiceAddress,
         company: company,
         shirtSize: shirtSize,
+        type: type,
       })
     );
 
