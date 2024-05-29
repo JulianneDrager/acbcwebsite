@@ -70,6 +70,10 @@ export const RegisterEmail = ({
             <Text style={paragraph2}>
               Shirt Size: {shirtSize ? shirtSize : "No shirt size was provided"}
             </Text>
+              <Text style={paragraph2}>
+              CLICK THE LINK TO REGISTER FOR YOUR HOTEL ROOM:
+              https://book.passkey.com/event/50726023/owner/2529966/home
+            </Text>
           </Container>
           <Text style={paragraph}>— Access Bootcamp Website</Text>
           <Hr style={hr} />
