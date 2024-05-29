@@ -19,6 +19,7 @@ const { Email } = require("./dist/email.js");
 const { SubscribeEmail } = require("./dist/subscribemail.js");
 const { SponsorEmail } = require("./dist/sponsoremail.js");
 const { RegisterEmail } = require("./dist/registeremail.js");
+const { RegisterEmailResponse } = require("./dist/registeremailresponse.js");
 
 app.use(morgan("tiny"));
 const nodemailer = require("nodemailer");
@@ -135,6 +136,21 @@ app.post("/send-email", async (req, res) => {
       })
     );
 
+        const registerEmailResponseHtml = render(
+      React.createElement(RegisterEmail, {
+        firstName: firstName,
+        lastName: lastName,
+        email: email,
+        phone: phone,
+        eventDropDown: eventDropDown,
+        specialty: specialty,
+        practice: practice,
+        practiceAddress: practiceAddress,
+        company: company,
+        shirtSize: shirtSize,
+      })
+    );
+
     const options = {
       from: "acbcemails@gmail.com",
       to: "acbcemails@gmail.com",
@@ -162,6 +178,15 @@ app.post("/send-email", async (req, res) => {
       subject: "Registrant Form from ACBC Website",
       html: registerEmailHtml,
     };
+
+        const responseOptions = {
+      from: "acbcemails@gmail.com",
+      to: email,
+      subject: "Thank you for registering for the 2024 Grand Rapids Roundup",
+      html: registerEmailResponseHtml,
+    };
+
+        await smtpTransport.sendMail(responseOptions);
 
     if (type === "contact") {
       await smtpTransport.sendMail(options);
