@@ -26,7 +26,7 @@ export const ContactContextProvider = ({ children }) => {
   const [practiceAddress, setPracticeAddress] = useState("");
   const [company, setCompany] = useState("");
   const [message, setMessage] = useState("");
-  const [type, setType] = useState(""); // ["general", "sponsor", "subscribe"]
+  const [type, setType] = useState("type"); // ["general", "sponsor", "subscribe"]
   const [shirtSize, setShirtSize] = useState(""); // ["S", "M", "L", "XL", "XXL"
 
   // console.log("type", type);
