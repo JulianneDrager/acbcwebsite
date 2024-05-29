@@ -55,7 +55,7 @@ const FooterTitle = () => {
             <Link className={linkStyleFooter} to="tel:4693733563">
               469-373-3563
             </Link>{" "}
-            OR:{" "}
+            FAX:{" "}
             <Link className={linkStyleFooter} to="4693733741">
               469-373-3741
             </Link>
