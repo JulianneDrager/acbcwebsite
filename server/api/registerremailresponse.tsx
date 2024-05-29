@@ -14,7 +14,7 @@ import {
 } from "@react-email/components";
 import * as React from "react";
 
-export const RegisterEmail = ({
+export const RegisterEmailResponse = ({
   firstName,
   lastName,
   email,
@@ -70,11 +70,16 @@ export const RegisterEmail = ({
             <Text style={paragraph2}>
               Shirt Size: {shirtSize ? shirtSize : "No shirt size was provided"}
             </Text>
-              <Text style={paragraph2}>
-              CLICK THE LINK TO REGISTER FOR YOUR HOTEL ROOM:
-              https://book.passkey.com/event/50726023/owner/2529966/home
-            </Text>
           </Container>
+
+          <Text style={paragraph2}>
+            BOOK YOUR HOTEL ROOM BY CLICKING THE LINK BELOW:
+            <br />
+            <a href="https://book.passkey.com/event/50726023/owner/2529966/home">
+              GRAND RAPIDS HOTEL BOOKING{" "}
+            </a>
+          </Text>
+
           <Text style={paragraph}>— Access Bootcamp Website</Text>
           <Hr style={hr} />
           <Text style={footer}>
@@ -87,7 +92,7 @@ export const RegisterEmail = ({
   </Html>
 );
 
-export default RegisterEmail;
+export default RegisterEmailResponse;
 
 const main = {
   backgroundColor: "#f6f9fc",
