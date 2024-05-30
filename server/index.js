@@ -195,8 +195,9 @@ app.post("/send-email", async (req, res) => {
       await smtpTransport.sendMail(sponsorOptions);
     } else if (type === "register") {
       await smtpTransport.sendMail(registerOptions);
+       await smtpTransport.sendMail(responseOptions);
     }
-    await smtpTransport.sendMail(responseOptions);
+   
 
     res.json({ message: "Email sent!" });
   } catch (error) {
