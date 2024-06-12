@@ -10,7 +10,18 @@ exports.extractEmails = async (req, res) => {
     // Query the database to retrieve the emails
     const users = await RegisterForm.find(
       {},
-      { email: 1, _id: 0, firstName: 1, _id: 0, lastName: 1, _id: 0 }
+      {
+        fullName: { $concat: ["$firstName", " ", "$lastName"] },
+        email: 1,
+        eventDropDown: 1,
+        phone: 1,
+        specialty: 1,
+        practice: 1,
+        practiceAddress: 1,
+        address2: 1,
+        shirtSize: 1,
+        _id: 0,
+      }
     );
 
     // Convert the results to Excel format
@@ -27,13 +38,3 @@ exports.extractEmails = async (req, res) => {
     res.status(500).json({ message: "Server error" });
   }
 };
-
-// Get all Registers
-// exports.getAllRegisters = async (req, res) => {
-//     try {
-//       const Registers = await Register.find();
-//       res.json(Registers);
-//     } catch (error) {
-//       res.status(500).json({ message: error.message });
-//     }
-//   };
