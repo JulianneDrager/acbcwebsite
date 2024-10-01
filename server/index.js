@@ -6,7 +6,7 @@ const cors = require("cors");
 const morgan = require("morgan");
 const connectDB = require("./config/db");
 // added
-const { handlePayment } = require("./api/pay.js");
+const { handlePayment } = require("./pay");
 
 require("dotenv").config();
 connectDB();
