@@ -5,6 +5,8 @@ const jsonParser = require("body-parser").json();
 const cors = require("cors");
 const morgan = require("morgan");
 const connectDB = require("./config/db");
+// added
+const { handlePayment } = require("./api/pay.js");
 
 require("dotenv").config();
 connectDB();
@@ -31,10 +33,11 @@ app.use(bodyParser.urlencoded({ extended: true })); // to support URL-encoded bo
 
 var corsOptions = {
   origin: [
-    "https://www.accesscoordinatorbootcamp.com", 
-    "https://accesscoordinatorbootcamp.com", 
-    "https://www.accesscoordinatorbootcamp.net", 
+    "https://www.accesscoordinatorbootcamp.com",
     "https://accesscoordinatorbootcamp.com",
+    "https://www.accesscoordinatorbootcamp.net",
+    "https://accesscoordinatorbootcamp.com",
+    "http://accesscoordinatorbootcamp.com",
     "http://localhost:3000",
   ],
   optionsSuccessStatus: 200, // some legacy browsers (IE11, various SmartTVs) choke on 204
@@ -49,6 +52,9 @@ const userRouter = require("./routes/UserRouter.js");
 app.use("/api", registerRouter);
 app.use("/api", extractEmailsRouter);
 app.use("/api", userRouter);
+
+// added Payment route
+app.post("./api/pay.js", handlePayment);
 
 //server route
 app.get("/", (req, res) => {
@@ -73,7 +79,7 @@ app.post("/send-email", async (req, res) => {
     shirtSize,
     message,
   } = req.body;
-  console.log("FN", req.body.type);
+  console.log("TYPE", req.body.type);
 
   try {
     let smtpTransport = nodemailer.createTransport({
@@ -137,7 +143,9 @@ app.post("/send-email", async (req, res) => {
       })
     );
 
-        const registerEmailResponseHtml = render(
+    console.log("RegisterEmailResponse:", RegisterEmailResponse);
+
+    const registerEmailResponseHtml = render(
       React.createElement(RegisterEmailResponse, {
         firstName: firstName,
         lastName: lastName,
@@ -180,7 +188,7 @@ app.post("/send-email", async (req, res) => {
       html: registerEmailHtml,
     };
 
-        const responseOptions = {
+    const responseOptions = {
       from: "acbcemails@gmail.com",
       to: email,
       subject: "Thank you for registering for the 2024 Grand Rapids Roundup",
@@ -195,9 +203,8 @@ app.post("/send-email", async (req, res) => {
       await smtpTransport.sendMail(sponsorOptions);
     } else if (type === "register") {
       await smtpTransport.sendMail(registerOptions);
-       await smtpTransport.sendMail(responseOptions);
+      await smtpTransport.sendMail(responseOptions);
     }
-   
 
     res.json({ message: "Email sent!" });
   } catch (error) {
