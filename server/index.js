@@ -54,7 +54,7 @@ app.use("/api", extractEmailsRouter);
 app.use("/api", userRouter);
 
 // added Payment route
-app.post("./api/pay.js", handlePayment);
+app.post("./api/pay", handlePayment);
 
 //server route
 app.get("/", (req, res) => {
