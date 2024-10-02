@@ -23,7 +23,7 @@ const handlePayment = async (req, res) => {
   console.log("Received request"); // Log when a request is received
   if (req.method === "POST") {
     const requestBody = req.body;
-    console.log("Request body:", requestBody); // Log the request body
+    // console.log("Request body:", requestBody); // Log the request body
     try {
       const response = await client.paymentsApi.createPayment({
         idempotencyKey: uuidv4(),
@@ -34,9 +34,9 @@ const handlePayment = async (req, res) => {
           currency: "USD",
         },
       });
-      console.log("Payment response:", response); // Log the response from createPayment
+      // console.log("Payment response:", response); // Log the response from createPayment
       const { result } = response;
-      console.log("Payment result:", result); // Log the result from createPayment
+      // console.log("Payment result:", result); // Log the result from createPayment
       res.status(200).json(result);
     } catch (error) {
       console.error("Error creating payment:", error); // Log any errors
