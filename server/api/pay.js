@@ -3,7 +3,7 @@ require("dotenv").config();
 require("dotenv").config({ path: "./api/.env" });
 const SQUARE_ACCESS_TOKEN = process.env.SQUARE_ACCESS_TOKEN;
 
-console.log(SQUARE_ACCESS_TOKEN);
+// console.log(SQUARE_ACCESS_TOKEN);
 
 const { Client, Environment } = require("square");
 
@@ -30,16 +30,17 @@ const handlePayment = async (req, res) => {
         sourceId: req.body.sourceId,
         amountMoney: {
           // Amount in cents
-          amount: 1, // Amount in cents
+          amount: 2700, // Amount in cents
           currency: "USD",
         },
       });
-      console.log("Payment response:", response); // Log the response from createPayment
+      // console.log("Payment response:", response); // Log the response from createPayment
       const { result } = response;
-      console.log("Payment result:", result); // Log the result from createPayment
+      alert("Payment successful!");
+      // console.log("Payment result:", result); // Log the result from createPayment
       res.status(200).json(result);
     } catch (error) {
-      console.error("Error creating payment:", error); // Log any errors
+      // console.error("Error creating payment:", error); // Log any errors
       res.status(500).json({ error: error.message });
     }
   } else {

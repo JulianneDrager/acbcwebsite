@@ -13,7 +13,7 @@ connectDB();
 
 require("dotenv").config({ path: "./api/.env" });
 const PW = process.env.EMAILPW;
-console.log("PW:", PW);
+// console.log("PW:", PW);
 
 const React = require("react");
 const { render } = require("@react-email/render");
