@@ -34,13 +34,13 @@ const handlePayment = async (req, res) => {
           currency: "USD",
         },
       });
-      // console.log("Payment response:", response); // Log the response from createPayment
+      console.log("Payment response:", response); // Log the response from createPayment
       const { result } = response;
       alert("Payment successful!");
-      // console.log("Payment result:", result); // Log the result from createPayment
+      console.log("Payment result:", result); // Log the result from createPayment
       res.status(200).json(result);
     } catch (error) {
-      // console.error("Error creating payment:", error); // Log any errors
+      console.error("Error creating payment:", error); // Log any errors
       res.status(500).json({ error: error.message });
     }
   } else {

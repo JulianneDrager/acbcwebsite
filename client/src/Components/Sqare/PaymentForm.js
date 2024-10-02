@@ -31,7 +31,7 @@ const MyPaymentForm = () => {
 
             if (response.ok) {
               const data = await response.json();
-              // alert(JSON.stringify(data, null, 2));
+              alert(JSON.stringify(data, null, 2));
               navigate("/register"); // Navigate to the register page
             } else {
               console.error("Server response:", await response.text());
