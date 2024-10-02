@@ -36,7 +36,6 @@ const handlePayment = async (req, res) => {
       });
       console.log("Payment response:", response); // Log the response from createPayment
       const { result } = response;
-      alert("Payment successful!");
       console.log("Payment result:", result); // Log the result from createPayment
       res.status(200).json(result);
     } catch (error) {
