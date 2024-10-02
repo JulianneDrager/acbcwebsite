@@ -1,5 +1,5 @@
 require("dotenv").config();
-// find access token in .env file'
+// find access token in .env file
 require("dotenv").config({ path: "./api/.env" });
 const SQUARE_ACCESS_TOKEN = process.env.SQUARE_ACCESS_TOKEN;
 
@@ -14,8 +14,8 @@ BigInt.prototype.toJSON = function () {
   return this.toString();
 };
 
-const { paymentsApi } = new Client({
-  accessToken: process.env.SQUARE_ACCESS_TOKEN, // Use environment variable for access token
+const client = new Client({
+  accessToken: SQUARE_ACCESS_TOKEN, // Use environment variable for access token
   environment: Environment.Production,
 });
 
@@ -25,11 +25,11 @@ const handlePayment = async (req, res) => {
     const requestBody = req.body;
     console.log("Request body:", requestBody); // Log the request body
     try {
-      const response = await paymentsApi.createPayment({
+      const response = await client.paymentsApi.createPayment({
         idempotencyKey: uuidv4(),
         sourceId: req.body.sourceId,
         amountMoney: {
-          amount: 1, // Removed duplicate key
+          amount: 1, // Amount in cents
           currency: "USD",
         },
       });
@@ -39,51 +39,11 @@ const handlePayment = async (req, res) => {
       res.status(200).json(result);
     } catch (error) {
       console.error("Error creating payment:", error); // Log any errors
-      res.status(500).json(requestBody);
+      res.status(500).json({ error: error.message });
     }
   } else {
-    console.log("Received non-POST request"); // Log if a non-POST request is received
+    res.status(405).json({ message: "Method not allowed" });
   }
 };
 
 module.exports = { handlePayment };
-
-// require("dotenv").config();
-// const { Client, Environment } = require("square");
-// const { v4: uuidv4 } = require("uuid");
-
-// BigInt.prototype.toJSON = function () {
-//   return this.toString();
-// };
-
-// const client = new Client({
-//   accessToken: process.env.SQUARE_ACCESS_TOKEN,
-//   environment: Environment.Production,
-// });
-
-// const handlePayment = async (req, res) => {
-//   console.log("Received request");
-//   if (req.method === "POST") {
-//     const { sourceId } = req.body;
-//     console.log("Request body:", req.body);
-//     try {
-//       const response = await client.paymentsApi.createPayment({
-//         idempotencyKey: uuidv4(),
-//         sourceId,
-//         amountMoney: {
-//           amount: 100, // Amount in cents
-//           currency: "USD",
-//         },
-//       });
-//       console.log("Payment response:", response);
-//       res.status(200).json(response.result);
-//     } catch (error) {
-//       console.error("Error creating payment:", error);
-//       res.status(500).json({ error: error.message });
-//     }
-//   } else {
-//     res.status(405).json({ message: "Method not allowed" });
-//   }
-// };
-
-// module.exports = { handlePayment };

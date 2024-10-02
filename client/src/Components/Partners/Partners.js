@@ -9,10 +9,7 @@ import PartnerStyles from "./PartnerStyles.module.css";
 // import partnerGroup2 from "../../assets/mobile/partners/2.png";
 
 import sponsor1 from "../../assets/images/sponsors/Abbvie-sm.png";
-<<<<<<< HEAD
 import sponsor1a from "../../assets/images/sponsors/ucb.png";
-=======
->>>>>>> 8e742970011bc0413918951b8d73bedd0c88cc96
 import sponsor2 from "../../assets/images/sponsors/astrazeneca-sm.png";
 import sponsor3 from "../../assets/images/sponsors/BMS-sm.png";
 import sponsor4 from "../../assets/images/sponsors/Boehringer-sm.png";

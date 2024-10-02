@@ -17,8 +17,8 @@ const MyPaymentForm = () => {
         locationId="L80KFT030HD0V"
         cardTokenizeResponseReceived={async (token, buyer) => {
           const response = await fetch(
-            "https://acbcwebsite.onrender.com/api/pay",
-            // "http://localhost:10000/api/pay",
+            // "https://acbcwebsite.onrender.com/api/pay",
+            "http://localhost:10000/api/pay",
             {
               method: "POST",
               headers: {
