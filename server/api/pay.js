@@ -1,5 +1,9 @@
 require("dotenv").config();
-// console.log(accessToken);
+// find access token in .env file'
+require("dotenv").config({ path: "./api/.env" });
+const SQUARE_ACCESS_TOKEN = process.env.SQUARE_ACCESS_TOKEN;
+
+console.log(SQUARE_ACCESS_TOKEN);
 
 const { Client, Environment } = require("square");
 
@@ -11,9 +15,7 @@ BigInt.prototype.toJSON = function () {
 };
 
 const { paymentsApi } = new Client({
-  accessToken:
-    "EAAAlzLmagOIlzdzcT1uw7MDkkuL02e2bxHbLHDnu-V7B2w5etx5RxdwSjZ2zF5f",
-
+  accessToken: process.env.SQUARE_ACCESS_TOKEN, // Use environment variable for access token
   environment: Environment.Production,
 });
 
@@ -27,7 +29,7 @@ const handlePayment = async (req, res) => {
         idempotencyKey: uuidv4(),
         sourceId: req.body.sourceId,
         amountMoney: {
-          amount: 0.01, // Removed duplicate key
+          amount: 1, // Removed duplicate key
           currency: "USD",
         },
       });
@@ -44,7 +46,7 @@ const handlePayment = async (req, res) => {
   }
 };
 
-exports.handlePayment = handlePayment;
+module.exports = { handlePayment };
 
 // require("dotenv").config();
 // const { Client, Environment } = require("square");
