@@ -110,13 +110,10 @@ export const ContactContextProvider = ({ children }) => {
         shirtSize: shirtSize,
       },
     }).then(function (response) {
-      if (type === "register" && individualDown === "Pharmacy Rep") {
-        // alert("Registrant added!");
-        navigate("/success");
-      } else if (individualDown === "No I am not") {
-        navigate(`/thankyou-texas/${firstName}`);
+      if (type === "register") {
+        alert("Registrant added!");
+        navigate(`/thankyou/${firstName}`);
       }
-
       //   if (
       //     type === "register" &&
       //     eventDropDown === "2024 Grand Rapids, Michigan Round Up"

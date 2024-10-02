@@ -21,6 +21,17 @@
     padding: 0;
 }
 
+
+.sq-card-wrapper .sq-card-message {
+    margin-bottom: 0 !important;
+    margin-top: 0 !important;
+}
+
+.c-jWYnUm {
+    background-color: rgb(191 145 8) !important;
+    border: none;
+}
+
 /* .input-group>.form-control, .input-group>.form-floating, .input-group>.form-select {
     margin: 2px;
 } */

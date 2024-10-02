@@ -1,11 +1,15 @@
 import React, { useState, useEffect } from "react";
-import { Col, Form, InputGroup, Card } from "react-bootstrap";
+import { Link } from "react-router-dom";
+import { Col, Form, InputGroup, Card, Button } from "react-bootstrap";
 import ContactStyle from "../Contact.module.css";
 import { useContactContext } from "../../Context/ContactContext";
+import MyPaymentForm from "Components/Sqare/PaymentForm";
 
 const IndividualDown = () => {
   const { individualDown, setIndividualDown } = useContactContext();
   const nameContact = ContactStyle.nameContact;
+  const btnContact = ContactStyle.btnContact;
+
   const [selected, setSelected] = useState(false);
 
   const showMessage = (e) => {
@@ -55,15 +59,23 @@ const IndividualDown = () => {
             style={{
               color: "black",
               padding: ".5rem",
-              background: "#ffc107",
+              background: "#f2eded",
               borderRadius: "5px",
             }}
           >
-            <b>Please note</b>: There is a $25.00 registration fee to cover the
-            cost of your t-shirt for this event. Please complete the form, to
-            access the payment link.
+            <b>Please note</b>: There is a $27.00 registration fee to cover the
+            cost of your t-shirt for this event. Once Payment is received, you
+            will be taken to the registration form.
           </Card.Text>
         </Card>
+      )}
+      <br />
+      {selected && <MyPaymentForm />}
+      {/* for pharma reps to fill out form */}
+      {!selected && (
+        <Button href={"/register"} className={btnContact}>
+          SUBMIT
+        </Button>
       )}
     </>
   );

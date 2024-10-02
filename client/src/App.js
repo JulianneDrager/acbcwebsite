@@ -16,6 +16,7 @@ import ThankyouTexas from "Components/Thank You/ThankyouTexas";
 import CreateUser from "Components/Admin/CreateUser";
 import Agendas from "Components/Events/Agendas";
 import Success from "Components/Admin/Success";
+import Payment from "Components/Contact/Payment";
 
 function App() {
   return (
@@ -30,8 +31,9 @@ function App() {
           <Route
             exact
             path="/event-details/grand-rapids-michigan-round-up-2024"
-            element={<RegisterForm />}
+            element={<Payment />}
           />
+          <Route exact path="/register-indv" element={<Payment />} />
           <Route exact path="/register" element={<RegisterForm />} />
           <Route exact path="/payment" element={<PaymentForm />} />
           <Route exact path="/login" element={<Login />} />

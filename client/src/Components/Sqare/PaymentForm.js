@@ -1,13 +1,11 @@
 import React from "react";
-import {
-  PaymentForm,
-  CreditCard,
-  Ach,
-  ApplePay,
-} from "react-square-web-payments-sdk";
+import { useNavigate } from "react-router-dom";
+import { PaymentForm, CreditCard } from "react-square-web-payments-sdk";
 
 const MyPaymentForm = () => {
-  const amount = 1.0; // Amount in dollars
+  const navigate = useNavigate();
+  const amount = 27.0; // Amount in dollars
+
   return (
     <>
       <h2>Registration Payment</h2>
@@ -16,33 +14,38 @@ const MyPaymentForm = () => {
         applicationId="sq0idp-KQ8gyOa1SfCh-mL-wWbngA"
         locationId="L80KFT030HD0V"
         cardTokenizeResponseReceived={async (token, buyer) => {
-          const response = await fetch(
-            // "https://acbcwebsite.onrender.com/api/pay",
-            "http://localhost:10000/api/pay",
-            {
-              method: "POST",
-              headers: {
-                "Content-Type": "application/json",
-              },
-              body: JSON.stringify({
-                sourceId: token.token,
-              }),
-            }
-          );
+          try {
+            const response = await fetch(
+              "https://acbcwebsite.onrender.com/api/pay",
+              // "http://localhost:10000/api/pay",
+              {
+                method: "POST",
+                headers: {
+                  "Content-Type": "application/json",
+                },
+                body: JSON.stringify({
+                  sourceId: token.token,
+                }),
+              }
+            );
 
-          if (response.ok) {
-            const data = await response.json();
-            alert(JSON.stringify(data, null, 2));
-          } else {
-            console.error("Server response:", await response.text());
+            if (response.ok) {
+              const data = await response.json();
+              // alert(JSON.stringify(data, null, 2));
+              navigate("/register"); // Navigate to the register page
+            } else {
+              console.error("Server response:", await response.text());
+              alert("Payment failed. Please try again.");
+            }
+          } catch (error) {
+            console.error("Error processing payment:", error);
+            alert("An error occurred. Please try again.");
           }
         }}
       >
-        <CreditCard />
-        <p></p>
-        <Ach accountHolderName="John Doe" />
-        <p></p>
-        {/* <ApplePay /> */}
+        <div style={{ marginBottom: "20px" }}>
+          <CreditCard />
+        </div>
       </PaymentForm>
     </>
   );

@@ -9,7 +9,7 @@ import LikedIn from "../../assets/mobile/header/linkedIn.png";
 import HeaderStyles from "./Header.module.css";
 import useMediaQuery from "services/useMediaQuery";
 import logoImg from "../../assets/images/header/logo.svg";
-// import videoUrl from "../../assets/videos/acbc-video.mp4";
+import videoUrl from "../../assets/videos/acbc-video.mp4";
 import posterUrl from "../../assets/images/header/screenshot.png";
 
 const Header = () => {
@@ -146,7 +146,7 @@ const Header = () => {
               style={{ width: "100%" }}
               poster={posterUrl}
             >
-              {/* <source src={videoUrl} type="video/mp4" /> */}
+              <source src={videoUrl} type="video/mp4" />
               Your browser does not support the video tag.
             </video>
 

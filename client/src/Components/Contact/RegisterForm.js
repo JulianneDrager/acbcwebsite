@@ -113,7 +113,7 @@ const RegisterForm = () => {
               </a>
             </div>
           )}
-          <IndividualDown />
+          {/* <IndividualDown /> */}
           <EventDropDown />
           <div className={nameDiv}>
             <Name />
@@ -128,7 +128,8 @@ const RegisterForm = () => {
           <Company />
           <ShirtSize />
           <br />
-          <MyPaymentForm />
+          {/* payment form -------------------------------- */}
+          {/* <MyPaymentForm /> */}
 
           <input type="hidden" name="type" value={type} />
 
