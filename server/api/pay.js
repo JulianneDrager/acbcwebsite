@@ -30,17 +30,18 @@ const handlePayment = async (req, res) => {
         sourceId: req.body.sourceId,
         amountMoney: {
           // Amount in cents
-          amount: 1, // Amount in cents
+          amount: 2700, // Amount in cents
           currency: "USD",
         },
       });
       console.log("Payment response:", response); // Log the response from createPayment
-      const { result } = response;
+      alert("Payment successful!");
+      // const { result } = response;
       console.log("Payment result:", result); // Log the result from createPayment
-      res.status(200).json(result);
+      // res.status(200).json(result);
     } catch (error) {
       console.error("Error creating payment:", error); // Log any errors
-      res.status(500).json({ error: error.message });
+      // res.status(500).json({ error: error.message });
     }
   } else {
     res.status(405).json({ message: "Method not allowed" });
