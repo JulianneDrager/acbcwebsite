@@ -1,0 +1,790 @@
+.name,
+.phone,
+.email,
+.message,
+.firstName,
+.lastName,
+.position,
+.resume,
+.reason,
+.nameContact,
+.phoneContact,
+.emailContact,
+.messageContact {
+    background-color: white;
+    margin-top: 2vw;
+    padding: 2.5vw 0 2.5vw 2vw;
+    font-size: 4vw;
+    color: black !important;
+    border-radius: .2rem;
+}
+
+
+.email::placeholder,
+.name::placeholder,
+.message::placeholder,
+.phone::placeholder,
+.name::placeholder,
+.lastName::placeholder,
+.firstName::placeholder,
+.position::placeholder,
+.resume::placeholder,
+.reason::placeholder,
+.desktopResume::placeholder {
+    color: black !important;
+}
+
+.emailContact::placeholder,
+.nameContact::placeholder,
+.phoneContact::placeholder,
+.messageContact::placeholder {
+    color: black !important;
+}
+
+.nameDiv {
+    display: flex;
+    gap: .2rem
+}
+
+
+.formStyle,
+.desktopFormStyle,
+.subscribeFormStyle,
+.subscribeAddFormStyle,
+.sponsorFormStyle,
+.sponsorFormFields {
+    position: relative;
+    z-index: 6;
+    padding: 0 6vw 8vw 6vw;
+    background: rgb(2 2 2 / 49%);
+    width: 90%;
+    border-radius: 0;
+    margin: 0 auto;
+}
+
+.sponsorFormFields {
+    font-family: sans-serif;
+    padding: 0;
+    width: 100%;
+}
+
+.subscribeAddFormStyle {
+    background-color: transparent;
+    border: none;
+}
+
+.subscribeFormStyle {
+    padding: 0;
+    background-color: transparent;
+    border: none;
+    color: white;
+    width: 85%;
+}
+
+.sponsorFormStyle {
+    width: 94%;
+    margin: 15px 0 0 0;
+    line-height: 5vw;
+    color: var(--color-light-grey);
+    font-size: 4.5vw;
+    font-family: var(--font-proxima);
+}
+
+.readMoreButton {
+    width: 40%;
+    border: 0;
+    border-radius: .4rem;
+    text-transform: uppercase;
+    /* margin: 5px 0 5px 13px; */
+    background-color: white;
+    color: black;
+    font-size: 4.2vw;
+    letter-spacing: .1vw;
+    padding: 2vw 0;
+}
+
+.readMoreButton:hover {
+    background-color: var(--color-gold-orange);
+    color: black;
+}
+
+.sponsorH1,
+.subscribeH1 {
+    color: white;
+    font-family: var(--font-anton);
+    font-size: 9vw;
+    text-align: center;
+    margin: 10vw 0 0 3vw;
+}
+
+.subscribeH1 {
+    font-size: 8vw;
+}
+
+.linkStyle,
+.linkStyleFooter {
+    color: #6e737d;
+    text-decoration: none;
+    font-size: 3.5vw;
+}
+
+.linkStyleFooter {
+    color: rgb(50, 50, 50);
+    font-weight: bold;
+}
+
+.linkStyle:hover {
+    color: var(--color-primary);
+}
+
+.linkStyleFooter:hover {
+    color: white;
+}
+
+.icon,
+.iconFooter {
+    width: 7vw
+}
+
+.icon:hover {
+    filter: invert(.55);
+    cursor: pointer;
+}
+
+.iconFooter {
+    padding-top: .2rem;
+    width: 10vw;
+    filter: invert(1);
+    cursor: pointer;
+}
+
+.iconFooter:hover {
+    filter: invert(0);
+}
+
+.contactWrapper,
+.contactWrapperBottom,
+.contactWrapperBottomFooter {
+    display: flex;
+    text-align: left;
+    font-size: 2.99vw;
+    color: white;
+    letter-spacing: -.08vw;
+}
+
+.contactWrapperBottom,
+.contactWrapperBottomFooter {
+    display: block;
+}
+
+.brTag {
+    display: block;
+}
+
+.addressText,
+.hoursText,
+.socialSection,
+.socialSectionFooter,
+.addressTextFooter,
+.hoursTextFooter {
+    width: 28vw;
+    border-right: solid 2px var(--color-gold-orange);
+    margin: 0 1.5vw 0 0;
+}
+
+.socialSectionFooter {
+    width: 100%;
+    border-right: none;
+    text-align: center;
+
+}
+
+.addressTextFooter,
+.hoursTextFooter {
+    width: 100%;
+    border-right: solid 2px black
+}
+
+.hoursText {
+    width: 28vw;
+    margin: 0 .2vw;
+    letter-spacing: -.17vw;
+
+}
+
+.socialSection {
+    width: 20vw;
+    text-align: center;
+}
+
+.mapIconStyle,
+.subscribeStyle,
+.sponsorStyle {
+    background-image: url("../../assets/images/contact/map-btn-desktop1.png");
+    background-size: cover;
+    width: 100%;
+    height: 9vw;
+    margin: 0 0 0 -1vw;
+    border-radius: 0.2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    border: none;
+    color: black;
+
+}
+
+.subscribeStyle {
+    background-image: url("../../assets/images/contact/subscribe-btn-desktop1.png");
+    background-position: center left -2px;
+    margin-bottom: .5rem;
+}
+
+.sponsorStyle {
+    background-image: url("../../assets/images/contact/sponsor-btn-desktop.png");
+    background-position: center left -4px;
+    margin-bottom: .5rem;
+}
+
+.sponsorStyle a {
+    text-decoration: none;
+
+    cursor: pointer;
+    color: black;
+}
+
+.mapIconStyle:hover,
+.subscribeStyle:hover,
+.sponsorStyle:hover {
+    filter: contrast(1.5);
+    background-color: transparent;
+    border: none;
+    color: rgba(0, 0, 0, 0.498);
+}
+
+.mapBtnText {
+    margin: 0 0 0 8vw;
+    font-family: var(--font-anton);
+    cursor: pointer;
+}
+
+.mapStyle {
+    width: 100%;
+    height: 250px;
+    border: none;
+    border-radius: .2rem;
+    filter: saturate(0.5);
+
+}
+
+.spanText {
+    color: var(--color-gold)
+}
+
+.contact {
+    display: flex;
+    justify-content: center;
+    background-image: url("../../assets/images/contact/contact-bkgd-mobile.png");
+    background-size: 217%;
+    background-repeat: no-repeat;
+    background-position: center bottom -409px;
+    background-color: #1d1d20;
+    padding: 5vw 0 5vw 0;
+}
+
+.contactTitle,
+.contactTitleHire {
+    text-align: center;
+    font-size: 19vw;
+    line-height: 17vw;
+    font-family: var(--font-logo);
+    color: var(--color-grey);
+    margin: 6vw 0 14px 0;
+}
+
+.contactTitle2,
+.contactTitle2Hire {
+    text-align: center;
+    font-size: 8vw;
+    font-weight: 500;
+    margin: -8.5vw 0 2vw 0;
+    color: var(--font-color-primary)
+}
+
+.checkForm {
+    text-align: center;
+    font-size: 3.3vw;
+    color: white;
+    text-shadow: 0px 0px 7px #02020254;
+}
+
+.btn,
+.btnContact,
+.btnContactAdd,
+.btnContactDisabled {
+    background-color: white !important;
+    color: black;
+    width: 100%;
+    margin-top: 6vw;
+    padding: 4vw 0 4vw 0;
+    font-size: 4vw;
+    border: none;
+}
+
+.btnContactAdd {
+    background-color: #7f734e !important;
+    color: black;
+}
+
+.btnContactDisabled {
+    background-color: #cbcbcb !important;
+}
+
+.btn:hover,
+.btnContact:hover {
+    background-color: var(--color-gold-orange) !important;
+    transition: 0.2s !important;
+    color: black;
+}
+
+.btnContainer {
+    text-align: center;
+}
+
+.contactDivider {
+    position: relative;
+    z-index: 2;
+    background-color: #2B5E86;
+    width: 100%;
+    height: 2.5vw;
+    overflow: auto;
+}
+
+@media screen and (min-width:375px) {
+    .mapStyle {
+        width: 99%;
+    }
+}
+
+
+@media screen and (min-width:414px) {
+    .mapStyle {
+        width: 98.4%;
+    }
+}
+
+
+@media screen and (min-width:500px) {
+    .mapStyle {
+        width: 100.4%;
+    }
+
+    .mapIconStyle,
+    .subscribeStyle,
+    .sponsorStyle {
+        border-radius: 0.3rem;
+        font-size: 3.2vw;
+    }
+}
+
+@media screen and (min-width:568px) {
+
+    .contactTitle2,
+    .contactTitle2Hire {
+        font-size: 7vw;
+    }
+
+    .name,
+    .nameContact,
+    .phone,
+    .phoneContact,
+    .email,
+    .emailContact,
+    .message,
+    .messageContact,
+    .firstName,
+    .lastName,
+    .position,
+    .resume,
+    .reason {
+        padding: 1.5vw 0 1.5vw 2vw;
+        font-size: 3vw;
+    }
+
+    .btn,
+    .btnContact,
+    .btnContactAdd {
+        padding: 3vw 0 3vw 0;
+        font-size: 3vw;
+    }
+}
+
+@media screen and (min-width:600px) {
+    .checkForm {
+        font-size: 2.5vw;
+    }
+
+    .nameDiv {
+        display: flex;
+        gap: 1rem
+    }
+}
+
+
+@media screen and (min-width:728px) {
+
+    .mapIconStyle,
+    .subscribeStyle,
+    .sponsorStyle {
+        border-radius: .4rem;
+        margin: 0;
+        height: 7vw;
+        background-color: transparent;
+    }
+
+    .sponsorStyle {
+        margin: .5rem 0;
+    }
+
+    .contactWrapperDesktop,
+    .contactWrapperDesktopFooter {
+        display: flex;
+        flex-direction: row-reverse;
+        margin: 0 0 2vw 2vw;
+    }
+
+    .contactWrapperDesktopFooter {
+        margin: 0 0 0 0;
+        width: 86vw;
+    }
+
+    .contactWrapper, .contactWrapperBottom, .contactWrapperBottomFooter {
+        font-size: 13.8px;
+        margin-bottom: .5rem;
+        color: #e7f4ff;
+        letter-spacing: -.2px;
+    }
+
+    .contactWrapperBottom, .contactWrapperBottomFooter {
+        border-right: solid 2px var(--color-gold-orange);
+        margin: 0 1.5vw 0 0;
+        width: 36vw;
+    }
+
+    .contactWrapperBottomFooter {
+        text-align: left;
+        border-right: 2px solid black;
+    }
+
+    .brTag {
+        display: none;
+    }
+
+    .addressText {
+        width: 16vw;
+    }
+
+    .hoursText {
+        width: 13.8vw;
+    }
+
+    .hoursTextFooter {
+        width: 216%;
+    }
+
+    .socialSection {
+        width: 12vw;
+        text-align: left;
+        margin-left: 1vw;
+        border: none
+    }
+
+    .icon {
+        width: 5vw;
+    }
+
+    .iconFooter {
+        width: 5vw;
+    }
+
+    .linkStyle {
+        color: white;
+        font-size: 13px;
+    }
+
+    .linkStyleFooter {
+        font-size: 13px;
+        color: #1d1d20;
+    }
+
+    .linkStyle:hover {
+        color: white
+    }
+
+    .formStyleHire {
+        background: rgb(255, 255, 255);
+        background: linear-gradient(90deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0.7802579650024072) 41%, rgba(255, 255, 255, 0.7130310742461047) 49%, rgba(255, 255, 255, 0.78) 57%, rgba(255, 255, 255, 1) 100%);
+    }
+
+    .formStyle {
+        background-color: var(--color-secondary-lighter-opacity);
+        border-radius: .8rem;
+    }
+
+    .contact {
+        background-image: url("../../assets/images/contact/contact-bkgd-desktop.png");
+        background-size: cover;
+    }
+
+    .contactTitle {
+        margin: 3vw 0 1.5vw 0;
+        font-size: 9vw;
+    }
+
+    .addressTextFooter {
+        width: 216%;
+    }
+
+    .formStyle {
+        padding: 0 2vw 2.5vw 2vw;
+        background: rgb(2 2 2 / 49%);
+    }
+
+    .name,
+    .nameContact,
+    .phone,
+    .phoneContact,
+    .email,
+    .emailContact,
+    .message,
+    .messageContact,
+    .firstName,
+    .lastName,
+    .position,
+    .resume,
+    .reason {
+        padding: 1.5vw 0 1.5vw 1.5vw;
+        font-size: 1.4vw;
+        margin: .5rem 0;
+        color: black !important;
+    }
+
+    .emailContact::placeholder,
+    .nameContact::placeholder,
+    .phoneContact::placeholder,
+    .messageContact::placeholder {
+        color: black !important;
+    }
+
+    .nameContact,
+    .phoneContact,
+    .emailContact,
+    .messageContact {
+        background-color: white;
+    }
+
+    .resume {
+        background-color: var(--color-primary)
+    }
+
+    .checkForm {
+        font-size: 1.8vw;
+        color: black;
+    }
+
+    .btn,
+    .btnContact,
+    .btnContactAdd,
+    .btnContactDisabled {
+        width: 30vw;
+        margin-top: 2vw;
+        padding: 1.5vw 0 1.5vw 0;
+        font-size: 1.2vw;
+    }
+
+    .btnContact {
+        background-color: white !important;
+    }
+
+    .btnContainer {
+        text-align: left;
+    }
+
+    .hiringDivider {
+        background: linear-gradient(90deg, rgba(71, 80, 95, 1) 0%, rgba(89, 109, 139, 1) 46%, rgba(71, 80, 95, 1) 100%, rgba(9, 9, 121, 0) 100%, rgba(0, 212, 255, 1) 100%);
+        height: 10vw;
+        margin-top: -10vw;
+    }
+}
+
+@media screen and (min-width:1024px) {
+
+    .contactWrapper {
+        font-size: 19px;
+        line-height: 20px;
+    }
+
+    .contactWrapperBottom {
+        font-size: 19px;
+        line-height: 20px;
+    }
+
+    .linkStyle {
+        font-size: 19px;
+        line-height: 21px;
+    }
+
+    .contactTitle {
+        margin: 3vw 0 0.5vw 0;
+    }
+
+    .contact {
+        background-position: center bottom -689px;
+    }
+
+    .icon {
+        margin: 9px 0 0 0;
+    }
+
+    .btn,
+    .btnContact,
+    .btnContactAdd,
+    .btnContactDisabled {
+        width: 180px;
+        margin-top: 32px;
+        padding: 14px 0;
+        font-size: 15.2px;
+    }
+
+    .name,
+    .nameContact,
+    .phone,
+    .phoneContact,
+    .email,
+    .emailContact,
+    .message,
+    .messageContact,
+    .firstName,
+    .lastName,
+    .position,
+    .resume,
+    .reason {
+        padding: 10px;
+        padding-right: 0;
+        font-size: 15.2px;
+    }
+
+
+    .checkForm {
+        font-size: 1.4vw;
+    }
+
+    .contactTitle {
+        margin-block-end: 40px;
+        margin-block-start: 48px;
+        margin-bottom: 40px;
+        margin-top: 48px;
+        line-height: 88px;
+    }
+
+    .contactTitle2 {
+        margin-bottom: 8px;
+        margin-left: 0px;
+        margin-right: 0px;
+        margin-top: -72px;
+    }
+
+    .contactTitleHire {
+        margin: 3px 0 -28.5px 0;
+        /* font-size: 56px; */
+        line-height: 70px;
+    }
+
+    .contactTitle2Hire {
+        margin: 4px 0 24.5px 0;
+        font-size: 51px;
+        line-height: 70px;
+    }
+
+    .contactTitle {
+        margin: 97px 0 64px 0;
+    }
+
+    .addressTextFooter,
+    .hoursTextFooter,
+    .socialSectionFooter {
+        font-size: 13px;
+        line-height: 15px;
+        width: 151px;
+    }
+
+    .contactWrapperDesktopFooter {
+        /* width: 953px; */
+    }
+
+    .socialSectionFooter {
+        text-align: left;
+    }
+}
+
+@media screen and (min-width:1100px) {
+    .contact {
+        background-position: center bottom -759px;
+    }
+}
+
+@media screen and (min-width:1500px) {
+
+    .formStyle {
+        padding: 0 27.32px 34.15px 27.32px;
+    }
+
+    .icon {
+        width: 45px;
+    }
+
+    .contact {
+        background-position: center bottom -1039px;
+    }
+
+
+    .contactTitle {
+        font-size: 135px;
+    }
+
+    .contactWrapperBottom {
+        width: 491.76px;
+    }
+
+    .mapIconStyle,
+    .subscribeStyle,
+    .sponsorStyle {
+        /* width: 1286.1px; */
+        height: 95.62px;
+        font-size: 43.712px;
+    }
+
+    .mapBtnText {
+        margin: 0 0 0 109.28px;
+    }
+
+    .addressText {
+        width: 239px;
+    }
+
+    .hoursText {
+        width: 202.508px;
+        letter-spacing: -0.55px;
+    }
+
+    .socialSection {
+        width: 180px;
+        margin-left: 15px;
+    }
+
+    .checkForm {
+        font-size: 21px;
+    }
+
+}

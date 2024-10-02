@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Montserrat:ital@0;1&family=Open+Sans:wght@700&display=swap');
+
+
+@font-face {
+  font-family: "Fontspring-DEMO-proximanovacond-regular";
+  src: url("./Fonts/Fontspring-DEMO-proximanovacond-regular.otf") format("opentype");
+}
+
+:root {
+
+  --color-gold: #D4BA66;
+  --color-grey: #A6A0A0;
+  --color-light-grey: #CBC6C6;
+  --color-gold-orange: #F1B721;
+
+  /* font for all titles */
+  --font-logo: "Bebas Neue";
+  /* font for all body text */
+  --font-proxima: "Fontspring-DEMO-proximanovacond-regular";
+  /* font for btn text */
+  --font-anton: "Anton";
+
+
+}
