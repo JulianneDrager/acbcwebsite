@@ -14,10 +14,7 @@ exports.extractEmails = async (req, res) => {
         fullName: { $concat: ["$firstName", " ", "$lastName"] },
         email: 1,
         eventDropDown: 1,
-<<<<<<< HEAD
         individualDown: 1,
-=======
->>>>>>> 8e742970011bc0413918951b8d73bedd0c88cc96
         phone: 1,
         specialty: 1,
         practice: 1,

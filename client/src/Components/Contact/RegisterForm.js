@@ -86,7 +86,6 @@ const RegisterForm = () => {
   return (
     <>
       <Nav />
-
       <Form
         id="register"
         ref={refForm}

@@ -15,14 +15,11 @@
 .DS_Store
 
 # Ignore .env file in api folder.
-# /api/.env
-client\src\assets\videos\acbc-video.mp4
 
-
-# .env.local
-# .env.development.local
-# .env.test.local
-# .env.production.local
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
 \src\_deprecated
 
 npm-debug.log*
