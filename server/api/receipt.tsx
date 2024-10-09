@@ -35,9 +35,9 @@ export const RegisterEmailResponse = ({
           <Text style={paragraph2}>
             REGISTRATION CONFIRMATION:
             <Hr style={hr} />
-            Details: April 4th, 2025 7:00 PM – April 6th, 2025 at 12:00 PM
-            Location: Frisco-Dallas, Hyatt Regency Hotel, <br />
-            2615 Preston Road, Frisco, TX 75034, USA
+            Details: July 26, 2024 7:00 PM – July 28, 2024 at 12:00 PM Location:
+            Grand Rapids, Amway Grand Plaza Hotel, <br />
+            187 Monroe Ave NW, Grand Rapids, MI 49503, USA
           </Text>
           <br />
           <Container style={messageContainer}>
