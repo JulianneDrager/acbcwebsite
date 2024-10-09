@@ -50,11 +50,7 @@ var RegisterEmailResponse = exports.RegisterEmailResponse = function RegisterEma
     style: paragraph2
   }, "Company Name: ", company ? company : "No company name was provided"), /*#__PURE__*/React.createElement(_components.Text, {
     style: paragraph2
-  }, "Shirt Size: ", shirtSize ? shirtSize : "No shirt size was provided"), " "), /*#__PURE__*/React.createElement("br", null), /*#__PURE__*/React.createElement(_components.Text, {
-    style: paragraph2
-  }, "BOOK YOUR HOTEL ROOM:", /*#__PURE__*/React.createElement("br", null), /*#__PURE__*/React.createElement("a", {
-    href: "https://book.passkey.com/event/50726023/owner/2529966/home"
-  }, "GRAND RAPIDS HOTEL BOOKING", " ")), /*#__PURE__*/React.createElement(_components.Text, {
+  }, "Shirt Size: ", shirtSize ? shirtSize : "No shirt size was provided"), " "), /*#__PURE__*/React.createElement(_components.Text, {
     style: paragraph
   }, "\u2014 Access Bootcamp Website"), /*#__PURE__*/React.createElement(_components.Hr, {
     style: hr

@@ -67,14 +67,6 @@ export const RegisterEmailResponse = ({
               Shirt Size: {shirtSize ? shirtSize : "No shirt size was provided"}
             </Text>{" "}
           </Container>
-          <br />
-          <Text style={paragraph2}>
-            BOOK YOUR HOTEL ROOM:
-            <br />
-            <a href="https://book.passkey.com/event/50726023/owner/2529966/home">
-              GRAND RAPIDS HOTEL BOOKING{" "}
-            </a>
-          </Text>
 
           <Text style={paragraph}>— Access Bootcamp Website</Text>
           <Hr style={hr} />
