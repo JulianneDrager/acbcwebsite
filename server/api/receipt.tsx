@@ -14,58 +14,38 @@ import {
 } from "@react-email/components";
 import * as React from "react";
 
-export const RegisterEmailResponse = ({
-  firstName,
-  lastName,
+export const Receipt = ({
   email,
-  phone,
-  eventDropDown,
-  specialty,
-  practice,
-  practiceAddress,
-  company,
-  shirtSize,
+  fullName,
+  sqReceipt,
+  amount,
+  confirmationNumber,
 }) => (
   <Html>
     <Heading style={acbcHeading}>ACBC Grand Rapids Round Up 24'</Heading>
-    <Preview>You have a new {eventDropDown} ACBC Registrant Response</Preview>
     <Body style={main}>
       <Container style={container}>
         <Section style={box}>
           <Text style={paragraph2}>
-            REGISTRATION CONFIRMATION:
+            REGISTRATION RECEIPT CONFIRMATION:
             <Hr style={hr} />
-            Details: July 26, 2024 7:00 PM – July 28, 2024 at 12:00 PM Location:
-            Grand Rapids, Amway Grand Plaza Hotel, <br />
-            187 Monroe Ave NW, Grand Rapids, MI 49503, USA
+            Details: April 4th, 2025 7:00 PM – April 6th, 2025 at 12:00 PM
+            Location: Frisco-Dallas, Hyatt Regency Hotel, <br />
+            2615 Preston Road, Frisco, TX 75034, USA
           </Text>
           <br />
           <Container style={messageContainer}>
             <Text style={paragraph}>
-              First Name: {firstName} <br />
-              Last Name: {lastName}
+              First Name: {fullName} <br />
             </Text>
             <Text style={paragraph2}>Email: {email}</Text>
+            <Text style={paragraph2}>Payment Amount: {amount}</Text>
             <Text style={paragraph2}>
-              Phone: {phone ? phone : "No phone number was provided"}
+              Confirmation Number: {confirmationNumber}
             </Text>
             <Text style={paragraph2}>
-              Address:{" "}
-              {practiceAddress ? practiceAddress : "No address was provided"}
+              <a href={sqReceipt}>View Online Receipt</a>
             </Text>
-            <Text style={paragraph2}>
-              Specialty:
-              {specialty ? specialty : "No specialty field was number provided"}
-            </Text>
-            <Text style={paragraph2}>
-              Position: {practice ? practice : "No practice field was provided"}
-            </Text>
-            <Text style={paragraph2}>
-              Company Name: {company ? company : "No company name was provided"}
-            </Text>
-            <Text style={paragraph2}>
-              Shirt Size: {shirtSize ? shirtSize : "No shirt size was provided"}
-            </Text>{" "}
           </Container>
 
           <Text style={paragraph}>— Access Bootcamp Website</Text>
@@ -80,7 +60,7 @@ export const RegisterEmailResponse = ({
   </Html>
 );
 
-export default RegisterEmailResponse;
+export default Receipt;
 
 const main = {
   backgroundColor: "#f6f9fc",
