@@ -30,7 +30,7 @@ const handlePayment = async (req, res) => {
         idempotencyKey: uuidv4(),
         sourceId: req.body.sourceId,
         amountMoney: {
-          amount: 1, // Amount in cents
+          amount: 2700, // Amount in cents
           currency: "USD",
         },
       });

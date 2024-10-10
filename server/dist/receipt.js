@@ -17,7 +17,7 @@ var Receipt = exports.Receipt = function Receipt(_ref) {
     confirmationNumber = _ref.confirmationNumber;
   return /*#__PURE__*/React.createElement(_components.Html, null, /*#__PURE__*/React.createElement(_components.Heading, {
     style: acbcHeading
-  }, "ACBC Grand Rapids Round Up 24'"), /*#__PURE__*/React.createElement(_components.Body, {
+  }, "ACBC Frisco-Dallas Round Up 25'"), /*#__PURE__*/React.createElement(_components.Body, {
     style: main
   }, /*#__PURE__*/React.createElement(_components.Container, {
     style: container

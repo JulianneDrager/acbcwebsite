@@ -22,7 +22,7 @@ export const Receipt = ({
   confirmationNumber,
 }) => (
   <Html>
-    <Heading style={acbcHeading}>ACBC Grand Rapids Round Up 24'</Heading>
+    <Heading style={acbcHeading}>ACBC Frisco-Dallas Round Up 25'</Heading>
     <Body style={main}>
       <Container style={container}>
         <Section style={box}>
