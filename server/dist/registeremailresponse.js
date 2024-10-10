@@ -22,7 +22,7 @@ var RegisterEmailResponse = exports.RegisterEmailResponse = function RegisterEma
     shirtSize = _ref.shirtSize;
   return /*#__PURE__*/React.createElement(_components.Html, null, /*#__PURE__*/React.createElement(_components.Heading, {
     style: acbcHeading
-  }, "ACBC Grand Rapids Round Up 24'"), /*#__PURE__*/React.createElement(_components.Preview, null, "You have a new ", eventDropDown, " ACBC Registrant Response"), /*#__PURE__*/React.createElement(_components.Body, {
+  }, eventDropDown), /*#__PURE__*/React.createElement(_components.Preview, null, "You have a new ", eventDropDown, " ACBC Registrant Response"), /*#__PURE__*/React.createElement(_components.Body, {
     style: main
   }, /*#__PURE__*/React.createElement(_components.Container, {
     style: container

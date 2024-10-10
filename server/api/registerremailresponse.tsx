@@ -27,7 +27,7 @@ export const RegisterEmailResponse = ({
   shirtSize,
 }) => (
   <Html>
-    <Heading style={acbcHeading}>ACBC Grand Rapids Round Up 24'</Heading>
+    <Heading style={acbcHeading}>{eventDropDown}</Heading>
     <Preview>You have a new {eventDropDown} ACBC Registrant Response</Preview>
     <Body style={main}>
       <Container style={container}>
