@@ -50,7 +50,10 @@ var RegisterEmailResponse = exports.RegisterEmailResponse = function RegisterEma
     style: paragraph2
   }, "Company Name: ", company ? company : "No company name was provided"), /*#__PURE__*/React.createElement(_components.Text, {
     style: paragraph2
-  }, "Shirt Size: ", shirtSize ? shirtSize : "No shirt size was provided"), " "), /*#__PURE__*/React.createElement(_components.Text, {
+  }, "Shirt Size: ", shirtSize ? shirtSize : "No shirt size was provided"), " ", /*#__PURE__*/React.createElement("hr", null), /*#__PURE__*/React.createElement(_components.Link, {
+    style: button,
+    href: "https://www.hyatt.com/en-US/group-booking/DFWRO/G-ACCB"
+  }, "CLICK HERE TO RESERVE YOUR ROOM")), /*#__PURE__*/React.createElement(_components.Text, {
     style: paragraph
   }, "\u2014 Access Bootcamp Website"), /*#__PURE__*/React.createElement(_components.Hr, {
     style: hr
