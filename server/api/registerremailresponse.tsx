@@ -158,7 +158,7 @@ const button = {
   textDecoration: "none",
   textAlign: "center",
   display: "block",
-  width: "100%",
+  width: "80%",
   padding: "10px",
 };
 
