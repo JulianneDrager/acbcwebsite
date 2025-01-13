@@ -66,6 +66,13 @@ export const RegisterEmailResponse = ({
             <Text style={paragraph2}>
               Shirt Size: {shirtSize ? shirtSize : "No shirt size was provided"}
             </Text>{" "}
+            <hr />
+            <Link
+              style={button}
+              href="https://www.hyatt.com/en-US/group-booking/DFWRO/G-ACCB"
+            >
+              CLICK HERE TO RESERVE YOUR ROOM
+            </Link>
           </Container>
 
           <Text style={paragraph}>— Access Bootcamp Website</Text>
