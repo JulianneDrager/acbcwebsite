@@ -198,7 +198,7 @@ app.post("/send-email", async (req, res) => {
     const responseOptions = {
       from: "acbcemails@gmail.com",
       to: email,
-      subject: "Thank you for registering for the 2024 Grand Rapids Roundup",
+      subject: "Thank you for registering for the 2025 Frisco Texas Roundup",
       html: registerEmailResponseHtml,
     };
 
