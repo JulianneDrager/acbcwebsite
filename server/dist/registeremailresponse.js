@@ -46,7 +46,7 @@ var RegisterEmailResponse = exports.RegisterEmailResponse = function RegisterEma
     style: paragraph2
   }, "Specialty:", specialty ? specialty : "No specialty field was number provided"), /*#__PURE__*/React.createElement(_components.Text, {
     style: paragraph2
-  }, "Position: ", practice ? practice : "No practice field was provided"), /*#__PURE__*/React.createElement(_components.Text, {
+  }, "Practice: ", practice ? practice : "No practice field was provided"), /*#__PURE__*/React.createElement(_components.Text, {
     style: paragraph2
   }, "Company Name: ", company ? company : "No company name was provided"), /*#__PURE__*/React.createElement(_components.Text, {
     style: paragraph2
