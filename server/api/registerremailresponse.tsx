@@ -58,7 +58,7 @@ export const RegisterEmailResponse = ({
               {specialty ? specialty : "No specialty field was number provided"}
             </Text>
             <Text style={paragraph2}>
-              Position: {practice ? practice : "No practice field was provided"}
+              Practice: {practice ? practice : "No practice field was provided"}
             </Text>
             <Text style={paragraph2}>
               Company Name: {company ? company : "No company name was provided"}
