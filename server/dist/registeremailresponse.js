@@ -32,7 +32,7 @@ var RegisterEmailResponse = exports.RegisterEmailResponse = function RegisterEma
     style: paragraph2
   }, "REGISTRATION CONFIRMATION:", /*#__PURE__*/React.createElement(_components.Hr, {
     style: hr
-  }), "Details: April 4th, 2025 7:00 PM \u2013 April 6th, 2025 at 12:00 PM Location: Frisco-Dallas, Hyatt Regency Hotel, ", /*#__PURE__*/React.createElement("br", null), "2615 Preston Road, Frisco, TX 75034, USA"), /*#__PURE__*/React.createElement("br", null), /*#__PURE__*/React.createElement(_components.Container, {
+  }), "Details: April 4th, 2025 7:00 PM \u2013 April 5th, 2025 at 5:30 PM Location: Frisco-Dallas, Hyatt Regency Hotel, ", /*#__PURE__*/React.createElement("br", null), "2615 Preston Road, Frisco, TX 75034, USA"), /*#__PURE__*/React.createElement("br", null), /*#__PURE__*/React.createElement(_components.Container, {
     style: messageContainer
   }, /*#__PURE__*/React.createElement(_components.Text, {
     style: paragraph
