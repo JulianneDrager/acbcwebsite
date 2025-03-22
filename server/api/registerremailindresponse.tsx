@@ -14,17 +14,17 @@ import {
 } from "@react-email/components";
 import * as React from "react";
 
-export const RegisterEmailResponse = ({
-  firstName,
-  lastName,
-  email,
-  phone,
+export const RegisterEmailIndResponse = ({
+  firstNameInd,
+  lastNameInd,
+  emailInd,
+  phoneInd,
   eventDropDown,
-  specialty,
-  practice,
-  practiceAddress,
-  company,
-  shirtSize,
+  specialtyInd,
+  practiceInd,
+  practiceAddressInd,
+  companyInd,
+  shirtSizeInd,
 }) => (
   <Html>
     <Heading style={acbcHeading}>{eventDropDown}</Heading>
@@ -42,29 +42,36 @@ export const RegisterEmailResponse = ({
           <br />
           <Container style={messageContainer}>
             <Text style={paragraph}>
-              First Name: {firstName} <br />
-              Last Name: {lastName}
+              First Name: {firstNameInd} <br />
+              Last Name: {lastNameInd}
             </Text>
-            <Text style={paragraph2}>Email: {email}</Text>
+            <Text style={paragraph2}>Email: {emailInd}</Text>
             <Text style={paragraph2}>
-              Phone: {phone ? phone : "No phone number was provided"}
+              Phone: {phoneInd ? phoneInd : "No phone number was provided"}
             </Text>
             <Text style={paragraph2}>
               Address:{" "}
-              {practiceAddress ? practiceAddress : "No address was provided"}
+              {practiceAddressInd
+                ? practiceAddressInd
+                : "No address was provided"}
             </Text>
             <Text style={paragraph2}>
               Specialty:
-              {specialty ? specialty : "No specialty field was number provided"}
+              {specialtyInd
+                ? specialtyInd
+                : "No specialty field was number provided"}
             </Text>
             <Text style={paragraph2}>
-              Practice: {practice ? practice : "No practice field was provided"}
+              Practice:{" "}
+              {practiceInd ? practiceInd : "No practice field was provided"}
             </Text>
             <Text style={paragraph2}>
-              Company Name: {company ? company : "No company name was provided"}
+              Company Name:{" "}
+              {companyInd ? companyInd : "No company name was provided"}
             </Text>
             <Text style={paragraph2}>
-              Shirt Size: {shirtSize ? shirtSize : "No shirt size was provided"}
+              Shirt Size:{" "}
+              {shirtSizeInd ? shirtSizeInd : "No shirt size was provided"}
             </Text>{" "}
             <hr />
             <Link
@@ -87,7 +94,7 @@ export const RegisterEmailResponse = ({
   </Html>
 );
 
-export default RegisterEmailResponse;
+export default RegisterEmailIndResponse;
 
 const main = {
   backgroundColor: "#f6f9fc",

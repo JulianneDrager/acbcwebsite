@@ -29,7 +29,7 @@ export const Receipt = ({
           <Text style={paragraph2}>
             REGISTRATION RECEIPT CONFIRMATION:
             <Hr style={hr} />
-            Details: April 4th, 2025 7:00 PM – April 6th, 2025 at 12:00 PM
+            Details: April 4th, 2025 7:00 PM – April 5th, 2025 at 5:30 PM
             Location: Frisco-Dallas, Hyatt Regency Hotel, <br />
             2615 Preston Road, Frisco, TX 75034, USA
           </Text>

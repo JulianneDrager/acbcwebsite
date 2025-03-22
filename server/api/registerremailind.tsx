@@ -14,67 +14,62 @@ import {
 } from "@react-email/components";
 import * as React from "react";
 
-export const RegisterEmailResponse = ({
-  firstName,
-  lastName,
-  email,
-  phone,
+export const RegisterEmailInd = ({
+  firstNameInd,
+  lastNameInd,
+  emailInd,
+  phoneInd,
   eventDropDown,
-  specialty,
-  practice,
-  practiceAddress,
-  company,
-  shirtSize,
+  specialtyInd,
+  practiceInd,
+  practiceAddressInd,
+  companyInd,
+  shirtSizeInd,
 }) => (
   <Html>
-    <Heading style={acbcHeading}>{eventDropDown}</Heading>
-    <Preview>You have a new {eventDropDown} ACBC Registrant Response</Preview>
+    <Heading style={acbcHeading}>{eventDropDown} Registrant</Heading>
+    <Preview>You have a new {eventDropDown} registrant</Preview>
     <Body style={main}>
       <Container style={container}>
         <Section style={box}>
-          <Text style={paragraph2}>
-            REGISTRATION CONFIRMATION:
-            <Hr style={hr} />
-            Details: April 4th, 2025 7:00 PM – April 5th, 2025 at 5:30 PM
-            Location: Frisco-Dallas, Hyatt Regency Hotel, <br />
-            2615 Preston Road, Frisco, TX 75034, USA
-          </Text>
-          <br />
+          <Hr style={hr} />
+          <Text style={paragraph2}>Their Register Information:</Text>
           <Container style={messageContainer}>
+            <Text style={paragraph2}>Event: {eventDropDown}</Text>
             <Text style={paragraph}>
-              First Name: {firstName} <br />
-              Last Name: {lastName}
+              First Name: {firstNameInd} <br />
+              Last Name: {lastNameInd}
             </Text>
-            <Text style={paragraph2}>Email: {email}</Text>
+            <Text style={paragraph2}>Email: {emailInd}</Text>
             <Text style={paragraph2}>
-              Phone: {phone ? phone : "No phone number was provided"}
+              Phone: {phoneInd ? phoneInd : "No phone number was provided"}
             </Text>
             <Text style={paragraph2}>
               Address:{" "}
-              {practiceAddress ? practiceAddress : "No address was provided"}
+              {practiceAddressInd
+                ? practiceAddressInd
+                : "No address was provided"}
             </Text>
             <Text style={paragraph2}>
               Specialty:
-              {specialty ? specialty : "No specialty field was number provided"}
+              {specialtyInd
+                ? specialtyInd
+                : "No specialty field was number provided"}
             </Text>
             <Text style={paragraph2}>
-              Practice: {practice ? practice : "No practice field was provided"}
+              Position:{" "}
+              {practiceInd ? practiceInd : "No practice field was provided"}
             </Text>
             <Text style={paragraph2}>
-              Company Name: {company ? company : "No company name was provided"}
+              Company Name:{" "}
+              {companyInd ? companyInd : "No company name was provided"}
             </Text>
+            <Hr style={hr} />
             <Text style={paragraph2}>
-              Shirt Size: {shirtSize ? shirtSize : "No shirt size was provided"}
-            </Text>{" "}
-            <hr />
-            <Link
-              style={button}
-              href="https://www.hyatt.com/en-US/group-booking/DFWRO/G-ACCB"
-            >
-              CLICK HERE TO RESERVE YOUR ROOM
-            </Link>
+              Shirt Size:{" "}
+              {shirtSizeInd ? shirtSizeInd : "No shirt size was provided"}
+            </Text>
           </Container>
-
           <Text style={paragraph}>— Access Bootcamp Website</Text>
           <Hr style={hr} />
           <Text style={footer}>
@@ -87,7 +82,7 @@ export const RegisterEmailResponse = ({
   </Html>
 );
 
-export default RegisterEmailResponse;
+export default RegisterEmailInd;
 
 const main = {
   backgroundColor: "#f6f9fc",
@@ -158,7 +153,7 @@ const button = {
   textDecoration: "none",
   textAlign: "center",
   display: "block",
-  width: "80%",
+  width: "100%",
   padding: "10px",
 };
 
