@@ -22,7 +22,7 @@ function _typeof(o) {
 Object.defineProperty(exports, "__esModule", {
   value: true,
 });
-exports["default"] = exports.Receipt = void 0;
+exports["default"] = exports.RegisterEmailInd = void 0;
 var _components = require("@react-email/components");
 var React = _interopRequireWildcard(require("react"));
 function _getRequireWildcardCache(e) {
@@ -48,12 +48,19 @@ function _interopRequireWildcard(e, r) {
     }
   return (n["default"] = e), t && t.set(e, n), n;
 }
-var Receipt = (exports.Receipt = function Receipt(_ref) {
-  var email = _ref.email,
-    fullName = _ref.fullName,
-    sqReceipt = _ref.sqReceipt,
-    amount = _ref.amount,
-    confirmationNumber = _ref.confirmationNumber;
+var RegisterEmailInd = (exports.RegisterEmailInd = function RegisterEmailInd(
+  _ref
+) {
+  var firstNameInd = _ref.firstNameInd,
+    lastNameInd = _ref.lastNameInd,
+    emailInd = _ref.emailInd,
+    phoneInd = _ref.phoneInd,
+    eventDropDown = _ref.eventDropDown,
+    specialtyInd = _ref.specialtyInd,
+    practiceInd = _ref.practiceInd,
+    practiceAddressInd = _ref.practiceAddressInd,
+    companyInd = _ref.companyInd,
+    shirtSizeInd = _ref.shirtSizeInd;
   return /*#__PURE__*/ React.createElement(
     _components.Html,
     null,
@@ -62,7 +69,15 @@ var Receipt = (exports.Receipt = function Receipt(_ref) {
       {
         style: acbcHeading,
       },
-      "ACBC Frisco-Dallas Round Up 25'"
+      eventDropDown,
+      " Registrant"
+    ),
+    /*#__PURE__*/ React.createElement(
+      _components.Preview,
+      null,
+      "You have a new ",
+      eventDropDown,
+      " registrant"
     ),
     /*#__PURE__*/ React.createElement(
       _components.Body,
@@ -79,20 +94,16 @@ var Receipt = (exports.Receipt = function Receipt(_ref) {
           {
             style: box,
           },
+          /*#__PURE__*/ React.createElement(_components.Hr, {
+            style: hr,
+          }),
           /*#__PURE__*/ React.createElement(
             _components.Text,
             {
               style: paragraph2,
             },
-            "REGISTRATION RECEIPT CONFIRMATION:",
-            /*#__PURE__*/ React.createElement(_components.Hr, {
-              style: hr,
-            }),
-            "Details: April 4th, 2025 7:00 PM \u2013 April 5th, 2025 at 5:30 PM Location: Frisco-Dallas, Hyatt Regency Hotel, ",
-            /*#__PURE__*/ React.createElement("br", null),
-            "2615 Preston Road, Frisco, TX 75034, USA"
+            "Their Register Information:"
           ),
-          /*#__PURE__*/ React.createElement("br", null),
           /*#__PURE__*/ React.createElement(
             _components.Container,
             {
@@ -101,12 +112,22 @@ var Receipt = (exports.Receipt = function Receipt(_ref) {
             /*#__PURE__*/ React.createElement(
               _components.Text,
               {
+                style: paragraph2,
+              },
+              "Event: ",
+              eventDropDown
+            ),
+            /*#__PURE__*/ React.createElement(
+              _components.Text,
+              {
                 style: paragraph,
               },
               "First Name: ",
-              fullName,
+              firstNameInd,
               " ",
-              /*#__PURE__*/ React.createElement("br", null)
+              /*#__PURE__*/ React.createElement("br", null),
+              "Last Name: ",
+              lastNameInd
             ),
             /*#__PURE__*/ React.createElement(
               _components.Text,
@@ -114,36 +135,66 @@ var Receipt = (exports.Receipt = function Receipt(_ref) {
                 style: paragraph2,
               },
               "Email: ",
-              email
+              emailInd
             ),
             /*#__PURE__*/ React.createElement(
               _components.Text,
               {
                 style: paragraph2,
               },
-              "Payment Amount: ",
-              amount
+              "Phone: ",
+              phoneInd ? phoneInd : "No phone number was provided"
             ),
             /*#__PURE__*/ React.createElement(
               _components.Text,
               {
                 style: paragraph2,
               },
-              "Confirmation Number: ",
-              confirmationNumber
+              "Address:",
+              " ",
+              practiceAddressInd
+                ? practiceAddressInd
+                : "No address was provided"
             ),
             /*#__PURE__*/ React.createElement(
               _components.Text,
               {
                 style: paragraph2,
               },
-              /*#__PURE__*/ React.createElement(
-                "a",
-                {
-                  href: sqReceipt,
-                },
-                "View Online Receipt"
-              )
+              "Specialty:",
+              specialtyInd
+                ? specialtyInd
+                : "No specialty field was number provided"
+            ),
+            /*#__PURE__*/ React.createElement(
+              _components.Text,
+              {
+                style: paragraph2,
+              },
+              "Position:",
+              " ",
+              practiceInd ? practiceInd : "No practice field was provided"
+            ),
+            /*#__PURE__*/ React.createElement(
+              _components.Text,
+              {
+                style: paragraph2,
+              },
+              "Company Name:",
+              " ",
+              companyInd ? companyInd : "No company name was provided"
+            ),
+            /*#__PURE__*/ React.createElement(_components.Hr, {
+              style: hr,
+            }),
+            /*#__PURE__*/ React.createElement(
+              _components.Text,
+              {
+                style: paragraph2,
+              },
+              "Shirt Size:",
+              " ",
+              shirtSizeInd ? shirtSizeInd : "No shirt size was provided"
             )
           ),
           /*#__PURE__*/ React.createElement(
@@ -168,7 +219,7 @@ var Receipt = (exports.Receipt = function Receipt(_ref) {
     )
   );
 });
-var _default = (exports["default"] = Receipt);
+var _default = (exports["default"] = RegisterEmailInd);
 var main = {
   backgroundColor: "#f6f9fc",
   fontFamily:
