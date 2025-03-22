@@ -21,7 +21,11 @@ const { Email } = require("./dist/email.js");
 const { SubscribeEmail } = require("./dist/subscribemail.js");
 const { SponsorEmail } = require("./dist/sponsoremail.js");
 const { RegisterEmail } = require("./dist/registeremail.js");
+const { RegisterEmailInd } = require("./dist/registeremailind.js");
 const { RegisterEmailResponse } = require("./dist/registeremailresponse.js");
+const {
+  RegisterEmailIndResponse,
+} = require("./dist/registeremailindresponse.js");
 
 app.use(morgan("tiny"));
 const nodemailer = require("nodemailer");
@@ -150,8 +154,6 @@ app.post("/send-email", async (req, res) => {
       })
     );
 
-    console.log("RegisterEmailResponse:", RegisterEmailResponse);
-
     const registerEmailResponseHtml = render(
       React.createElement(RegisterEmailResponse, {
         firstName: firstName,
@@ -222,6 +224,306 @@ app.post("/send-email", async (req, res) => {
   }
 });
 
+app.post("/send-email-ind", async (req, res) => {
+  const {
+    typeInd,
+    firstNameInd,
+    lastNameInd,
+    emailInd,
+    phoneInd,
+    eventDropDown,
+    specialtyInd,
+    practiceInd,
+    practiceAddressInd,
+    companyInd,
+    shirtSizeInd,
+  } = req.body;
+  console.log("TYPE IND", req.body.typeInd);
+
+  try {
+    let smtpTransport = nodemailer.createTransport({
+      host: "smtp.gmail.com",
+      port: 465,
+      secure: true, // use SSL
+      auth: {
+        user: "acbcemails@gmail.com",
+        pass: PW,
+      },
+    });
+
+    const registerEmailIndHtml = render(
+      React.createElement(RegisterEmailInd, {
+        firstNameInd: firstNameInd,
+        lastNameInd: lastNameInd,
+        emailInd: emailInd,
+        phoneInd: phoneInd,
+        eventDropDown: eventDropDown,
+        specialtyInd: specialtyInd,
+        practiceInd: practiceInd,
+        practiceAddressInd: practiceAddressInd,
+        companyInd: companyInd,
+        shirtSizeInd: shirtSizeInd,
+      })
+    );
+
+    const registerEmailIndResponseHtml = render(
+      React.createElement(RegisterEmailIndResponse, {
+        firstNameInd: firstNameInd,
+        lastNameInd: lastNameInd,
+        emailInd: emailInd,
+        phoneInd: phoneInd,
+        eventDropDown: eventDropDown,
+        specialtyInd: specialtyInd,
+        practiceInd: practiceInd,
+        practiceAddressInd: practiceAddressInd,
+        companyInd: companyInd,
+        shirtSizeInd: shirtSizeInd,
+      })
+    );
+
+    const registerOptionsInd = {
+      from: "acbcemails@gmail.com",
+      to: "acbcemails@gmail.com",
+      subject: "Registrant Form from ACBC Website",
+      html: registerEmailIndHtml,
+    };
+
+    const responseOptionsResponseInd = {
+      from: "acbcemails@gmail.com",
+      to: emailInd,
+      subject: "Thank you for registering for the 2025 Frisco Texas Roundup",
+      html: registerEmailIndResponseHtml,
+    };
+
+    if (typeInd === "registerInd") {
+      await smtpTransport.sendMail(registerOptionsInd);
+      await smtpTransport.sendMail(responseOptionsResponseInd);
+    }
+
+    res.json({ message: "Email sent!" });
+  } catch (error) {
+    console.error(error);
+    res
+      .status(500)
+      .json({ message: "An error occurred while sending the email." });
+  }
+});
+
 app.listen(process.env.PORT || 10000, () => {
   console.log(`Server started on port ${process.env.PORT || 10000}`);
 });
+
+// app.post("/send-email", async (req, res) => {
+//   const {
+//     type,
+//     typeInd,
+//     firstName,
+//     lastName,
+//     email,
+//     phone,
+//     eventDropDown,
+//     address,
+//     practiceAddress,
+//     address2,
+//     specialty,
+//     practice,
+//     position,
+//     company,
+//     shirtSize,
+//     message,
+//     firstNameInd,
+//     lastNameInd,
+//     emailInd,
+//     phoneInd,
+//     // addressInd,
+//     practiceAddressInd,
+//     // address2Ind,
+//     specialtyInd,
+//     practiceInd,
+//     // positionInd,
+//     companyInd,
+//     shirtSizeInd,
+//     // messageInd,
+//   } = req.body;
+//   console.log("TYPE", req.body.type);
+//   console.log("TYPE", req.body.typeInd);
+
+//   try {
+//     let smtpTransport = nodemailer.createTransport({
+//       host: "smtp.gmail.com",
+//       port: 465,
+//       secure: true, // use SSL
+//       auth: {
+//         user: "acbcemails@gmail.com",
+//         pass: PW,
+//       },
+//     });
+//     const emailHtml = render(
+//       React.createElement(Email, {
+//         firstName: firstName,
+//         lastName: lastName,
+//         email: email,
+//         message: message,
+//       })
+//     );
+
+//     const subscribeEmailHtml = render(
+//       React.createElement(SubscribeEmail, {
+//         firstName: firstName,
+//         lastName: lastName,
+//         email: email,
+//         phone: phone,
+//         address: address,
+//         specialty: specialty,
+//         position: position,
+//         company: company,
+//         message: message,
+//       })
+//     );
+
+//     const sponsorEmailHtml = render(
+//       React.createElement(SponsorEmail, {
+//         firstName: firstName,
+//         lastName: lastName,
+//         email: email,
+//         phone: phone,
+//         address: address,
+//         address2: address2,
+//         company: company,
+//         message: message,
+//       })
+//     );
+
+//     const registerEmailHtml = render(
+//       React.createElement(RegisterEmail, {
+//         firstName: firstName,
+//         lastName: lastName,
+//         email: email,
+//         phone: phone,
+//         eventDropDown: eventDropDown,
+//         specialty: specialty,
+//         practice: practice,
+//         practiceAddress: practiceAddress,
+//         company: company,
+//         shirtSize: shirtSize,
+//       })
+//     );
+
+//     const registerEmailIndHtml = render(
+//       React.createElement(RegisterEmailInd, {
+//         firstNameInd: firstNameInd,
+//         lastNameInd: lastNameInd,
+//         emailInd: emailInd,
+//         phoneInd: phoneInd,
+//         eventDropDown: eventDropDown,
+//         specialtyInd: specialtyInd,
+//         practiceInd: practiceInd,
+//         practiceAddressInd: practiceAddressInd,
+//         companyInd: companyInd,
+//         shirtSizeInd: shirtSizeInd,
+//       })
+//     );
+
+//     // console.log("RegisterEmailResponse:", RegisterEmailResponse);
+
+//     const registerEmailResponseHtml = render(
+//       React.createElement(RegisterEmailResponse, {
+//         firstName: firstName,
+//         lastName: lastName,
+//         email: email,
+//         phone: phone,
+//         eventDropDown: eventDropDown,
+//         specialty: specialty,
+//         practice: practice,
+//         practiceAddress: practiceAddress,
+//         company: company,
+//         shirtSize: shirtSize,
+//       })
+//     );
+
+//     const registerEmailIndResponseHtml = render(
+//       React.createElement(RegisterEmailIndResponse, {
+//         firstNameInd: firstNameInd,
+//         lastNameInd: lastNameInd,
+//         emailInd: emailInd,
+//         phoneInd: phoneInd,
+//         eventDropDown: eventDropDown,
+//         specialtyInd: specialtyInd,
+//         practiceInd: practiceInd,
+//         practiceAddressInd: practiceAddressInd,
+//         companyInd: companyInd,
+//         shirtSizeInd: shirtSizeInd,
+//       })
+//     );
+
+//     const options = {
+//       from: "acbcemails@gmail.com",
+//       to: "acbcemails@gmail.com",
+//       subject: "Contact Form Inquiry from ACBC Website",
+//       html: emailHtml,
+//     };
+
+//     const subscribeOptions = {
+//       from: "acbcemails@gmail.com",
+//       to: "acbcemails@gmail.com",
+//       subject: "Email Subscription Inquiry from ACBC Website",
+//       html: subscribeEmailHtml,
+//     };
+
+//     const sponsorOptions = {
+//       from: "acbcemails@gmail.com",
+//       to: "acbcemails@gmail.com",
+//       subject: "Sponsorship Inquiry from ACBC Website",
+//       html: sponsorEmailHtml,
+//     };
+
+//     const registerOptions = {
+//       from: "acbcemails@gmail.com",
+//       to: "acbcemails@gmail.com",
+//       subject: "Registrant Form from ACBC Website",
+//       html: registerEmailHtml,
+//     };
+
+//     const registerOptionsInd = {
+//       from: "acbcemails@gmail.com",
+//       to: "acbcemails@gmail.com",
+//       subject: "Registrant Form from ACBC Website",
+//       html: registerEmailIndHtml,
+//     };
+
+//     const responseOptions = {
+//       from: "acbcemails@gmail.com",
+//       to: email,
+//       subject: "Thank you for registering for the 2025 Frisco Texas Roundup",
+//       html: registerEmailResponseHtml,
+//     };
+
+//     const responseOptionsInd = {
+//       from: "acbcemails@gmail.com",
+//       to: email,
+//       subject: "Thank you for registering for the 2025 Frisco Texas Roundup",
+//       html: registerEmailIndResponseHtml,
+//     };
+
+//     if (type === "contact") {
+//       await smtpTransport.sendMail(options);
+//     } else if (type === "subscribe") {
+//       await smtpTransport.sendMail(subscribeOptions);
+//     } else if (type === "sponsor") {
+//       await smtpTransport.sendMail(sponsorOptions);
+//     } else if (type === "register") {
+//       await smtpTransport.sendMail(registerOptions);
+//       await smtpTransport.sendMail(responseOptions);
+//     } else if (typeInd === "registerInd") {
+//       await smtpTransport.sendMail(registerOptionsInd);
+//       await smtpTransport.sendMail(responseOptionsInd);
+//     }
+
+//     res.json({ message: "Email sent!" });
+//   } catch (error) {
+//     console.error(error);
+//     res
+//       .status(500)
+//       .json({ message: "An error occurred while sending the email." });
+//   }
+// });
