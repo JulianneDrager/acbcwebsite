@@ -22,7 +22,7 @@ var RegisterEmail = exports.RegisterEmail = function RegisterEmail(_ref) {
     shirtSize = _ref.shirtSize;
   return /*#__PURE__*/React.createElement(_components.Html, null, /*#__PURE__*/React.createElement(_components.Heading, {
     style: acbcHeading
-  }, eventDropDown, " Registrant"), /*#__PURE__*/React.createElement(_components.Preview, null, "You have a new ", eventDropDown, " registrant"), /*#__PURE__*/React.createElement(_components.Body, {
+  }, eventDropDown, " Pharmacy rep Registrant"), /*#__PURE__*/React.createElement(_components.Preview, null, "You have a new ", eventDropDown, " Pharmacy rep registrant"), /*#__PURE__*/React.createElement(_components.Body, {
     style: main
   }, /*#__PURE__*/React.createElement(_components.Container, {
     style: container
