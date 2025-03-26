@@ -36,7 +36,13 @@ var RegisterEmail = exports.RegisterEmail = function RegisterEmail(_ref) {
     style: messageContainer
   }, /*#__PURE__*/React.createElement(_components.Text, {
     style: paragraph2
-  }, "Event: ", eventDropDown), /*#__PURE__*/React.createElement(_components.Text, {
+  }, "Event: ", eventDropDown), /*#__PURE__*/React.createElement(_components.Hr, {
+    style: hr
+  }), /*#__PURE__*/React.createElement(_components.Text, {
+    style: paragraph2
+  }, "Type: Pharmacy Rep"), /*#__PURE__*/React.createElement(_components.Hr, {
+    style: hr
+  }), /*#__PURE__*/React.createElement(_components.Text, {
     style: paragraph
   }, "First Name: ", firstName, " ", /*#__PURE__*/React.createElement("br", null), "Last Name: ", lastName), /*#__PURE__*/React.createElement(_components.Text, {
     style: paragraph2
