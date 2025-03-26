@@ -272,7 +272,7 @@ app.post("/send-email-ind", async (req, res) => {
         lastNameInd: lastNameInd,
         emailInd: emailInd,
         phoneInd: phoneInd,
-        eventDropDown: eventDropDown,
+        eventDropDownInd: eventDropDownInd,
         specialtyInd: specialtyInd,
         practiceInd: practiceInd,
         practiceAddressInd: practiceAddressInd,
