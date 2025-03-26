@@ -14,7 +14,7 @@ var RegisterEmailIndResponse = exports.RegisterEmailIndResponse = function Regis
     lastNameInd = _ref.lastNameInd,
     emailInd = _ref.emailInd,
     phoneInd = _ref.phoneInd,
-    eventDropDown = _ref.eventDropDown,
+    eventDropDownInd = _ref.eventDropDownInd,
     specialtyInd = _ref.specialtyInd,
     practiceInd = _ref.practiceInd,
     practiceAddressInd = _ref.practiceAddressInd,
@@ -22,7 +22,7 @@ var RegisterEmailIndResponse = exports.RegisterEmailIndResponse = function Regis
     shirtSizeInd = _ref.shirtSizeInd;
   return /*#__PURE__*/React.createElement(_components.Html, null, /*#__PURE__*/React.createElement(_components.Heading, {
     style: acbcHeading
-  }, eventDropDown), /*#__PURE__*/React.createElement(_components.Preview, null, "You have a new ", eventDropDown, " ACBC Registrant Response"), /*#__PURE__*/React.createElement(_components.Body, {
+  }, eventDropDownInd), /*#__PURE__*/React.createElement(_components.Preview, null, "You have a new ", eventDropDownInd, " ACBC Registrant Response"), /*#__PURE__*/React.createElement(_components.Body, {
     style: main
   }, /*#__PURE__*/React.createElement(_components.Container, {
     style: container
