@@ -193,7 +193,7 @@ app.post("/send-email", async (req, res) => {
     const registerOptions = {
       from: "acbcemails@gmail.com",
       to: "acbcemails@gmail.com",
-      subject: "Registrant Form from ACBC Website",
+      subject: "Pharmacy Rep Registrant Form from ACBC Website",
       html: registerEmailHtml,
     };
 
@@ -284,7 +284,7 @@ app.post("/send-email-ind", async (req, res) => {
     const registerOptionsInd = {
       from: "acbcemails@gmail.com",
       to: "acbcemails@gmail.com",
-      subject: "Registrant Form from ACBC Website",
+      subject: "Individual Registrant Form from ACBC Website",
       html: registerEmailIndHtml,
     };
 
