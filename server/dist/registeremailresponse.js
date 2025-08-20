@@ -186,7 +186,7 @@ var RegisterEmailResponse = (exports.RegisterEmailResponse =
                 _components.Link,
                 {
                   style: button,
-                  href: "https://www.hyatt.com/en-US/group-booking/DFWRO/G-ACCB",
+                  href: "https://www.marriott.com/event-reservations/reservation-link.mi?id=1755535778983&key=GRP&app=resvlinkand",
                 },
                 "CLICK HERE TO RESERVE YOUR ROOM"
               )
