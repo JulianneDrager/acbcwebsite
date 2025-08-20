@@ -19,7 +19,7 @@ export const RegisterEmailIndResponse = ({
   lastNameInd,
   emailInd,
   phoneInd,
-  eventDropDown,
+  eventDropDownInd,
   specialtyInd,
   practiceInd,
   practiceAddressInd,
@@ -27,17 +27,19 @@ export const RegisterEmailIndResponse = ({
   shirtSizeInd,
 }) => (
   <Html>
-    <Heading style={acbcHeading}>{eventDropDown}</Heading>
-    <Preview>You have a new {eventDropDown} ACBC Registrant Response</Preview>
+    <Heading style={acbcHeading}>{eventDropDownInd}</Heading>
+    <Preview>
+      You have a new {eventDropDownInd} ACBC Registrant Response
+    </Preview>
     <Body style={main}>
       <Container style={container}>
         <Section style={box}>
           <Text style={paragraph2}>
             REGISTRATION CONFIRMATION:
             <Hr style={hr} />
-            Details: April 4th, 2025 7:00 PM – April 5th, 2025 at 5:30 PM
-            Location: Frisco-Dallas, Hyatt Regency Hotel, <br />
-            2615 Preston Road, Frisco, TX 75034, USA
+            Details: March 6th, 2026 7:00 PM – March 6th, 2026 at 5:30 PM
+            Location: The Westin Dallas Park Central, <br />
+            12720 Merit Drive Dallas, TX 75251, USA
           </Text>
           <br />
           <Container style={messageContainer}>
@@ -76,7 +78,7 @@ export const RegisterEmailIndResponse = ({
             <hr />
             <Link
               style={button}
-              href="https://www.hyatt.com/en-US/group-booking/DFWRO/G-ACCB"
+              href="https://www.marriott.com/event-reservations/reservation-link.mi?id=1755535778983&key=GRP&app=resvlinkand"
             >
               CLICK HERE TO RESERVE YOUR ROOM
             </Link>
