@@ -200,7 +200,7 @@ app.post("/send-email", async (req, res) => {
     const responseOptions = {
       from: "acbcemails@gmail.com",
       to: email,
-      subject: "Thank you for registering for the 2025 Frisco Texas Roundup",
+      subject: "Thank you for registering for the 2026 Dallas Texas Roundup",
       html: registerEmailResponseHtml,
     };
 
@@ -291,7 +291,7 @@ app.post("/send-email-ind", async (req, res) => {
     const responseOptionsResponseInd = {
       from: "acbcemails@gmail.com",
       to: emailInd,
-      subject: "Thank you for registering for the 2025 Frisco Texas Roundup",
+      subject: "Thank you for registering for the 2026 Dallas Texas Roundup",
       html: registerEmailIndResponseHtml,
     };
 
