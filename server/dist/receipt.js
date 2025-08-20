@@ -88,9 +88,9 @@ var Receipt = (exports.Receipt = function Receipt(_ref) {
             /*#__PURE__*/ React.createElement(_components.Hr, {
               style: hr,
             }),
-            "Details: April 4th, 2025 7:00 PM \u2013 April 5th, 2025 at 5:30 PM Location: Frisco-Dallas, Hyatt Regency Hotel, ",
+            "Details: March 6th, 2026 7:00 PM \u2013 March 7th, 2026 at 5:30 PM Location: The Westin Dallas Park Central, ",
             /*#__PURE__*/ React.createElement("br", null),
-            "2615 Preston Road, Frisco, TX 75034, USA"
+            "12720 Merit Drive Dallas, TX 75251, USA"
           ),
           /*#__PURE__*/ React.createElement("br", null),
           /*#__PURE__*/ React.createElement(
